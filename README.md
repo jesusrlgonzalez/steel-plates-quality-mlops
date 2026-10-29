@@ -1,13 +1,13 @@
 # Quality intelligence: steel-plate defect classification
 
-[![CI](https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops/actions/workflows/ci.yml/badge.svg)](https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/jesusgonzalezmexdata-ux/steel-plates-quality-mlops)](https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops/releases)
+[![CI](https://github.com/jesusrlgonzalez/steel-plates-quality-mlops/actions/workflows/ci.yml/badge.svg)](https://github.com/jesusrlgonzalez/steel-plates-quality-mlops/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/jesusrlgonzalez/steel-plates-quality-mlops)](https://github.com/jesusrlgonzalez/steel-plates-quality-mlops/releases)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)](NOTICE)
 
 **English** · [Español](README.es.md)
 
-**[Live demo](https://huggingface.co/spaces/JesusRLGonzalez/steel-plates-quality-mlops)** | **[Project page](https://jesusgonzalezmexdata-ux.github.io/steel-plates-quality-mlops/)**
+**[Live demo](https://huggingface.co/spaces/JesusRLGonzalez/steel-plates-quality-mlops)** | **[Project page](https://jesusrlgonzalez.github.io/steel-plates-quality-mlops/)**
 
 **An industrial quality problem turned into measurable evidence: a data contract, scientific validation, a model evaluated once on an independent holdout, error analysis and Power BI decision support, all reproducible from this repository.**
 
@@ -86,7 +86,7 @@ Tested on the real plates with a hidden truth: every plate gets a prediction its
 Requires Python 3.13 (recorded environment: 3.13.7) and Git LFS.
 
 ```bash
-git clone https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops.git
+git clone https://github.com/jesusrlgonzalez/steel-plates-quality-mlops.git
 cd steel-plates-quality-mlops
 git lfs pull
 python -m venv .venv

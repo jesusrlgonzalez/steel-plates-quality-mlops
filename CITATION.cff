@@ -8,7 +8,7 @@ authors:
 license: Apache-2.0
 version: "1.5.0"
 date-released: "2026-10-17"
-repository-code: "https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops"
+repository-code: "https://github.com/jesusrlgonzalez/steel-plates-quality-mlops"
 keywords:
   - quality intelligence
   - multiclass classification

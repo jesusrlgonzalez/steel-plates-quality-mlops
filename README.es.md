@@ -2,7 +2,7 @@
 
 [English](README.md) · **Español**
 
-**[Demo en vivo](https://huggingface.co/spaces/JesusRLGonzalez/steel-plates-quality-mlops)** | **[Página del proyecto](https://jesusgonzalezmexdata-ux.github.io/steel-plates-quality-mlops/)**
+**[Demo en vivo](https://huggingface.co/spaces/JesusRLGonzalez/steel-plates-quality-mlops)** | **[Página del proyecto](https://jesusrlgonzalez.github.io/steel-plates-quality-mlops/)**
 
 **Un problema industrial de calidad convertido en evidencia medible: contrato de datos, validación científica, un modelo evaluado una sola vez sobre un holdout independiente, análisis de errores y apoyo a la decisión en Power BI, todo reproducible desde este repositorio.**
 
@@ -81,7 +81,7 @@ Probado con las placas reales y una verdad oculta: cada placa tiene una predicci
 Requiere Python 3.13 (entorno registrado: 3.13.7) y Git LFS.
 
 ```bash
-git clone https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops.git
+git clone https://github.com/jesusrlgonzalez/steel-plates-quality-mlops.git
 cd steel-plates-quality-mlops
 git lfs pull
 python -m venv .venv

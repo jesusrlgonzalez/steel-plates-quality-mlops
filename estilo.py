@@ -20,9 +20,9 @@ CSS = """
 
 PIE = (
     '<footer class="pie">© 2026 Jesús R. L. González · Código bajo '
-    '<a href="https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops/blob/main/LICENSE" target="_blank" rel="noopener">licencia Apache 2.0</a>'
+    '<a href="https://github.com/jesusrlgonzalez/steel-plates-quality-mlops/blob/main/LICENSE" target="_blank" rel="noopener">licencia Apache 2.0</a>'
     ' · Datos: UCI Steel Plates Faults (CC BY 4.0); costos supuestos · '
-    '<a href="https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops" target="_blank" rel="noopener">Código fuente</a></footer>'
+    '<a href="https://github.com/jesusrlgonzalez/steel-plates-quality-mlops" target="_blank" rel="noopener">Código fuente</a></footer>'
 )
 
 
