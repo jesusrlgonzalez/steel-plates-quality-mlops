@@ -4,6 +4,12 @@ All notable changes to this project are documented here. Versions follow
 [Semantic Versioning](https://semver.org/). The frozen model, its metrics and
 the consumed holdout have not changed since v1.0.0.
 
+## [Unreleased]
+
+### Fixed
+- CI: `ubuntu-latest` moved to Ubuntu 26.04, where `actions/python-versions` publishes no Python 3.13.7 build. Jobs that pin 3.13.7 (the Docker base and the interpreter recorded in the artifact manifest) now run on `ubuntu-24.04`.
+- `test_previous_powerbi_preserved`: the account rename (`jesusgonzalezmexdata-ux` → `jesusrlgonzalez`, commit fecb642) changed the online data URL in `powerbi/powerquery/00_Parametros.pq`. The test now accepts exactly that owner change and still requires every other byte to match the pre-ML baseline; the baseline hash is unchanged.
+
 ## [1.5.0] - 2026-10-17
 
 ### Added
