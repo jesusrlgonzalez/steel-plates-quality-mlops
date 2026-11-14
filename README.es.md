@@ -45,9 +45,9 @@ Stains y Dirtiness tienen muy poco soporte: no permiten conclusiones estables.
 
 ## Capa de quality intelligence (Power BI y Streamlit)
 
-El tablero responde dónde actuar primero con un presupuesto limitado, con umbrales de gestión **supuestos** y la cláusula ISO 9001:2015 que respalda cada acción:
+El tablero responde dónde actuar primero con un presupuesto limitado, con umbrales de gestión **supuestos**. Cada regla es propia, alineada con la cláusula ISO 9001:2015 indicada; las reglas no han sido auditadas ni certificadas:
 
-| Señal | Umbral (supuesto de gestión) | Acción | ISO 9001:2015 |
+| Señal | Umbral (supuesto de gestión) | Acción | Alineada con ISO 9001:2015 |
 |---|---|---|---|
 | ≥ 10 % de las placas con defecto mayor a 500 px² | `UMBRAL_FUERA_USL_PCT` | Contener: segregar e inspeccionar al 100 % | 8.7 |
 | Un tipo pesa ≥ 20 % del COPQ | `UMBRAL_COPQ_PCT` | Análisis de causa raíz y acción correctiva | 10.2 |
