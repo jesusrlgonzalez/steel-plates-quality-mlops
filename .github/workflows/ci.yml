@@ -13,7 +13,9 @@ concurrency:
   cancel-in-progress: true
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # Exact interpreter pinned to match the Docker image (python:3.13.7-slim); ubuntu-latest moved to
+    # 26.04, where actions/python-versions has no 3.13.7 build, so the runner image is pinned too.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v7
@@ -44,7 +46,9 @@ jobs:
       - name: Full tests in container
         run: docker run --rm steel-plates-quality-mlops python -B -m pytest -q -p no:cacheprovider
   data-contract:
-    runs-on: ubuntu-latest
+    # Exact interpreter pinned to match the Docker image (python:3.13.7-slim); ubuntu-latest moved to
+    # 26.04, where actions/python-versions has no 3.13.7 build, so the runner image is pinned too.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v7
@@ -58,7 +62,9 @@ jobs:
       - name: Contract tests (including corruption cases)
         run: python -B -m pytest -q -p no:cacheprovider tests/test_data_contract.py
   onnx:
-    runs-on: ubuntu-latest
+    # Exact interpreter pinned to match the Docker image (python:3.13.7-slim); ubuntu-latest moved to
+    # 26.04, where actions/python-versions has no 3.13.7 build, so the runner image is pinned too.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v7

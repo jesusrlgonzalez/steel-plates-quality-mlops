@@ -35,12 +35,17 @@ RUTA_CSV_BASELINE = (b'expression RutaCSV = "C:\\\\Users\\\\Lowo\\\\Downloads\\\
                      b'steel-plates-quality-bi-main\\\\data\\\\raw\\\\steel_plates_faults.csv"')
 RUTA_CSV_PLACEHOLDER = (b'expression RutaCSV = "C:\\\\path\\\\to\\\\steel-plates-quality-mlops'
                         b'\\\\data\\\\raw\\\\steel_plates_faults.csv"')
+# The GitHub account was renamed (jesusgonzalezmexdata-ux -> jesusrlgonzalez, commit fecb642).
+# The online data URL in 00_Parametros.pq follows the account; every other byte must match the baseline.
+PARAMETROS_PQ = "powerbi/powerquery/00_Parametros.pq"
+RAW_URL_OWNER_NOW = b"raw.githubusercontent.com/jesusrlgonzalez/"
+RAW_URL_OWNER_BASELINE = b"raw.githubusercontent.com/jesusgonzalezmexdata-ux/"
 
 
 def test_previous_powerbi_preserved():
     baseline = json.loads((ROOT / BASELINE_PATH).read_text())
     exceptions = {f"{REPORT}/pages.json", f"{SEMANTIC}/model.tmdl",
-                  f"{SEMANTIC}/expressions.tmdl"}
+                  f"{SEMANTIC}/expressions.tmdl", PARAMETROS_PQ}
     for name, identity in baseline["files"].items():
         data = (ROOT / name).read_bytes()
         if name.endswith(".pbix"):
@@ -54,6 +59,11 @@ def test_previous_powerbi_preserved():
         elif name.endswith("model.tmdl"):
             original = data.replace(b"\r\n", b"\n").split(b"\nref table ML_Holdout\n")[0]
             assert hashlib.sha256(original.replace(b"\r\n", b"\n")).hexdigest() == identity["lf_sha256"]
+        elif name == PARAMETROS_PQ:
+            current = data.replace(b"\r\n", b"\n")
+            assert current.count(RAW_URL_OWNER_NOW) == 2 and RAW_URL_OWNER_BASELINE not in current
+            original = current.replace(RAW_URL_OWNER_NOW, RAW_URL_OWNER_BASELINE)
+            assert hashlib.sha256(original).hexdigest() == identity["lf_sha256"]
         elif name.endswith("expressions.tmdl"):
             original = data.replace(b"\r\n", b"\n").split(b"\nexpression RutaMLCSV =")[0]
             # Only documented change: the RutaCSV default no longer carries the

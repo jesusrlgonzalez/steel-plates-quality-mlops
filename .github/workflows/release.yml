@@ -11,7 +11,9 @@ permissions:
   contents: write
 jobs:
   assets:
-    runs-on: ubuntu-latest
+    # Exact interpreter pinned to match the Docker image (python:3.13.7-slim); ubuntu-latest moved to
+    # 26.04, where actions/python-versions has no 3.13.7 build, so the runner image is pinned too.
+    runs-on: ubuntu-24.04
     env:
       TAG: ${{ github.event.release.tag_name || inputs.tag }}
       GH_TOKEN: ${{ github.token }}
