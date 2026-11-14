@@ -72,7 +72,7 @@ t0, t1, t2, t3, t4, t5 = st.tabs(["Decisiones", "Pareto del COPQ", "Carta de med
 
 with t0:
     st.write(f"Qué hacer con cada tipo de defecto. Umbrales (supuestos de gestión): contención si ≥ {UMBRAL_FUERA_USL_PCT:.0%} de las placas "
-             f"supera {usl} px²; causa raíz si el tipo pesa ≥ {UMBRAL_COPQ_PCT:.0%} del COPQ. Las cláusulas son de ISO 9001:2015.")
+             f"supera {usl} px²; causa raíz si el tipo pesa ≥ {UMBRAL_COPQ_PCT:.0%} del COPQ. Reglas propias, alineadas con cláusulas de ISO 9001:2015; no auditadas.")
     dec = M.decisiones(df, usl)
     st.dataframe(dec.rename(columns={"tipo_defecto": "Tipo de defecto", "placas": "Placas", "copq_pct": "% del COPQ",
                                      "fuera_usl_pct": f"% mayor a {usl} px²", "cpk": "Cpk", "accion": "Acción recomendada"})
