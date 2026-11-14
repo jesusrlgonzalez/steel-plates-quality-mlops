@@ -6,7 +6,7 @@
 <title>Steel-plate defect classification | Jesús R. L. González</title>
 <meta name="description" content="Seven defect types, 27 measurements per plate. A frozen model classifies the defect, and a review rule decides which predictions go to an inspector.">
 <meta property="og:title" content="Which defect does each steel plate have, and when should a person check?">
-<meta property="og:description" content="0.815 macro-F1 on 389 plates never used to build the model">
+<meta property="og:description" content="0.815 macro-F1 classifying the defect type of 389 already-defective plates never used to build the model">
 <meta property="og:image" content="https://jesusrlgonzalez.github.io/steel-plates-quality-mlops/figures/decisiones.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,7 @@ footer a{font-weight:600}
 <p class="lead">Seven defect types, 27 measurements per plate. A frozen model classifies the defect, and a review rule decides which predictions go to an inspector.</p>
 <div class="actions"><a class="btn primary" href="https://huggingface.co/spaces/JesusRLGonzalez/steel-plates-quality-mlops">Open the live demo</a><a class="btn secondary" href="https://github.com/jesusrlgonzalez/steel-plates-quality-mlops">Read the code</a></div>
 </div>
-<div class="tagbox"><p class="tag"><span class="value">0.815</span><span class="label">macro-F1 on 389 plates never used to build the model</span><span class="note">Evaluated once on an independent holdout</span></p></div>
+<div class="tagbox"><p class="tag"><span class="value">0.815</span><span class="label">macro-F1 classifying the defect type of 389 already-defective plates never used to build the model</span><span class="note">Evaluated once on an independent holdout</span></p></div>
 </div>
 <section aria-labelledby="result"><h2 id="result">What the result means</h2><dl class="facts"><div><dt>Review queue</dt><dd>Confidence below 0.80 goes to review: 81 of the 82 errors land there</dd></div><div><dt>Cost per 1,000 plates</dt><dd>750 review units vs 1,000 for reviewing everything, if a miss costs 10 reviews</dd></div><div><dt>Monitoring</dt><dd>Unit changes and camera recalibration are flagged against the training plates</dd></div><div><dt>Delivery</dt><dd>SQL data contract, ONNX export, Docker and a Power BI layer</dd></div></dl></section>
 <section aria-labelledby="chart"><h2 id="chart" class="visually-plain">The main chart</h2><figure><img src="figures/decisiones.png" alt="Dashboard with the recommended action by defect type" loading="lazy"><figcaption>Decision view of the quality-intelligence layer: action by defect type, with the ISO 9001 clause each own rule is aligned with (rules not audited).</figcaption></figure></section>
