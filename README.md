@@ -50,9 +50,9 @@ Stains and Dirtiness have too little support for stable conclusions.
 
 ## Quality-intelligence layer (Power BI and Streamlit)
 
-The dashboard answers where to act first on a limited budget, using **assumed** management thresholds and the ISO 9001:2015 clause behind each action:
+The dashboard answers where to act first on a limited budget, using **assumed** management thresholds. Each rule is the author's own, aligned with the ISO 9001:2015 clause shown; the rules have not been audited or certified:
 
-| Signal | Threshold (management assumption) | Action | ISO 9001:2015 |
+| Signal | Threshold (management assumption) | Action | Aligned with ISO 9001:2015 |
 |---|---|---|---|
 | ≥ 10 % of plates with a defect larger than 500 px² | `UMBRAL_FUERA_USL_PCT` | Contain: segregate and inspect 100 % | 8.7 |
 | One type weighs ≥ 20 % of COPQ | `UMBRAL_COPQ_PCT` | Root-cause analysis and corrective action | 10.2 |
