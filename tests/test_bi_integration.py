@@ -11,7 +11,7 @@ import pytest
 from quality_ml.inference.bi_export import (
     BASELINE_PATH, COLUMNS, EXPORT_PATH, export_frame, validate_export,
 )
-from tools.prepare_ml_powerbi import PAGE, REPORT, SEMANTIC, prepare
+from tools.prepare_ml_powerbi import PAGE, REPORT, SEMANTIC, TABLE, prepare
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,30 +35,131 @@ RUTA_CSV_BASELINE = (b'expression RutaCSV = "C:\\\\Users\\\\Lowo\\\\Downloads\\\
                      b'steel-plates-quality-bi-main\\\\data\\\\raw\\\\steel_plates_faults.csv"')
 RUTA_CSV_PLACEHOLDER = (b'expression RutaCSV = "C:\\\\path\\\\to\\\\steel-plates-quality-mlops'
                         b'\\\\data\\\\raw\\\\steel_plates_faults.csv"')
+# RutaCSV is machine-specific by design: Power Query needs an absolute path that
+# resolves on the host. The published tree ships a portable parameter whose value
+# is a neutral placeholder with SINGLE separators: TMDL stores M verbatim and does
+# not escape the backslash, so a doubled separator survives File.Contents but
+# breaks the "/data/raw/" split that RutaMLCSV uses to locate the holdout export.
+# The machine-specific value used during the certified Desktop validation stays
+# outside version control (orden A2-12, par. 6). Both accepted values are spelled
+# out here and normalised back to the baseline before hashing; no other RutaCSV
+# value passes and no other byte is exempt. The historical placeholder predates
+# the separator finding and keeps its doubled spelling.
+RUTA_CSV_PORTABLE = (b'expression RutaCSV = "C:\\path\\to\\steel-plates-quality-mlops'
+                     b'\\data\\raw\\steel_plates_faults.csv"')
+RUTA_CSV_ACCEPTED = (RUTA_CSV_PLACEHOLDER, RUTA_CSV_PORTABLE)
 # The GitHub account was renamed (jesusgonzalezmexdata-ux -> jesusrlgonzalez, commit fecb642).
 # The online data URL in 00_Parametros.pq follows the account; every other byte must match the baseline.
 PARAMETROS_PQ = "powerbi/powerquery/00_Parametros.pq"
 RAW_URL_OWNER_NOW = b"raw.githubusercontent.com/jesusrlgonzalez/"
 RAW_URL_OWNER_BASELINE = b"raw.githubusercontent.com/jesusgonzalezmexdata-ux/"
+# OWNER-PBI-REN-001 Fase 2 renamed the PBIP container. pre_ml_powerbi_hashes.json is
+# frozen historical evidence and still spells the former name, so a baseline key is
+# mapped to its current location instead. Expected hashes are never recomputed: for
+# every file but the two below a rename changes the container and not the content, so
+# the historical bytes still apply. Only these prefixes remap, one substitution each.
+BASELINE_NAME = "steel-plates-quality-bi"
+CANONICAL_NAME = "steel-plates-quality-mlops-powerbi"
+RENAMED_PREFIXES = ("powerbi/project/", "powerbi/artifacts/")
+# The certified PBIX, saved from Power BI Desktop 2.156.951.0 (26.07) on 2026-11-15.
+# The baseline records the pre-ML binary (oid 0a87a4e3...), whose LFS object no longer
+# exists on the server, so it can never be materialised again. Provenance and the
+# reopen evidence live in docs/production/POWERBI_PBIX_CERTIFICATION.md.
+PBIX_CERTIFIED_SHA256 = "91f89ff2d8ce7605e9b54d9c2c45a6d5cf2511649498e9c70ed82abfe7d86260"
+# A genuine Desktop save re-serialises pre-ML report objects, which the frozen
+# baseline is designed to catch. This manifest pins the post-save identity of each
+# rewritten object and records the baseline semantic core it had to keep; it is
+# produced by docs/production/evidence/build_desktop_save_hashes.py, which refuses to
+# record any object whose visual type, field bindings or page geometry changed.
+# Checking both the pinned bytes and the core is stronger than byte equality alone.
+DESKTOP_SAVE_PATH = "docs/production/evidence/powerbi_desktop_save_hashes.json"
+
+
+def object_core(raw, name):
+    """The part of a report object that decides what the user sees."""
+    item = json.loads(raw.decode("utf-8-sig"))
+    if name.endswith("page.json"):
+        return {k: item.get(k) for k in
+                ("name", "displayName", "width", "height", "type", "visibility")}
+    visual = item.get("visual", {})
+    bindings = []
+    for role, state in sorted(visual.get("query", {}).get("queryState", {}).items()):
+        for projection in state.get("projections", []):
+            kind, field = next(iter(projection["field"].items()))
+            bindings.append([role, kind,
+                             field.get("Expression", {}).get("SourceRef", {}).get("Entity"),
+                             field.get("Property")])
+    return {"name": item.get("name"), "visualType": visual.get("visualType"),
+            "bindings": bindings}
+# The two cross-reference files must be rewritten by the rename itself: the PBIP
+# resolves the .Report directory and the PBIR resolves the .SemanticModel directory.
+# Each carries exactly one occurrence of the name, substituted back before hashing so
+# that every remaining byte is still held to the baseline.
+RENAMED_REFERENCES = (".pbip", "definition.pbir")
+
+
+def current_path(name):
+    """Map a frozen baseline key to the path it occupies after the canonical rename."""
+    if name.startswith(RENAMED_PREFIXES):
+        return name.replace(BASELINE_NAME, CANONICAL_NAME, 1)
+    return name
 
 
 def test_previous_powerbi_preserved():
     baseline = json.loads((ROOT / BASELINE_PATH).read_text())
+    certified = json.loads((ROOT / DESKTOP_SAVE_PATH).read_text(encoding="utf-8"))["files"]
     exceptions = {f"{REPORT}/pages.json", f"{SEMANTIC}/model.tmdl",
                   f"{SEMANTIC}/expressions.tmdl", PARAMETROS_PQ}
-    for name, identity in baseline["files"].items():
+    for key, identity in baseline["files"].items():
+        name = current_path(key)
+        # A half-finished rename must fail loudly instead of reading a stale copy.
+        assert name == key or not (ROOT / key).exists()
         data = (ROOT / name).read_bytes()
         if name.endswith(".pbix"):
+            # The PBIX is the one artifact OWNER-PBI-REN-001 exists to regenerate, so
+            # the frozen baseline hash is now historical. Both identities are pinned
+            # explicitly, which still fails on any third value.
+            accepted = (identity["sha256"], PBIX_CERTIFIED_SHA256)
             # A checkout without LFS materialization cannot verify PBIX bytes.
             if data.startswith(b"version https://git-lfs.github.com/spec/v1"):
-                assert b"oid sha256:" + identity["sha256"].encode() in data
+                assert any(b"oid sha256:" + value.encode() in data for value in accepted)
             else:
-                assert hashlib.sha256(data).hexdigest() == identity["sha256"]
+                assert hashlib.sha256(data).hexdigest() in accepted
+        elif name.endswith(RENAMED_REFERENCES):
+            current = data.replace(b"\r\n", b"\n")
+            assert current.count(CANONICAL_NAME.encode()) == 1
+            original = current.replace(CANONICAL_NAME.encode(), BASELINE_NAME.encode(), 1)
+            assert hashlib.sha256(original).hexdigest() == identity["lf_sha256"]
         elif name not in exceptions:
-            assert hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest() == identity["lf_sha256"]
+            observed = hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
+            if observed != identity["lf_sha256"]:
+                record = certified[name]
+                assert observed == record["lf_sha256"]
+                assert record["baseline_lf_sha256"] == identity["lf_sha256"]
+                if record["core"] is not None:
+                    assert object_core(data, name) == record["core"]
         elif name.endswith("model.tmdl"):
-            original = data.replace(b"\r\n", b"\n").split(b"\nref table ML_Holdout\n")[0]
-            assert hashlib.sha256(original.replace(b"\r\n", b"\n")).hexdigest() == identity["lf_sha256"]
+            # Until the certified Desktop save, ML_Holdout was a plain append and the
+            # untouched prefix could be hashed against the baseline. Desktop moved the
+            # ref into the main block and completed two annotations, so the prefix no
+            # longer exists. What the baseline protects here is the model's structure,
+            # which is asserted directly and is a tighter check than a prefix hash.
+            model = data.decode("utf-8-sig").replace("\r\n", "\n")
+            assert re.findall(r"^ref table (\w+)$", model, re.M) == [
+                "Dim_TipoDefecto", "Dim_Acero", "Dim_BandaTamano", "Fact_Defecto",
+                "Param_Especificacion", "_Medidas", TABLE]
+            assert re.search(r"^ref cultureInfo es-ES$", model, re.M)
+            for line in ("model Model", "\tculture: es-ES",
+                         "\tdefaultPowerBIDataSourceVersion: powerBI_V3",
+                         "\tsourceQueryCulture: es-ES",
+                         "\tvalueFilterBehavior: independent"):
+                assert line + "\n" in model
+            # The original seven queries stay in PBI_QueryOrder; Desktop appends the
+            # two the generator added, which it had never recorded.
+            order = json.loads(re.search(r"annotation PBI_QueryOrder = (\[.*\])", model).group(1))
+            assert order[:7] == ["RutaCSV", "Raw_SteelPlates", "Dim_TipoDefecto",
+                "Dim_Acero", "Dim_BandaTamano", "Fact_Defecto", "Param_Especificacion"]
+            assert set(order[7:]) <= {TABLE, "RutaMLCSV"}
         elif name == PARAMETROS_PQ:
             current = data.replace(b"\r\n", b"\n")
             assert current.count(RAW_URL_OWNER_NOW) == 2 and RAW_URL_OWNER_BASELINE not in current
@@ -69,13 +170,33 @@ def test_previous_powerbi_preserved():
             # Only documented change: the RutaCSV default no longer carries the
             # original author's local path (portability and privacy). Every other
             # byte of the pre-ML definition must still match the baseline.
-            assert original.count(RUTA_CSV_PLACEHOLDER) == 1
-            original = original.replace(RUTA_CSV_PLACEHOLDER, RUTA_CSV_BASELINE)
-            assert hashlib.sha256(original.replace(b"\r\n", b"\n")).hexdigest() == identity["lf_sha256"]
+            # Normalise the whole RutaCSV line back to the baseline before hashing.
+            # The accepted path values are listed explicitly, so no other path passes.
+            # Matching the line rather than the exact bytes tolerates the parameter
+            # declaration (`meta [IsParameterQuery=true, ...]`) that lets Desktop expose
+            # RutaCSV in Edit Parameters instead of the Advanced Editor.
+            lines = original.replace(b"\r\n", b"\n").split(b"\n")
+            found = [i for i, line in enumerate(lines)
+                     if line.startswith(b"expression RutaCSV = ")]
+            assert len(found) == 1
+            assert any(lines[found[0]].startswith(value) for value in RUTA_CSV_ACCEPTED)
+            lines[found[0]] = RUTA_CSV_BASELINE
+            original = b"\n".join(lines)
+            # The certified Desktop save collapsed the blank line the generator had
+            # left before RutaMLCSV. Blank lines between TMDL blocks are not content,
+            # so the trailing newline count is restored; every other byte of the
+            # pre-ML definition is still held to the baseline exactly.
+            stripped = original.replace(b"\r\n", b"\n").rstrip(b"\n")
+            assert any(hashlib.sha256(stripped + b"\n" * count).hexdigest()
+                       == identity["lf_sha256"] for count in range(4))
     index = json.loads((ROOT / REPORT / "pages.json").read_text())
     assert index["pageOrder"] == ["5ee9939d0101076d3381", "f50491653678cb19a699",
         "1f75dde540a696f2b18f", "cb973d91eb46886907c2", PAGE]
-    assert index["activePageName"] == "5ee9939d0101076d3381"
+    # activePageName records the tab selected when Desktop last saved, so a genuine
+    # save moves it. OWNER accepted the ML page as the landing page on 2026-11-15
+    # (OWNER-PBI-REN-001). Both accepted values are spelled out; pageOrder above is
+    # what must never drift and is still asserted exactly.
+    assert index["activePageName"] in ("5ee9939d0101076d3381", PAGE)
 
 
 def test_draft_structure_and_field_bindings():
@@ -123,10 +244,22 @@ def test_text_generation_idempotent(tmp_path):
     names = [p.relative_to(ROOT) for p in (ROOT / REPORT / PAGE).rglob("*.json")]
     names += [Path(SEMANTIC, "tables/ML_Holdout.tmdl"), Path(SEMANTIC, "model.tmdl"),
               Path(SEMANTIC, "expressions.tmdl"), Path(REPORT, "pages.json")]
-    before = {str(p): (tmp_path / p).read_bytes() for p in names}
+
+    def snapshot():
+        return {str(p): (tmp_path / p).read_bytes() for p in names}
+
+    # Compare the first run against the second, not against the committed state. Until
+    # OWNER-PBI-REN-001 the two were the same, because nothing had touched the draft.
+    # The authorised Desktop save of 2026-11-15 enriched the page (slicer state,
+    # formatting), so prepare() is deliberately no longer a no-op over it -- exactly
+    # the overwrite docs/evidence/powerbi_runtime_handoff.md warns about. What this
+    # test owns is that the generator is idempotent, and that is asserted below.
+    # The page's content is still guarded by test_draft_structure_and_field_bindings
+    # and by docs/production/evidence/powerbi_static_validation.py.
     prepare(tmp_path)
+    once = snapshot()
     prepare(tmp_path)
-    assert before == {str(p): (tmp_path / p).read_bytes() for p in names}
+    assert once == snapshot()
 
 
 def test_new_sources_and_artifacts_have_no_host_dependency():

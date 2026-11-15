@@ -1,0 +1,1372 @@
+[
+  {
+    "path": ".dockerignore",
+    "size": 136,
+    "sha256": "989e5b68262b64a9d8639d47fedf1fa519d9fea6b648e399c33888ac05e68845"
+  },
+  {
+    "path": ".gitattributes",
+    "size": 617,
+    "sha256": "e1d73a6aa05b6e7fec56786d7753f79f86f79347b4d7277c29fcaadb8248d510"
+  },
+  {
+    "path": ".github/CODEOWNERS",
+    "size": 395,
+    "sha256": "d9cd9501c46c04ad8216dd0ca764b894597c4631e9a4e95f6a1c4e734d135984"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+    "size": 771,
+    "sha256": "eba2aeca3b3db653a6f9f7266634230199a7c6d092cf26d985b2d2ed321b995a"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/config.yml",
+    "size": 241,
+    "sha256": "f9f37e26184772fc170ecb965a737c63260c49af56efab3e71b8618496e3dedf"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/data_quality.yml",
+    "size": 770,
+    "sha256": "5b56c2106e25451c65146d72909350aa728b412a174879e0f053cfd1e22c4813"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/experiment_proposal.yml",
+    "size": 1567,
+    "sha256": "ea0e2aa25894e0a29aa124b5778abb6ad91a66059caaa0de81bf85edf3c83564"
+  },
+  {
+    "path": ".github/labels.yml",
+    "size": 857,
+    "sha256": "aff997b78b0b57549c7b9e62054eb39bbd974537e1671e8cdd92933cf61fdfaa"
+  },
+  {
+    "path": ".github/pull_request_template.md",
+    "size": 797,
+    "sha256": "eb03b67cce0252e3001d49b00331c8d13e280d979d28f51062e2a2c114f5221c"
+  },
+  {
+    "path": ".github/workflows/ci.yml",
+    "size": 3434,
+    "sha256": "3666d8889b8d5779559fbfb74764e84f039df04b817c8479456541b51f6d239f"
+  },
+  {
+    "path": ".github/workflows/codeql.yml",
+    "size": 596,
+    "sha256": "662ab1da44cf73f8fd05b51896d91233b87610982aea26ea30e3ac2c88f6438a"
+  },
+  {
+    "path": ".github/workflows/demo.yml",
+    "size": 2019,
+    "sha256": "03250b0671f1a15e4d49f721314bb66e86f1c4233b16d61e7d509f3203614c89"
+  },
+  {
+    "path": ".github/workflows/labels.yml",
+    "size": 714,
+    "sha256": "2488577c965a7a7522bffa6c6d412bb5900e0d7a863f43a307aeb750c1d4f56f"
+  },
+  {
+    "path": ".github/workflows/pages.yml",
+    "size": 809,
+    "sha256": "fb62f7ca74b1bf6a031bdcaa9c35d57c81ce771b9f61e7b581e20178c1ab3988"
+  },
+  {
+    "path": ".github/workflows/release.yml",
+    "size": 1764,
+    "sha256": "3ba412f5a594f8337b4ed712f895e0f025577c7458016c3f3598020563d3990b"
+  },
+  {
+    "path": ".gitignore",
+    "size": 315,
+    "sha256": "766a5fe24d0696268eb9c8af4e5a209cf43a69cf2d805ebae8239dd0aa071a02"
+  },
+  {
+    "path": ".streamlit/config.toml",
+    "size": 863,
+    "sha256": "6293bec511e2a290fd0dd8ad638e884079b97589ab6265accb30d4257e14d9ba"
+  },
+  {
+    "path": "artifacts/manifest.json",
+    "size": 3708,
+    "sha256": "bf2128163682d0775435faf93b8af5b4bea7ddccc5edbc40ac54d8092b79e7d2"
+  },
+  {
+    "path": "artifacts/model/final_random_forest.joblib",
+    "size": 4506464,
+    "sha256": "6f363b2c788789494d09e4f7a773c93a5fb283cda502bb73b7637fa6fc0c44e6"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "size": 5555,
+    "sha256": "cd75b0fcffeef5e0a4bab8d84bfe9f75948c599362a1f068a47d96ba7f637083"
+  },
+  {
+    "path": "CITATION.cff",
+    "size": 950,
+    "sha256": "dd879cf6efed4c386b8456f91c24530d7f545c5fe4594e44e1962e70129abea1"
+  },
+  {
+    "path": "CODE_OF_CONDUCT.md",
+    "size": 5553,
+    "sha256": "a2f3e9ca50c855537de9c0536ef32414a11d8173299054d9a3176e5c2d4bc6de"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "size": 2490,
+    "sha256": "781b4a86a6422e2d37365b2a7b51772625b05db1852590b47b6ae5abdf0c9184"
+  },
+  {
+    "path": "data/model/Dim_Acero.csv",
+    "size": 392,
+    "sha256": "d9aae78345b189460568151cdc87a83a0c2687691771be6d29e61d9cb8f1cd47"
+  },
+  {
+    "path": "data/model/Dim_BandaTamano.csv",
+    "size": 180,
+    "sha256": "1b950ef0a91186af41bb8e2ef320b121d37a1d55e4f14080197e4d4a13344cc9"
+  },
+  {
+    "path": "data/model/Dim_TipoDefecto.csv",
+    "size": 352,
+    "sha256": "5de9afe740abc3b36f9e5ce4fc7f1abffc5a4b38891030e848a85b74d2bc382d"
+  },
+  {
+    "path": "data/model/Fact_Defecto.csv",
+    "size": 132120,
+    "sha256": "3694590490e67e33593901a012f425db64fc19b63e4ff38bc7081850a6cfc261"
+  },
+  {
+    "path": "data/raw/steel_plates_faults.csv",
+    "size": 315926,
+    "sha256": "cb07fc4284cb1bea5b308ef1822f4440e83e16d53703b5d3254a0b5def76f408"
+  },
+  {
+    "path": "dbt/dbt_project.yml",
+    "size": 368,
+    "sha256": "432d528f310f26f4aaf5163f75180bff48b7c988967b009fb23ad6d05dc624b2"
+  },
+  {
+    "path": "dbt/models/marts/plate_defects.sql",
+    "size": 550,
+    "sha256": "bf5f263d8eb69d2229ebd4d372b5436492f12a5469573cd0a7403f2f7a9f11eb"
+  },
+  {
+    "path": "dbt/models/schema.yml",
+    "size": 5213,
+    "sha256": "ed71919837a30c2d09b6f246e0b9b983a109f0ab330bf63cb7357b5837c219da"
+  },
+  {
+    "path": "dbt/models/staging/stg_steel_plates.sql",
+    "size": 171,
+    "sha256": "0d300ae529c70802e03769b9d22e96f6b314d9fe3e1f790ee807767a76e7789e"
+  },
+  {
+    "path": "dbt/profiles.yml",
+    "size": 170,
+    "sha256": "87111c22a2f1c5dfba35c6582131aa54319e325710377033ca5e58a3a11f6995"
+  },
+  {
+    "path": "dbt/seeds/expected_class_counts.csv",
+    "size": 116,
+    "sha256": "74386c2db08b6e13a910bb0102a47640a6039cf1cc7206704c9a37f18e731282"
+  },
+  {
+    "path": "dbt/tests/assert_class_distribution.sql",
+    "size": 279,
+    "sha256": "9e4a3f876987032e1c2e8b486640627b8de687f1c830e0cb95945d76c19355d7"
+  },
+  {
+    "path": "dbt/tests/assert_geometry_consistency.sql",
+    "size": 237,
+    "sha256": "6c30e126a66a346e634e9f9587a08444782cf71d6f8bea3c56ad2e06cc71645b"
+  },
+  {
+    "path": "dbt/tests/assert_index_ranges.sql",
+    "size": 548,
+    "sha256": "38920a6361030a400db8b6734fea28d6ddd3b7302e1a2d6038823e8ed4f788ad"
+  },
+  {
+    "path": "dbt/tests/assert_row_count.sql",
+    "size": 80,
+    "sha256": "30fecad7f45d19162a72a64871005e1250bcc23890dea2fb4c430939813cd8e2"
+  },
+  {
+    "path": "dbt/tests/assert_steel_type_one_hot.sql",
+    "size": 89,
+    "sha256": "03d8ae5c0d199091f665e8059a28e54f1b950fae157655b284d2a4f3beb774bc"
+  },
+  {
+    "path": "deploy/huggingface/build_space.py",
+    "size": 3670,
+    "sha256": "0d6c2838fdf4500707c2e96d3b2ec16ef3fb8952ca414d288000b756cf2af74f"
+  },
+  {
+    "path": "deploy/huggingface/space.json",
+    "size": 1491,
+    "sha256": "fcc3b2883809242744aed3666a75af6bcc40c14b1df76e931665c6e536c91357"
+  },
+  {
+    "path": "Dockerfile",
+    "size": 595,
+    "sha256": "3da1998bbe98175d450d8b0d7fa7f2e59fd3f7762909ca0698e4cfef29f211fa"
+  },
+  {
+    "path": "docs/construir_en_power_bi.md",
+    "size": 7561,
+    "sha256": "2197efe9c6d38a4e86e3786c06f4bd0842041177ca6204ce6ca1839951930d83"
+  },
+  {
+    "path": "docs/diccionario_de_datos.md",
+    "size": 3089,
+    "sha256": "01fdfa7f6e56482f93e6c0966666c090ba6a7d5454199134d9981484e3083810"
+  },
+  {
+    "path": "docs/evidence/powerbi_ml_reconciliation.md",
+    "size": 4769,
+    "sha256": "84a8d5438b58030b341cb791cd46343b0917b3510772fbfec1a38bd35292ef1c"
+  },
+  {
+    "path": "docs/evidence/powerbi_runtime_handoff.md",
+    "size": 5756,
+    "sha256": "3fb9a06243207eb45694df40600f92b6d85e47c3b9366e4a5a8e6f82b610de9a"
+  },
+  {
+    "path": "docs/evidence/pre_ml_powerbi_hashes.json",
+    "size": 21257,
+    "sha256": "ffbfa18bd740df61eccf4501fa6ce8956593564451194420ea6b40c17b662d57"
+  },
+  {
+    "path": "docs/evidence/README.md",
+    "size": 6618,
+    "sha256": "b9309820d244a23ff9e9920f8bac36f7e7f0c24028fc4c3a8f83b8e43b4e6c4e"
+  },
+  {
+    "path": "docs/EXECUTIVE_SUMMARY.md",
+    "size": 3637,
+    "sha256": "b6d1dfeeeef6d4f681d59ffacf7add7acd1f6e88439fd35bceac4dbe7e19dfff"
+  },
+  {
+    "path": "docs/ml/01_dataset_audit.md",
+    "size": 7718,
+    "sha256": "49043181bf93326205e681083ba3fee6bf568217c61f4405b2156a7b688cd4ae"
+  },
+  {
+    "path": "docs/ml/02_problem_contract.md",
+    "size": 7128,
+    "sha256": "32f238a39dd82e5c8cbed61f6e86d00e143e02e9aac3cd41f868a7f33b991f43"
+  },
+  {
+    "path": "docs/ml/03_leakage_audit.md",
+    "size": 6055,
+    "sha256": "5df5ecf65642afa61708e9122240276f3f5df98cdda558f9c99d8817ee0cbaad"
+  },
+  {
+    "path": "docs/ml/04_baseline_evaluation.md",
+    "size": 4247,
+    "sha256": "b990377a67c7a10731f43cb9d4eef9a74644db8e0f0687204927ecc35b70b3ac"
+  },
+  {
+    "path": "docs/ml/05_candidate_models.md",
+    "size": 5711,
+    "sha256": "fc7e934591c513d820aa13c3fb1f09089344b29a9a86890c3d64bca3c1a78f16"
+  },
+  {
+    "path": "docs/ml/06_tuning_and_selection.md",
+    "size": 5213,
+    "sha256": "f532886fddbc8f47147ba25e61ad29268b6c54164999ae464f0e3d96e8b2b16a"
+  },
+  {
+    "path": "docs/ml/07_final_holdout_evaluation.md",
+    "size": 8745,
+    "sha256": "abcf9b5a5337e3723cf66c8e2c67ddc75d0f836bc43334ff5d4b704f515e0d26"
+  },
+  {
+    "path": "docs/ml/08_error_uncertainty_interpretability.md",
+    "size": 26998,
+    "sha256": "f36e7f34785f5950b1d77a2d19d8a4c17f808b0d62600f8512010e728d347295"
+  },
+  {
+    "path": "docs/ml/09_model_lineage_and_batch_inference.md",
+    "size": 8835,
+    "sha256": "8d9d837b2021a857dfd632755151a0e15692e23224996064b3b488ad13a11885"
+  },
+  {
+    "path": "docs/MVP_PILOTO.md",
+    "size": 3640,
+    "sha256": "e6a1023f02d305da65619d7486c54f3340909373f53dbc41ab91dae653e8ec5c"
+  },
+  {
+    "path": "docs/production/PRODUCTION_APPLICATION_VALIDATION.md",
+    "size": 949,
+    "sha256": "2142af063bc2ae21bd3a8fca73c1f2bd57891901599fff86afc9e46f700b7daa"
+  },
+  {
+    "path": "docs/production/PRODUCTION_BASELINE.md",
+    "size": 1700,
+    "sha256": "0e119aa48f00bde3276a9a64dca2f4a0484d9cd6f344f12709dcf632d8c4e8ed"
+  },
+  {
+    "path": "docs/production/PRODUCTION_CHANGELOG.md",
+    "size": 1078,
+    "sha256": "d239b464413536e51e72c7f4e41ea66b61fdcf4445ae03ce594fa61420e3cfc2"
+  },
+  {
+    "path": "docs/production/PRODUCTION_HANDOFF_TO_OWNER.md",
+    "size": 1141,
+    "sha256": "7906864d9ca13b3fc3bc8972b8acf96e62a67e9d0979f72c6b76b6c9a3a7f431"
+  },
+  {
+    "path": "docs/production/PRODUCTION_POWERBI_HANDOFF.md",
+    "size": 2088,
+    "sha256": "1a83824f540c0d6596056b556b2f6e1bf3bbd23fb48f22517c4eb0a7e280ae81"
+  },
+  {
+    "path": "docs/production/PRODUCTION_RECONCILIATION.md",
+    "size": 1839,
+    "sha256": "7277a9e0ad6ae247388a0d801ab8f7646c849ca308cae09f54df308a9f6cad7e"
+  },
+  {
+    "path": "docs/production/PRODUCTION_RELEASE_MANIFEST.json",
+    "size": 34488,
+    "sha256": "06b423c0dec47aa8d67dcb3143cb7cdbe476025a23861c0442d3e1be7a85e303"
+  },
+  {
+    "path": "docs/production/PRODUCTION_RELEASE_MANIFEST.md",
+    "size": 841,
+    "sha256": "1d2e7c2b175d368c1c6b064a5d169d99b472a2d132c8c66fd8fc50929d3cfacc"
+  },
+  {
+    "path": "docs/production/PRODUCTION_SCIENTIFIC_INTEGRITY.md",
+    "size": 1132,
+    "sha256": "bf920b3307e63952e5a42f5182eb59e9b288cc286822d9ca03a2bda5a1cabc06"
+  },
+  {
+    "path": "docs/production/PRODUCTION_SECURITY_REVIEW.md",
+    "size": 1132,
+    "sha256": "43d6e58a4c92ffac5e4c83111a5e379437f3a5a78cbf4cf2e73e7b232f20313a"
+  },
+  {
+    "path": "docs/production/PRODUCTION_TEST_RESULTS.md",
+    "size": 1486,
+    "sha256": "9bd34feba7bec0cf2f30fad72e9aad66d9385dfdad261d9ef43e41140e73ce16"
+  },
+  {
+    "path": "docs/PROJECT_EXECUTION_STATE.md",
+    "size": 12140,
+    "sha256": "31d24f38c26589f98e9a4b22a3b1d974d3a6e81e4a4a0e3da9b5fa44af1f16c4"
+  },
+  {
+    "path": "docs/pruebas_de_estres.md",
+    "size": 3457,
+    "sha256": "319b82c6ebf74399619bc55bb1f0e56bff4069e4a5348215afc1be6b80ec4d65"
+  },
+  {
+    "path": "docs/RESUMEN_EJECUTIVO.md",
+    "size": 3843,
+    "sha256": "62456402d9b0c3b6d50d2c53bf7b12cc15b86193285f4afe5d7c2bbca02391f7"
+  },
+  {
+    "path": "estilo.py",
+    "size": 1991,
+    "sha256": "27f842c14dffe4d40709654f46e2e181c35640e9ac04578dd5d360ef278388ef"
+  },
+  {
+    "path": "etl/build_star_schema.py",
+    "size": 3088,
+    "sha256": "00eb05a990d02efa30a9955d028ce36491dcb0742f179bb3a4dd3836a03f5ad6"
+  },
+  {
+    "path": "examples/onnx-node/.npmrc",
+    "size": 30,
+    "sha256": "a75111edc3cad2086a722c21dd5b3d417899d038ba95c5385607e9f691ca6f13"
+  },
+  {
+    "path": "examples/onnx-node/package-lock.json",
+    "size": 7851,
+    "sha256": "87dc76de783cc63672c27cc72251ac510cd35e96f3ba73bee298ae36643e1310"
+  },
+  {
+    "path": "examples/onnx-node/package.json",
+    "size": 270,
+    "sha256": "b4c4547324a6fe4af7d4cf037b6e32085f8898fc3cdc6505d3ff11d4674d354d"
+  },
+  {
+    "path": "examples/onnx-node/predict.mjs",
+    "size": 1575,
+    "sha256": "376e65ee6cc10bf91d1d9942a7492a18e4c1b98403ecfb0ae601d66fed4a2270"
+  },
+  {
+    "path": "examples/review_triage/inspeccion_placas.csv",
+    "size": 107334,
+    "sha256": "3cb7ac32a7fcd4e527fc17d5edee172221a6fc30e14bc1b49301fa5ecc746b99"
+  },
+  {
+    "path": "LICENSE",
+    "size": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "path": "MODEL_CARD.md",
+    "size": 7076,
+    "sha256": "8c6efe0cbfd36450dbcc153398bd27e51f59bef8e4f052aa8c24ed8082254924"
+  },
+  {
+    "path": "NOTICE",
+    "size": 744,
+    "sha256": "2e40d180a3c72631a94e3d6ff429f5af7c1db1a9e7836bdca1481074947c3298"
+  },
+  {
+    "path": "powerbi/artifacts/steel-plates-quality-bi.pbix",
+    "size": 131,
+    "sha256": "a89d3c1c8d9bcb1107833c28b8e38908a100776d2d57c60be91df4a3fd96c406"
+  },
+  {
+    "path": "powerbi/data/ml_holdout_evaluation.csv",
+    "size": 63243,
+    "sha256": "5f5fb946b8817fc630059878ea67be4c75e38b1da77c5faf88b9eecf8e671cb5"
+  },
+  {
+    "path": "powerbi/dax/measures.dax",
+    "size": 5086,
+    "sha256": "51984e2f28d37416d80e1154f7f279d6b42a054f4ca3ae4cb074ddaff9f53162"
+  },
+  {
+    "path": "powerbi/dax/revision_humana.dax",
+    "size": 1836,
+    "sha256": "d1d9c5001f61a8fccf91eaea489d75c37715dd55578c93536952a7847f40d2cf"
+  },
+  {
+    "path": "powerbi/powerquery/00_Parametros.pq",
+    "size": 436,
+    "sha256": "8889ec725d4afc5f12f221d07dc7c7b05423715d93072d2f7b1ac306288041d5"
+  },
+  {
+    "path": "powerbi/powerquery/01_Raw_SteelPlates.pq",
+    "size": 698,
+    "sha256": "4262e7105a2e91c2a5898aafde7151c0309fe05c2c7b26dba27b12dad656617e"
+  },
+  {
+    "path": "powerbi/powerquery/02_Dim_TipoDefecto.pq",
+    "size": 852,
+    "sha256": "a6534187e06dd30a44814f1437bce8424b06e4c8be3c056cd2480a97fd8fa019"
+  },
+  {
+    "path": "powerbi/powerquery/03_Dim_Acero.pq",
+    "size": 707,
+    "sha256": "d2896edd2f9eb1ecaf69a95388696fc356db2a6387dafd1f2272b60f5511b894"
+  },
+  {
+    "path": "powerbi/powerquery/04_Dim_BandaTamano.pq",
+    "size": 409,
+    "sha256": "e1b53f327bc44a74c0fc9111c335f6b40836a591f212325e43e4272fc4b8a147"
+  },
+  {
+    "path": "powerbi/powerquery/05_Fact_Defecto.pq",
+    "size": 2216,
+    "sha256": "9cd3f124e325945ed0033c28dbb51a37c4e5f5fc3dc1b6fdae6cb479b4c44e84"
+  },
+  {
+    "path": "powerbi/powerquery/06_Param_Especificacion.pq",
+    "size": 183,
+    "sha256": "8f4c535e73b1b67251d89aba7412bb9d1b30911442a3637de4529b03374b8f25"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.pbip",
+    "size": 183,
+    "sha256": "edef13b31f0e4ad4d7d69e6e49480a2ce999d9c12d94b5a3d81e18092ab530ff"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/.platform",
+    "size": 307,
+    "sha256": "fe85bcb82c5ae82c5886505eb019cf7f8da97ba7e2592972b09f2394c49b14a0"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition.pbir",
+    "size": 130,
+    "sha256": "cc8873c86532db0d5e3e66cf7cd41ab88538eb5f0816ba3f0431e4a24bd1b49c"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/page.json",
+    "size": 1173,
+    "sha256": "537a870390fe2df16016554f9c2294444b3fdbfe8da00185c94ede43f7a5f33a"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/10dded7886b093c43cd7/visual.json",
+    "size": 2309,
+    "sha256": "b5f2c219610954b6107b7ba7d72275f8e3d4f275ff1cc88063e83788a7fd407f"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/1263481585d6f527c78e/visual.json",
+    "size": 1368,
+    "sha256": "58aaed6c97595a4d7b5314da7f15ba5531ec0216e0b8dcf0f82d60f4ba9c9895"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/47a20baf23455a033537/visual.json",
+    "size": 1181,
+    "sha256": "25df90ccde90f53217da8f773253f11f2cefad9b60bf8c839e18b72f6d8defb2"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/51e2f5ca4b5c2b43a6db/visual.json",
+    "size": 1348,
+    "sha256": "49cc28149ea28ab91dd7c3d92a83ace1b2974c51375422af090db5d4c246ff72"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/5c4ce3f89eac79baadb4/visual.json",
+    "size": 2337,
+    "sha256": "e1c91368cffe0a84446de6facf916f433b0f3ff83c5b7a09ee33ba01e7dec46b"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/6f9c8bbfd53c549e021f/visual.json",
+    "size": 974,
+    "sha256": "0a5a305f82e665ee4d85409456561a21e657dd594a0ec71bd41abdc4e8b81b6d"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/a3a0702d79cc235356ad/visual.json",
+    "size": 986,
+    "sha256": "409ebcca30815fd1d1fd9a6dcda8131ef3bca4ec7b057ba0b792f9949a43f8ff"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/a70b62aae9005134f140/visual.json",
+    "size": 960,
+    "sha256": "c6d2fc58222985b8ab4766b089bd3548bd5eee3b854ce26d490f5467ca6ba5af"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/a8bf6c8687faaa409a83/visual.json",
+    "size": 1099,
+    "sha256": "48def6f30e3d75a10e01b1fe25ea80f1cb7d4e11e4f8356cdfb4f19aeb421f31"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/b8db3c0b614b3b22017e/visual.json",
+    "size": 2750,
+    "sha256": "f786432dd4518514d9bd0e7080d3ab99607539c9cce16792e9d198ae58a8f542"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/e3cd396434e6d0b9cfeb/visual.json",
+    "size": 1368,
+    "sha256": "f202642451b93c3a21d358c149c271b3f3790c2624f647b41d3517626eed35de"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/ee52b22adeafb5ff782a/visual.json",
+    "size": 2354,
+    "sha256": "ef6eca37cac482195274a702c66028c576b17f6078b1ee323ed77d1510d1c618"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/1f75dde540a696f2b18f/visuals/ef62acc79fd7ff5b4300/visual.json",
+    "size": 3616,
+    "sha256": "e1c7157101408fa74352fbcc9b21201a2686ab93bae0fd7993ef0ba827b2790c"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/page.json",
+    "size": 359,
+    "sha256": "2d61fbc84c2aba82e2df647474f90468fc12d2f4e859b4990fd0e0a408961c1c"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/083e0e977408b7b77e25/visual.json",
+    "size": 1723,
+    "sha256": "e6713bcccebb5f26d22478d3972e0e2e87cb30e47a549afebe14e3336d289af4"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/088f110a4410641b1bfe/visual.json",
+    "size": 1179,
+    "sha256": "8b89fb2f3ea10b09b81d63ecb46bb0ec709178ba7b19eb6780f4e129a9abf6b1"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/336a29971f332e9d13b5/visual.json",
+    "size": 5377,
+    "sha256": "769b149bd2aee6277078bba8a726be90c282a788b87b575a69365380147a994f"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/4918a5438182182e7366/visual.json",
+    "size": 1719,
+    "sha256": "f3e5e8f29b242193ed005dd7c3949425680b13e565df318dfacb1065eb9b759b"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/6e99b63b683f7f32afc5/visual.json",
+    "size": 1699,
+    "sha256": "dc1ce7100c585059c9001c388e5cbf59ec3934d5c2ad4310d0f7f0efcb310f1a"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/95ecf72717c4513bb403/visual.json",
+    "size": 1764,
+    "sha256": "89adae90600cf410801b627d1341590dfea44d05b5858917c3cc14401ad66266"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/cd5ebdf9a1788432a008/visual.json",
+    "size": 5465,
+    "sha256": "c3c8f226a6838beacf91d51a91b0331643b31f78d3717f9fc5158455b55bca1b"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/d0c0fefbc13322e39715/visual.json",
+    "size": 4494,
+    "sha256": "b1f222b8b3fdb9abaf38972dd0eb5872dac59110dc0cbe9484dbc396a705cff3"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/f424e0649cfa5a63e3e4/visual.json",
+    "size": 1707,
+    "sha256": "6f40f8419b87808430c6a7f46170d4a0c5e1cb2c807661c807e5f0e2b5f2d072"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/5ee9939d0101076d3381/visuals/f8a724918a7b4078efb2/visual.json",
+    "size": 1754,
+    "sha256": "c72cb97359c5fc9102092a9774c3f9b48135e7ad65aaff65cb9205fd3ea6686c"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/cb973d91eb46886907c2/page.json",
+    "size": 308,
+    "sha256": "f0765d659d65013139e650c4ba1dc03a25a5230417cde99e18293150caaf86ea"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/cb973d91eb46886907c2/visuals/03951ab1962356ccac40/visual.json",
+    "size": 1367,
+    "sha256": "8a06895201fdb4a60d0c5fe896dfe3df7a8e0d5b7d7383af9395ace29f539aef"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/cb973d91eb46886907c2/visuals/1ef6592c790b6a70b47e/visual.json",
+    "size": 1893,
+    "sha256": "bfc0de719ae6682c38bc44bbd53a467d543d4866d73937c0ee48b386c66a4a8f"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/cb973d91eb46886907c2/visuals/db044e4d0f622fcdb35e/visual.json",
+    "size": 1351,
+    "sha256": "263c9d74e49b5553e0ea43354a19e38add4bdaf1545d95bcc67bd6c4f0b31acc"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/page.json",
+    "size": 256,
+    "sha256": "1cd7e2cc03ed923621f073d2c9956d29d99d933d8268785184ed7c34b8d50324"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/0da48ade3c8f1735058c/visual.json",
+    "size": 3086,
+    "sha256": "b9efb252a6f617ec5c924b1bd113784e0c0191b2b5227cd394c29c5e81484121"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/1c238d54b37d334dc3bb/visual.json",
+    "size": 1427,
+    "sha256": "845fba58fc458456aabbccd25c65b0699727b236c38d8ed31a99c8212ed3883a"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/3088bd1ad4b64ad84a3b/visual.json",
+    "size": 1390,
+    "sha256": "8597c419d16b3d24856cacf3247657188094f535237272608834f7f632899704"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/3af756b17b6be98a9cb3/visual.json",
+    "size": 1722,
+    "sha256": "00f0b1336966e38c5f7bb7007d60a587aa70f76a1fde7aabd13609429c10ab88"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/53f9fbf278a14f1de6b6/visual.json",
+    "size": 9665,
+    "sha256": "1760e3cd829451a0d480e6adbdbfdfe4b68643af8c0f19d9c70cb0fc3dee830a"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/81ee43977bb23d2c9a17/visual.json",
+    "size": 1347,
+    "sha256": "8720279c524d742d4f775c79e9a5f38b24f186b3a0a865218d575eeb6a6c03e3"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/9813f84370458c85f853/visual.json",
+    "size": 976,
+    "sha256": "cf75122647fbe9d5c0f54635141a9b4863444f4bcde5af2b544def120fff0bc4"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/f50491653678cb19a699/visuals/a9527e94aa26c9e7590f/visual.json",
+    "size": 1791,
+    "sha256": "553aea2902ef49a1af10f207eb95ae0e6a49641e9116390f88ec169684b38535"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/page.json",
+    "size": 266,
+    "sha256": "698c97210ecfad6bbbfc99b243d83af6a493a273f4675199aa863af6003c1d1a"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/1966e8a2cbc5a1f35d63/visual.json",
+    "size": 955,
+    "sha256": "927d51ca50a8484f41ad025975485494f7284f7e450cd91ce59462ca35c09265"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/41016657f394c4a32f9d/visual.json",
+    "size": 927,
+    "sha256": "73efcf8e9b4cb49c03753ec38cb0beeec1e30bac6e2ee3190ec4531933693051"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/58417b2a223783b58382/visual.json",
+    "size": 932,
+    "sha256": "f437bfc78751f6aa185f7579932b1a8844ff31524c590f7ba05053480e071d70"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/7b2b9998ac1edc630a60/visual.json",
+    "size": 908,
+    "sha256": "711a218a3916946996752f289b6df23c3b1b31fe8d633baf551ae382d777f87d"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/86aa80aa4ec94df84fcc/visual.json",
+    "size": 2591,
+    "sha256": "769fbcc87763427981dae073998cb289b43e6e094473199462fa6ea6ba76000f"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/911dd523ba116fd6b8e7/visual.json",
+    "size": 889,
+    "sha256": "e03fc2b0ad4b4110368f49754840eb09e716d3112066c6c12e42d2d78ee4f5ab"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/959d3d8818f13287914c/visual.json",
+    "size": 931,
+    "sha256": "89efd03c2e4d4de9ac6b8110eda345fe31483b59da1481e111d8a62cea9ba2e1"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/9a92b3499d88046e9e2d/visual.json",
+    "size": 898,
+    "sha256": "6440857d3ecb1079641e10611d5b9fb865f8f846655dd45f297c8275e65e8b82"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/c97ace4c8fef2cee8fa0/visual.json",
+    "size": 2164,
+    "sha256": "521fa426223b3ffb9ac56409c6c51d78d0dea01569297d01e0f3dbc3a6a5ac2f"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/d0bbe55d7de7f662f82e/visual.json",
+    "size": 1776,
+    "sha256": "f29c052be819a0b535cc80d4c1f0ffe7ec70eb00b56c61e70b2c916b03ef0d38"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/dec66923be3e0ce1773b/visual.json",
+    "size": 1235,
+    "sha256": "b051cfbcb3e28d204e5e7135a078f9861ab138c3fa13e436c6be12dbc4a5eba2"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/visuals/ff0139d07c592e9ae929/visual.json",
+    "size": 2607,
+    "sha256": "645a57c99bcf98394db2cc1283706e7460b29a521fb30bad66255f68486ba86f"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/pages/pages.json",
+    "size": 332,
+    "sha256": "e66266f86327bacf750b5e8bd78a65a7377749f3404d00613e6fa9ad7e0ddb7d"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/report.json",
+    "size": 1349,
+    "sha256": "3700d8dfdbd5af647e3a4bcb2d2b0cd0b9c4825766dab2a9d6f3dc0c879720b8"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/definition/version.json",
+    "size": 149,
+    "sha256": "32bc72b8e7996a054f96e655c8dd8fda82e5f502532610b45bc21a18cffe30b6"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.Report/StaticResources/SharedResources/BaseThemes/CY26SU07.json",
+    "size": 19872,
+    "sha256": "2d871c8bd3e64e816bdba193b6745e5d88d7e148d4d176475e0144512d1243c6"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/.pbi/editorSettings.json",
+    "size": 243,
+    "sha256": "56c3c16b12ce76484e44ec879f4a51bdfc13b3668419fdf19f4601132d3c6ffe"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/.platform",
+    "size": 314,
+    "sha256": "b654c065889b1e7cbefa519833e2a882bf90904130f86baf96a00673d24da93b"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition.pbism",
+    "size": 40,
+    "sha256": "00dc543752fb328e18e9967a25d0b39f5aecef9179ae94e4ed15eb7e078c7944"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/cultures/es-ES.tmdl",
+    "size": 19,
+    "sha256": "1f5b7407bbb3a60fd61710593e9f9f354f3009ffe1df1ab358ef1650b1756ef5"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/database.tmdl",
+    "size": 36,
+    "sha256": "05e6e4d3963c40921d429c883e83714a9dd42aeadbb8470e671a6b38dbb34872"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/expressions.tmdl",
+    "size": 1361,
+    "sha256": "e077b5b306cfd5ed9638435be67e985563edfa243bca82948d92f658188a93a1"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/model.tmdl",
+    "size": 621,
+    "sha256": "7a15a4c33068eaf68c5afffa57f3a917daf3bc2c7197799826729c5bb24c5881"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/relationships.tmdl",
+    "size": 427,
+    "sha256": "df316433fc6cd184d6ddd22011918ac69546275661a62e3883c8bf3e72af66f2"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/_Medidas.tmdl",
+    "size": 5798,
+    "sha256": "87a9562427164abebdb8fa911f841444c7df1bac8567e2fc11d43e77c0405f59"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/Dim_Acero.tmdl",
+    "size": 1491,
+    "sha256": "509d79d9b54c462b286b94c3245d9a0c49895c8a78ffbf09768e25bf232a1e66"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/Dim_BandaTamano.tmdl",
+    "size": 1325,
+    "sha256": "f6062c21fd825a9dfb632382f88a3d2529a5252e3122d4c7a2d293f5e0e79395"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/Dim_TipoDefecto.tmdl",
+    "size": 2042,
+    "sha256": "1389e79fadfa16bd2a46d1bfa6c282d30299283ef18bd37aa96e0d5eea0c8f7a"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/Fact_Defecto.tmdl",
+    "size": 6027,
+    "sha256": "031b3a179fe0bed6ff2d92daaf6774f3c599b92fbe54858563141f7dd9da08de"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/ML_Holdout.tmdl",
+    "size": 3962,
+    "sha256": "da20e260a2792dfb71077081c9d6f0f88cb3e8f099b3041758f76039925c237d"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/Param_Especificacion.tmdl",
+    "size": 552,
+    "sha256": "3ad124598056072ddfe32a2353fa15b8d413cdd2a910aa11d0a7b8c40d877669"
+  },
+  {
+    "path": "powerbi/project/steel-plates-quality-bi.SemanticModel/diagramLayout.json",
+    "size": 2489,
+    "sha256": "2ce441a01634b0c0e0b64818a27ee1b1d46afd4bc53002ef640423e228e81798"
+  },
+  {
+    "path": "powerbi/theme.json",
+    "size": 538,
+    "sha256": "89165eeec3981c6813a7d53ed27286ecbe288ca14809303a68163caada8648d0"
+  },
+  {
+    "path": "pyproject.toml",
+    "size": 863,
+    "sha256": "5599468fe3386026f174226ecf84ca7ad0221496adc8b67dfd538f43b26e65a7"
+  },
+  {
+    "path": "qbi/__init__.py",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "qbi/config.py",
+    "size": 1606,
+    "sha256": "76b9638f08b7624b82875f45b47fc23280fe39f1923ab0dafb31f1baf1ac3098"
+  },
+  {
+    "path": "qbi/measures.py",
+    "size": 3829,
+    "sha256": "7484c741e1f218a3f4344a5eb0c3abed70ec5bc1584a25e63318a0a17ef50192"
+  },
+  {
+    "path": "README.es.md",
+    "size": 13634,
+    "sha256": "0cc22a84bbb1e26fd36c3f0acac00749a0770e2b611fd7a2dd5bfd230d64756a"
+  },
+  {
+    "path": "README.md",
+    "size": 12902,
+    "sha256": "dabc9984a04cb027bb6912695baa28900435ff07fbc1190f2a85ea1e05e1830d"
+  },
+  {
+    "path": "reports/figures/decisiones.png",
+    "size": 320271,
+    "sha256": "3843f8cc21a7d999a6f25a8c8bc4343535cdb37c1913526c9aff69e27aaf162d"
+  },
+  {
+    "path": "reports/figures/tablero.png",
+    "size": 269818,
+    "sha256": "5612c75aec1361a25b9725cb6b12e06008d45719a999425987b9601b51f1bcc9"
+  },
+  {
+    "path": "reports/ml/decision/review_cost.json",
+    "size": 13803,
+    "sha256": "06c5039dc55d256e06d22c585142634217d30a7f3771464d638e218e899a96c0"
+  },
+  {
+    "path": "reports/ml/error_analysis/analysis_protocol.json",
+    "size": 8174,
+    "sha256": "3f5b6f7f16c3f053f8923c15849c2ab864029dca83ea24114085c73042f12870"
+  },
+  {
+    "path": "reports/ml/error_analysis/analysis_summary.json",
+    "size": 3598,
+    "sha256": "632e0b74c0533066c156c82e6ea15f8e6b333c0d15e267eadfd24cb37041a8f9"
+  },
+  {
+    "path": "reports/ml/error_analysis/class_error_summary.csv",
+    "size": 846,
+    "sha256": "263cf5a109bfe25a101905e3ed448c36a698067837c3da0f2a6d996ff021cbfa"
+  },
+  {
+    "path": "reports/ml/error_analysis/confusion_matrix.png",
+    "size": 65854,
+    "sha256": "dfc79ad8f7226e406c5c69c19a4fce644c2c998bbdbbe2f23d3eda0c61a1104a"
+  },
+  {
+    "path": "reports/ml/error_analysis/confusion_pairs.csv",
+    "size": 1297,
+    "sha256": "e932569fbb92233a8d2b70fd4bb27201ab69266200602364a7210587b347a25d"
+  },
+  {
+    "path": "reports/ml/error_analysis/high_confidence_errors.csv",
+    "size": 4171,
+    "sha256": "2ad9d8bd438847719912bab66b988069bece29eaa792a5855d74adf216249c71"
+  },
+  {
+    "path": "reports/ml/error_analysis/segment_errors.csv",
+    "size": 90088,
+    "sha256": "1456702948943cc91583cdd944d69b9c062d265acafa3d36125ecb2c5ea6a724"
+  },
+  {
+    "path": "reports/ml/final_holdout/confusion_matrix.csv",
+    "size": 254,
+    "sha256": "d5ee3bc12d0ba22ec3658605711de60f09d88e84ef13fe2bede2c031b6c88826"
+  },
+  {
+    "path": "reports/ml/final_holdout/execution.json",
+    "size": 1126,
+    "sha256": "5a7d3fb7d87bf8153d9f055ad09c016b91effe70276fcde762b0a159ed4bc652"
+  },
+  {
+    "path": "reports/ml/final_holdout/metrics.json",
+    "size": 26721,
+    "sha256": "18d4fbd6d41e845eb2f975bc3ded28dc1bdc9851f49db81a80a28fe5a5e603f3"
+  },
+  {
+    "path": "reports/ml/final_holdout/predictions.csv",
+    "size": 62759,
+    "sha256": "f365dba807442658aded2e86b58bfd72b9625240a9504bdeb8e071dcbc946d50"
+  },
+  {
+    "path": "reports/ml/final_holdout/probabilities_snapshot.csv",
+    "size": 46029,
+    "sha256": "cbebd26329164c387bffd6fbd265cdb1f4ce04696512c2331829754582035b44"
+  },
+  {
+    "path": "reports/ml/integration/phase10_validation.json",
+    "size": 2784,
+    "sha256": "b20aec8cd5d3eb4b0ddf2ff72bfd31ca4e1475e0853a58f2ad80a172b43b0629"
+  },
+  {
+    "path": "reports/ml/integration/reconciliation_expected.json",
+    "size": 1426,
+    "sha256": "f316906bc58e26448269b2cd93e41629b055c65c870088d8a8384f61f5001677"
+  },
+  {
+    "path": "reports/ml/interpretability/case_examples.json",
+    "size": 2321,
+    "sha256": "cc9029135a8a644c341331712674383db483ba6778a67f87b9e9944a47c7a557"
+  },
+  {
+    "path": "reports/ml/interpretability/feature_importance.png",
+    "size": 114533,
+    "sha256": "9c46f259390a6507c524e7c885524ac5253294bbff5e483e35a5ff27da0e2133"
+  },
+  {
+    "path": "reports/ml/interpretability/native_feature_importance.csv",
+    "size": 971,
+    "sha256": "7a5131b5986266783faec8dc2423b834742aaa42be89c37b8095e85387b4dc65"
+  },
+  {
+    "path": "reports/ml/interpretability/permutation_by_fold.csv",
+    "size": 26952,
+    "sha256": "95e4f3f50b3f9949535cbaaf7140bd6dec470123dae6c0feb0ca17e5245ae8e8"
+  },
+  {
+    "path": "reports/ml/interpretability/permutation_importance.csv",
+    "size": 3336,
+    "sha256": "c6f4c39e5c2ccffb34598e722b0d0294ab5d7c186ea3f8c62df7120e136230d6"
+  },
+  {
+    "path": "reports/ml/model_selection/leaderboard.csv",
+    "size": 5621,
+    "sha256": "127f3f0abd1cbf6d7cf6e2e3c62e95d6c8af1be33c645f27e68a55238b0d0cf9"
+  },
+  {
+    "path": "reports/ml/model_selection/selection.json",
+    "size": 31754,
+    "sha256": "66c5111d73ea5d3754793f5772a14ddde385f9875f4c2fbe2611dc78dd0d8f51"
+  },
+  {
+    "path": "reports/ml/monitoring/drift.json",
+    "size": 913,
+    "sha256": "e8c6aaf0fa112fd6205d099f72fb3585578465ff4d42788b87dff3244bddef26"
+  },
+  {
+    "path": "reports/ml/uncertainty/calibration_metrics.json",
+    "size": 1197,
+    "sha256": "7cabff5b20862ceabbb1351a04f68526bf690d099a8e03995fcf3ae917544a24"
+  },
+  {
+    "path": "reports/ml/uncertainty/confidence_bins.csv",
+    "size": 831,
+    "sha256": "149cc06c1c365a64d12c12a00b89cfe27f9fe3d75e8928ea8655338e77d2101a"
+  },
+  {
+    "path": "reports/ml/uncertainty/holdout_confidence_bins.csv",
+    "size": 738,
+    "sha256": "c5ebbe02392a88e0ca18bb2b7e5e03d9ba62a1ec9558a365173028d75de3199a"
+  },
+  {
+    "path": "reports/ml/uncertainty/margin_bins.csv",
+    "size": 838,
+    "sha256": "4881b04fca431514b585db26d4d8df69a20fc9dd5087959e67f4b1316b9b3ace"
+  },
+  {
+    "path": "reports/ml/uncertainty/oof_fold_audit.json",
+    "size": 89288,
+    "sha256": "aa9eb2cd23317f7e884c434286d57de2535fd271d68c79fdec31dd09fa5f8d1b"
+  },
+  {
+    "path": "reports/ml/uncertainty/oof_predictions.csv",
+    "size": 307080,
+    "sha256": "0a68e8b4394e1f4ea7761db2b42845aab025eff92d9cf98891fc2384990289e4"
+  },
+  {
+    "path": "reports/ml/uncertainty/reliability.png",
+    "size": 87375,
+    "sha256": "6607f6048e69228d1b21d3498bddf8cfffcc0813d4ecfaa9a94281c587311297"
+  },
+  {
+    "path": "reports/ml/uncertainty/threshold_tradeoff.csv",
+    "size": 488,
+    "sha256": "c0a7d5c26bd53f4e1e19bd0e6062272b47527dc8e2b02327d7c322d88276b4c1"
+  },
+  {
+    "path": "reports/onnx/fixture.json",
+    "size": 4752,
+    "sha256": "7f5b1b14a84c7de9296b266477e8b89acdcdea7242d9fad3251897c1fc0e45b9"
+  },
+  {
+    "path": "reports/onnx/verification.json",
+    "size": 1964,
+    "sha256": "32651aa4249afb687c2c516a623494ba7f72674870974da55fcad9ef2cbc41da"
+  },
+  {
+    "path": "requirements-dbt.txt",
+    "size": 60,
+    "sha256": "6ad17c9d9be77b3676ba982852dd4fc26f913aca3e35956d5c8b0b9e1151c4d9"
+  },
+  {
+    "path": "requirements-dev.txt",
+    "size": 58,
+    "sha256": "0b404e0dcba16e2827892f111fa14b6b90ca066af1cc5ed85057fd07189eb0fb"
+  },
+  {
+    "path": "requirements-onnx.txt",
+    "size": 74,
+    "sha256": "038b2a0a2fce2a4ebc5ab4adba932ced7862416f5fedd0801d0b9a5e430a3bd7"
+  },
+  {
+    "path": "requirements.txt",
+    "size": 142,
+    "sha256": "36ca7c946d977f2e6e6a8d52409d62db6a0ed540d97000442ffe0035f1c0020c"
+  },
+  {
+    "path": "SECURITY.md",
+    "size": 1231,
+    "sha256": "407b45fe065557fcf760a09e22c63a173a4dc8ab960382bf1abbb723f9112424"
+  },
+  {
+    "path": "site/figures.txt",
+    "size": 31,
+    "sha256": "76b11fb29e291b8ea070832b08d4aa2c4fbc49d3c22494e920494b19c3542834"
+  },
+  {
+    "path": "site/index.html",
+    "size": 9443,
+    "sha256": "d58b7127e572fd60325dc0ac865344478def3a6c5abbbf12cc10f3a6782a374a"
+  },
+  {
+    "path": "src/quality_ml/__init__.py",
+    "size": 60,
+    "sha256": "d9f14eca1f92c6772e3ceac1b68a68e036c0b03962bc563063fbb82af0f2945c"
+  },
+  {
+    "path": "src/quality_ml/data/__init__.py",
+    "size": 46,
+    "sha256": "ad2e7ec0dbe927fc0a436e703c6502728692a0e5de95beea26c692653e73f47e"
+  },
+  {
+    "path": "src/quality_ml/data/audit.py",
+    "size": 4051,
+    "sha256": "eb9856e74eaaf219d1d794d0f9af5bc021ce23386233b277934868bb579cb059"
+  },
+  {
+    "path": "src/quality_ml/data/leakage.py",
+    "size": 4713,
+    "sha256": "1f36835bbc24a6130d7efdf608f9001106d495a1da4e231b1966099c14309cd0"
+  },
+  {
+    "path": "src/quality_ml/data/split.py",
+    "size": 6589,
+    "sha256": "0ca92bf21c9e4ef57566aef6bd0a57d32d79504ac259d928e0999f3f61a5a2b9"
+  },
+  {
+    "path": "src/quality_ml/evaluation/__init__.py",
+    "size": 63,
+    "sha256": "14abc4c25057d6dbf31ee944d6bb786d29c64d24edc00efbdd965f7b87581a07"
+  },
+  {
+    "path": "src/quality_ml/evaluation/__main__.py",
+    "size": 11774,
+    "sha256": "b07aa57e0d95511ee5f841cc15ee389908c505d201187319f28f150427382486"
+  },
+  {
+    "path": "src/quality_ml/evaluation/error_analysis.py",
+    "size": 5423,
+    "sha256": "84abc36483484dd95cb8293139e734220b42f9a6ea933106f26e318011e17831"
+  },
+  {
+    "path": "src/quality_ml/evaluation/interpretability.py",
+    "size": 4467,
+    "sha256": "d5e3ad5b244c7917b19bb20a78821388bef07ced289cd172c53ce39f4241a61b"
+  },
+  {
+    "path": "src/quality_ml/evaluation/protocol.py",
+    "size": 8170,
+    "sha256": "5d55b302398ce92fc26ad5e4de4ce395c65304f9c6ebcbbd4bf453ae88b047f8"
+  },
+  {
+    "path": "src/quality_ml/evaluation/uncertainty.py",
+    "size": 8521,
+    "sha256": "92eefddb7e7d8406def5eb2e7e53cf6753297b1bcdb1fcb1402a1b46fcb96c21"
+  },
+  {
+    "path": "src/quality_ml/inference/__init__.py",
+    "size": 71,
+    "sha256": "b96774a8b54264bf1147c07f1ffc15b8f0fe9e0e6c970119332f58000ba421a1"
+  },
+  {
+    "path": "src/quality_ml/inference/artifact.py",
+    "size": 9642,
+    "sha256": "c5b0e32a1c960b5133a9c9dc0836316e291f4c097f067d7fbceda4db5a041db7"
+  },
+  {
+    "path": "src/quality_ml/inference/bi_export.py",
+    "size": 6518,
+    "sha256": "2f0e6123c6f9e9eb6a3a4eb4b89950aeabd76e4e6c63b29452ac7274c2053468"
+  },
+  {
+    "path": "src/quality_ml/inference/predict.py",
+    "size": 3786,
+    "sha256": "1f8b0d14295d99c5981e970bed5132442c2f78ecf38b1edf4cd2384b73501f2d"
+  },
+  {
+    "path": "src/quality_ml/models/__init__.py",
+    "size": 46,
+    "sha256": "081c792b83ecbdc5bac1bd788f39dafd4ac1d4bec4af82b281c408ac58b91174"
+  },
+  {
+    "path": "src/quality_ml/models/baseline.py",
+    "size": 1800,
+    "sha256": "a1935ce3fda1c964c05665eed8c9fb1796638c3ea8c727649fada468475226bd"
+  },
+  {
+    "path": "src/quality_ml/models/candidates.py",
+    "size": 3206,
+    "sha256": "d0b0c288afa2e8d4963832e07cec7286ae97dc84cc822a6ca481a2616449d9ac"
+  },
+  {
+    "path": "src/quality_ml/models/evaluate.py",
+    "size": 5976,
+    "sha256": "95ea77e9e1c9174e64cfb2d35ed65c2bdca3eb569be34fbb4795012378c78f22"
+  },
+  {
+    "path": "src/quality_ml/models/final_holdout.py",
+    "size": 13487,
+    "sha256": "2f897a831054c3c0f586e4001712c9f1da996bdcff96401ad3638e4b0774b0d8"
+  },
+  {
+    "path": "src/quality_ml/models/select.py",
+    "size": 4488,
+    "sha256": "2dab8c10d4e9544d684a569f43091a5fcdfdf3f3f4f16d7cc5e9e652b0e11b5d"
+  },
+  {
+    "path": "src/quality_ml/models/tuning.py",
+    "size": 5059,
+    "sha256": "92408222833870590950b0afa586b0870900128cdeec1d1cc65c7db850cc1e7f"
+  },
+  {
+    "path": "src/quality_ml/review_intake.py",
+    "size": 7101,
+    "sha256": "c91c131a87e7910eae8e5dd30fce2d2c854e1e57e104947a1eefceede202b73a"
+  },
+  {
+    "path": "src/quality_ml/review_policy.py",
+    "size": 11361,
+    "sha256": "6211a26faf15c28d4bf0225e4a496c7d74e61fadc62239cd1dc6015325083995"
+  },
+  {
+    "path": "src/quality_ml/review_report.py",
+    "size": 6660,
+    "sha256": "113d877fdc149d3a71ee225ddde42a54a78e56282c337e5005215d9223e4db4f"
+  },
+  {
+    "path": "streamlit_app.py",
+    "size": 9920,
+    "sha256": "62293bb010ec80eb7e2599935581f27144693a487c02bdee78c952e74b67d2ae"
+  },
+  {
+    "path": "tests/conftest.py",
+    "size": 1454,
+    "sha256": "74f1e1f6cf82f3510f3fa2b00fcb01f1849b353ec3856e88f9908ff475afba29"
+  },
+  {
+    "path": "tests/test_app.py",
+    "size": 643,
+    "sha256": "07f4f71e344b3691a133c169ffd88cbe7aafd6f1b6ef85b87d48216b7f011baa"
+  },
+  {
+    "path": "tests/test_artifact.py",
+    "size": 8121,
+    "sha256": "b96adb3fec43b73955e54259715523f2e3ec6fef7dd1cb715b672e50822e82a9"
+  },
+  {
+    "path": "tests/test_baseline.py",
+    "size": 2876,
+    "sha256": "f35b5dcb4536e6a4ca8b0baebca4ddf5126387fdf2f06c8093f03491f129a006"
+  },
+  {
+    "path": "tests/test_bi_integration.py",
+    "size": 7463,
+    "sha256": "560632039c3f02efa55954343b7bfc4ce433278170519d7440f0d53db038a2dd"
+  },
+  {
+    "path": "tests/test_candidates.py",
+    "size": 3584,
+    "sha256": "e4e2477437e996833f9f2d0387c4e337872d19cc62056f7c3354fb4973979c25"
+  },
+  {
+    "path": "tests/test_data_contract.py",
+    "size": 2259,
+    "sha256": "ce60457397176f260a954960befe0fd1e94e475506c197e7d49f0aeb4eef0048"
+  },
+  {
+    "path": "tests/test_drift_check.py",
+    "size": 1117,
+    "sha256": "e50a6437e6b8f64860bb4db04c9844a743e1d5c7284843c9d5e260527d4d25c7"
+  },
+  {
+    "path": "tests/test_error_analysis.py",
+    "size": 3455,
+    "sha256": "e1410f7eeb84065f074a3194c5182ca5d04c0ca182451b8d6931e0579e1e827f"
+  },
+  {
+    "path": "tests/test_final_holdout.py",
+    "size": 7212,
+    "sha256": "b5d5987f2a56087d6fdb8a5fdf86b96edecd057d21e5861ab2b194110609e0e8"
+  },
+  {
+    "path": "tests/test_interpretability.py",
+    "size": 3869,
+    "sha256": "6e5111d2f27f6771537e0242262da7d93b4235e1155574b1c55c7070cc7eb976"
+  },
+  {
+    "path": "tests/test_modelo.py",
+    "size": 6897,
+    "sha256": "0f9936f31bb390a8ed723dff7c65506b0954d6ed212bd8baaf257bc36bb4bff8"
+  },
+  {
+    "path": "tests/test_onnx_export.py",
+    "size": 2727,
+    "sha256": "baeed07d2247dc77ff559b54e990cabfbf1b25d61a7141ea4f1d1f9ea86e1b32"
+  },
+  {
+    "path": "tests/test_packaging.py",
+    "size": 1084,
+    "sha256": "3d1b1b7765b41c08056b46399ca61e724026c0f8dec6843c31ca7a60a32f4831"
+  },
+  {
+    "path": "tests/test_review_cost.py",
+    "size": 2500,
+    "sha256": "b33cdfe676cb0682736523a0c6215f0f21b45c0bcec64bf0f969e86eacae8743"
+  },
+  {
+    "path": "tests/test_review_policy.py",
+    "size": 5600,
+    "sha256": "9a2eff151eea4dcaef9c8e559db1a55db341b984ef0e6b779f8ec385fdcb546b"
+  },
+  {
+    "path": "tests/test_selection.py",
+    "size": 1345,
+    "sha256": "0b9cb61569568fabbd228849a8ae1a4e78c83c4c93b46f8c8d1350f4b4d793b9"
+  },
+  {
+    "path": "tests/test_split.py",
+    "size": 3111,
+    "sha256": "8460a01300ae4dbef86f48138a97c0a930941b9d0f60bde7dcd945943b067a44"
+  },
+  {
+    "path": "tests/test_tuning.py",
+    "size": 3377,
+    "sha256": "f6ffd9a83ffb134836cec9093adc2a7efc5f3f44a41c3b7e40a2071dce6fa44f"
+  },
+  {
+    "path": "tests/test_uncertainty.py",
+    "size": 8114,
+    "sha256": "d47379c9a2a2a67cc4294bb5d53026b59570e9b7a658da0438e3f31f62e24a46"
+  },
+  {
+    "path": "tools/__init__.py",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "tools/build_review_example.py",
+    "size": 2552,
+    "sha256": "36b1b3ab8ad4d60cef8d1e496c9347a4412dbc35c477557bed8f0fb30dac5422"
+  },
+  {
+    "path": "tools/data_contract.py",
+    "size": 2505,
+    "sha256": "3a12c01b6323b60c55fb83a3841de43e33255675e8ad25c9212903f540c1e81e"
+  },
+  {
+    "path": "tools/drift_check.py",
+    "size": 3961,
+    "sha256": "e1e2c28f5c4befa8556543eba069639f938bcac7d94685373f5082893ade5e49"
+  },
+  {
+    "path": "tools/export_onnx.py",
+    "size": 5226,
+    "sha256": "544d5c733604fa01e036eb0990ff6036bd01e955e66011a20b48514ae08e2572"
+  },
+  {
+    "path": "tools/prepare_ml_powerbi.py",
+    "size": 9100,
+    "sha256": "5514ce7c0b50a8d1e0bcf69a32440d2b81730a42cd73095c44354068c97ccf44"
+  },
+  {
+    "path": "tools/project_checks.py",
+    "size": 3411,
+    "sha256": "80c7d625e73e0d5fee1e15501a3fbd7acf38c60e03854449f7dad6ff23b901ef"
+  },
+  {
+    "path": "tools/review_cost.py",
+    "size": 4726,
+    "sha256": "83af70969d33269176d13954ad56ef5e9bdc0c1866410e50f20d65d768de563a"
+  },
+  {
+    "path": "tools/shoot_readme.py",
+    "size": 999,
+    "sha256": "e8efe7537a4211cb53805dff4f0d45e8c42883e08fa276ff0b24194c639041de"
+  },
+  {
+    "path": "tools/stress_tests.py",
+    "size": 5944,
+    "sha256": "2cebc8e9f1335fe9f0f1316cb90fda955012456d3313a605f4ac2f46faf72e97"
+  },
+  {
+    "path": "ui_revision.py",
+    "size": 8095,
+    "sha256": "c1e161d664aa3ab6c6d8bfbb9a0cf5f5c5dc0cb64fb950f0d66c4d81dddc94e8"
+  }
+]
