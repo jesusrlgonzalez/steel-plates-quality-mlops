@@ -3,7 +3,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "steel-plates-quality-bi.Report"
+        "path": "steel-plates-quality-mlops-powerbi.Report"
       }
     }
   ],

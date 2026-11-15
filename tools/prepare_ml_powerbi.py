@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from quality_ml.inference.artifact import write_json
 from quality_ml.inference.bi_export import BASELINE_PATH, COLUMNS
 
-PROJECT = "powerbi/project/steel-plates-quality-bi"
+PROJECT = "powerbi/project/steel-plates-quality-mlops-powerbi"
 REPORT = PROJECT + ".Report/definition/pages"
 SEMANTIC = PROJECT + ".SemanticModel/definition"
 PAGE = "ml_performance_review"

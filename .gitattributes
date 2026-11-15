@@ -6,6 +6,6 @@ reports/ml/final_holdout/*.json text eol=lf
 *.joblib binary
 artifacts/*.json text eol=lf
 powerbi/data/*.csv text eol=lf
-powerbi/project/steel-plates-quality-bi.Report/definition/pages/pages.json text eol=lf
-powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/** text eol=lf
-powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/ML_Holdout.tmdl text eol=lf
+powerbi/project/steel-plates-quality-mlops-powerbi.Report/definition/pages/pages.json text eol=lf
+powerbi/project/steel-plates-quality-mlops-powerbi.Report/definition/pages/ml_performance_review/** text eol=lf
+powerbi/project/steel-plates-quality-mlops-powerbi.SemanticModel/definition/tables/ML_Holdout.tmdl text eol=lf
