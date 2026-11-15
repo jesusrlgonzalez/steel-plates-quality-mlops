@@ -1,0 +1,5 @@
+# PRODUCTION SECURITY REVIEW
+
+Fecha de preparación: 2026-11-14. Fuente: ZIP adjunto `steel-plates-quality-mlops-main.zip`. Rama de GitHub consultada: `main`; último commit consultado: `e19cd1af045ea22e4518f3795f9c5070979a924f (remote main; snapshot ZIP commit UNVERIFIED)`. La equivalencia byte a byte entre ZIP y este commit no está demostrada. Autor original: Jesús R. L. González.
+
+No se añadieron credenciales ni tokens. El CSV contiene datos públicos de placas defectuosas, pero revisar políticas del tenant y licencias antes de Service. En Power BI Service, las rutas `C:\...` no son accesibles por defecto: actualizar mediante gateway configurado o migración autorizada a fuente accesible. Publicar y compartir en workspaces normalmente requiere licenciamiento y permisos específicos. Referencias oficiales: https://learn.microsoft.com/en-us/power-bi/fundamentals/service-features-license-type y https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh . Service: NOT_EXECUTED; workspace, licencia, credenciales, gateway, RLS y refresh: NOT_VERIFIED. No autorizar publicación automática.
