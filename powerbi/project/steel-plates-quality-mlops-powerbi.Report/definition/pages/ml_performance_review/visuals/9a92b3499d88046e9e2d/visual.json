@@ -3,10 +3,10 @@
   "name": "9a92b3499d88046e9e2d",
   "position": {
     "x": 20,
-    "y": 240,
-    "width": 395,
-    "height": 170,
+    "y": 304.44444444444446,
     "z": 5,
+    "height": 170,
+    "width": 395,
     "tabOrder": 5
   },
   "visual": {
@@ -27,11 +27,19 @@
                 }
               },
               "queryRef": "ML_Holdout.steel_type",
-              "nativeQueryRef": "steel_type"
+              "nativeQueryRef": "steel_type",
+              "active": true
             }
           ]
         }
       }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

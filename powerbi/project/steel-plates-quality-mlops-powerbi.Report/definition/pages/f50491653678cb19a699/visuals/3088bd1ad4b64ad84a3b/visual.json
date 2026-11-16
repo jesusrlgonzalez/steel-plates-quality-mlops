@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "_Medidas.% Fuera de USL",
-              "nativeQueryRef": "% Fuera de USL"
+              "nativeQueryRef": "% Fuera de USL",
+              "format": "0.00 %;-0.00 %;0.00 %"
             }
           ]
         }
@@ -51,6 +52,42 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.% Fuera de USL"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5056965fe4965bb526ea",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "% Fuera de USL"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

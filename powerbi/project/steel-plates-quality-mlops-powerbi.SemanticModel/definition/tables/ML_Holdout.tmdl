@@ -1,117 +1,146 @@
 table ML_Holdout
+	lineageTag: ab5dd6ad-1b5d-4d93-ab61-a3ad80eada60
 
 	measure 'Final Macro-F1 (389)' = 0.8146728101764369
 		formatString: 0.0000
+		lineageTag: 75a6c054-e709-413b-963b-cf6d735d7321
 
 	measure 'Final Balanced Accuracy (389)' = 0.8048726799979933
 		formatString: 0.0000
+		lineageTag: bbb18c0f-bed7-4a1f-836f-34d8ef83a5a9
 
 	measure 'ML Rows' = COUNTROWS ( ML_Holdout )
 		formatString: 0
+		lineageTag: e43572ab-e1df-4976-8c74-d28e4807fc66
 
 	measure 'ML Correct' = SUM ( ML_Holdout[correct_prediction] )
 		formatString: 0
+		lineageTag: e51c5d98-b447-46d6-99e1-bbab04a4c807
 
 	measure 'ML Errors' = [ML Rows] - [ML Correct]
 		formatString: 0
+		lineageTag: 414312bf-c0a1-4358-8292-5f5e517f1f13
 
 	measure 'ML Confusion Errors' = IF ( [ML Errors] > 0, [ML Errors], BLANK () )
 		formatString: 0
+		lineageTag: 11613978-d3df-4c32-a353-6098979324d1
 
 	measure 'ML Review Rows' = SUM ( ML_Holdout[review_required] )
 		formatString: 0
+		lineageTag: 5596e889-c236-493c-badc-aefa5afeb103
 
 	measure 'Candidate Review Rate' = DIVIDE ( [ML Review Rows], [ML Rows] )
 		formatString: 0.00%
+		lineageTag: 94379ef6-d10a-407c-95fb-077df3ff0c78
 
 	measure 'Observed Accuracy' = DIVIDE ( [ML Correct], [ML Rows] )
 		formatString: 0.00%
+		lineageTag: 6d8351a5-20d8-4af3-8d9f-8b07f2911d5c
 
 	measure 'Observed Error Rate' = DIVIDE ( [ML Errors], [ML Rows] )
 		formatString: 0.00%
+		lineageTag: c94af36e-058e-4109-9114-ba93b37560c6
 
 	measure 'Mean Confidence' = AVERAGE ( ML_Holdout[confidence] )
 		formatString: 0.00%
+		lineageTag: 24774da0-2d9e-4c85-876b-1492cdd9914b
 
 	measure 'Segment Support' = IF ( [ML Rows] < 30, "INSUFFICIENT_DATA", "DESCRIPTIVE" )
+		lineageTag: 95c50cec-bb1c-4fbf-8608-7313c7595421
 
 	column row_id
 		dataType: int64
+		lineageTag: 6ab9fc5a-1bb3-481e-80f5-2a0bc5f5cf2e
 		summarizeBy: none
 		sourceColumn: row_id
 
 	column source_id
 		dataType: int64
+		lineageTag: 41501466-25f7-4152-9ddc-b0835b070718
 		summarizeBy: none
 		sourceColumn: source_id
 
 	column actual_defect
 		dataType: string
+		lineageTag: f9b25020-9cf1-461e-afc6-cbbc8a7ebd69
 		summarizeBy: none
 		sourceColumn: actual_defect
 
 	column predicted_defect
 		dataType: string
+		lineageTag: ecbc81e6-fce2-4cd1-8b38-ae6c66ccac6e
 		summarizeBy: none
 		sourceColumn: predicted_defect
 
 	column correct_prediction
 		dataType: int64
+		lineageTag: cc8fb081-0d6c-4e8c-9dc2-947c35513700
 		summarizeBy: none
 		sourceColumn: correct_prediction
 
 	column confidence
 		dataType: double
+		lineageTag: f9200ad5-caf8-45a8-a4a2-f32726248a99
 		summarizeBy: none
 		sourceColumn: confidence
 
 	column review_status
 		dataType: string
+		lineageTag: e399c2b1-58e9-4bc0-a868-87416a260468
 		summarizeBy: none
 		sourceColumn: review_status
 
 	column review_required
 		dataType: int64
+		lineageTag: ce78485e-5ce9-4c1d-9692-6aec49d13492
 		summarizeBy: none
 		sourceColumn: review_required
 
 	column steel_type
 		dataType: string
+		lineageTag: 8453f7d8-4e10-4ab6-93bf-00272ff7b73a
 		summarizeBy: none
 		sourceColumn: steel_type
 
 	column steel_plate_thickness
 		dataType: double
+		lineageTag: 447f3d50-53ba-4911-bf7b-b3afe312fbea
 		summarizeBy: none
 		sourceColumn: steel_plate_thickness
 
 	column pixels_area
 		dataType: double
+		lineageTag: 80dbd060-208b-4238-9e8b-a9fc9f48ebbc
 		summarizeBy: none
 		sourceColumn: pixels_area
 
 	column confidence_bin
 		dataType: string
+		lineageTag: a206a90c-4659-48f6-b4cf-bf1c3a673847
 		summarizeBy: none
 		sourceColumn: confidence_bin
 
 	column dataset_role
 		dataType: string
+		lineageTag: a6e0ec54-9286-4d75-ac23-05c71277ff2d
 		summarizeBy: none
 		sourceColumn: dataset_role
 
 	column policy_status
 		dataType: string
+		lineageTag: 575114e0-aec5-4c14-b78f-327037fde514
 		summarizeBy: none
 		sourceColumn: policy_status
 
 	column policy_application
 		dataType: string
+		lineageTag: 65be2fd8-2c9a-4433-9ed8-a1dc16a4cca4
 		summarizeBy: none
 		sourceColumn: policy_application
 
 	column model_version
 		dataType: string
+		lineageTag: f299c99d-5b1c-41bc-b39c-c42721801dc5
 		summarizeBy: none
 		sourceColumn: model_version
 
@@ -128,3 +157,8 @@ table ML_Holdout
 				        then Tipos else error "Expected 389 final holdout evaluation rows"
 				in
 				    Validado
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

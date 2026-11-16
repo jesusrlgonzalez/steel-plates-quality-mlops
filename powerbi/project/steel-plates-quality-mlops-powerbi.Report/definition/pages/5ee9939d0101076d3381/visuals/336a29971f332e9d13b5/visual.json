@@ -55,7 +55,8 @@
                 }
               },
               "queryRef": "_Medidas.COPQ % del Total",
-              "nativeQueryRef": "COPQ % del Total"
+              "nativeQueryRef": "COPQ % del Total",
+              "format": "0.00 %;-0.00 %;0.00 %"
             },
             {
               "field": {
@@ -112,13 +113,36 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "% Fuera de USL"
+                "Property": "COPQ % del Total"
               }
             },
             "direction": "Descending"
           }
         ]
       }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110.0784303021682D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.COPQ % del Total"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },

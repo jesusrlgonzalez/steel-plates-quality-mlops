@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "_Medidas.Cpk",
-              "nativeQueryRef": "Cpk"
+              "nativeQueryRef": "Cpk",
+              "format": "0.0000"
             }
           ]
         }
@@ -50,6 +51,31 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'4'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Cpk"
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }
