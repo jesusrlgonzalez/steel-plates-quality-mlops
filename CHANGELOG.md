@@ -10,6 +10,7 @@ the consumed holdout have not changed since v1.0.0.
 - Certified Power BI Desktop validation (OWNER-PBI-REN-001): the component is renamed to `steel-plates-quality-mlops-powerbi`, the PBIX saved from Desktop 2.156.951.0 (SHA256 `91f89ff2…d86260`) ships through Git LFS — repairing the previous pointer whose object was missing from the server — and the production dossier under `docs/production/` records the live-engine reconciliation with exactly-zero differences against the frozen metrics.
 
 ### Changed
+- The PBIX is re-saved through Power BI Desktop with `RutaCSV` set to the portable parameter and refreshed against it (issue #2): SHA256 `a37f3743…5bec1`. Same model (7 tables, 34 measures, 3 relationships, 1,941 and 389 rows); the previous certified binary `91f89ff2…` is superseded.
 - `RutaCSV` is published as a portable parameter with a neutral single-separator placeholder; the validation machine's local path stays out of version control. The preservation test accepts exactly the historical placeholder and the portable value, pins the Desktop-rewritten report objects byte by byte and checks their semantic core.
 
 ### Fixed

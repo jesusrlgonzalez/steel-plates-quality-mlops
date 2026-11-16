@@ -12,7 +12,7 @@ prepared; the following operations require direct Desktop evidence.
 ## Prepared files
 
 - Open [steel-plates-quality-mlops-powerbi.pbip](../../powerbi/project/steel-plates-quality-mlops-powerbi.pbip) (renamed from `steel-plates-quality-bi.pbip` in PR #9).
-- Certified [PBIX](../../powerbi/artifacts/steel-plates-quality-mlops-powerbi.pbix) saved from Desktop 2.156.951.0 (SHA256 `91f89ff2…d86260`).
+- Certified [PBIX](../../powerbi/artifacts/steel-plates-quality-mlops-powerbi.pbix) saved from Desktop 2.156.951.0; re-saved on 2026-11-16 with the portable `RutaCSV` (SHA256 `a37f3743…5bec1`).
 - New dataset: [ml_holdout_evaluation.csv](../../powerbi/data/ml_holdout_evaluation.csv).
 - New page: MODEL PERFORMANCE & REVIEW (12 visuals).
 - New table: ML_Holdout; new expression: RutaMLCSV.
@@ -21,7 +21,7 @@ prepared; the following operations require direct Desktop evidence.
 
 PRE_ML_PBIX_SHA256 = 0a87a4e33b78cf786d1a76250b39f154d19508480f256fa1898e8f818d9bdba5
 PRE_ML_PBIP_SHA256 = 343a455fa0dd01f26d6196f213808b13b90ed333e001ee468c6afed782ee77f7
-POST_ML_PBIX_SHA256 = 91f89ff2d8ce7605e9b54d9c2c45a6d5cf2511649498e9c70ed82abfe7d86260
+POST_ML_PBIX_SHA256 = a37f3743e6107b41eb11c31886cfa6120ebc468e480d361f000104e55bf5bec1
 POST_ML_PBIP_STATUS = DESKTOP_SAVED_AND_CERTIFIED
 
 ## Exact validation sequence

@@ -59,7 +59,7 @@ Hallazgos descriptivos (con **costos ilustrativos**, no ahorros demostrados): tr
 
 - Proyecto PBIP en [`powerbi/project/`](powerbi/project/) y PBIX en [`powerbi/artifacts/`](powerbi/artifacts/) (Git LFS: ejecuta `git lfs pull` tras clonar); nombre canónico del componente: `steel-plates-quality-mlops-powerbi`.
 - La página *MODEL PERFORMANCE & REVIEW* y la tabla `ML_Holdout` se reconciliaron contra Python (389 filas, 307 aciertos, 82 errores, 261 a revisión) a nivel de exportación y contra el motor real de Desktop: [reconciliación](docs/evidence/powerbi_ml_reconciliation.md).
-- **Validada en Power BI Desktop 2.156.951.0** (abierta, refrescada, reconciliada contra el motor con diferencia exactamente 0, inspeccionada visualmente por el autor, guardada y reabierta el 15 nov 2026): [evidencia de runtime](docs/production/POWERBI_DESKTOP_RUNTIME_EVIDENCE.md) y [certificación](docs/production/POWERBI_PBIX_CERTIFICATION.md). El PBIX publicado (SHA256 `91f89ff2…`) incluye la página ML.
+- **Validada en Power BI Desktop 2.156.951.0** (abierta, refrescada, reconciliada contra el motor con diferencia exactamente 0, inspeccionada visualmente por el autor, guardada y reabierta el 15 nov 2026): [evidencia de runtime](docs/production/POWERBI_DESKTOP_RUNTIME_EVIDENCE.md) y [certificación](docs/production/POWERBI_PBIX_CERTIFICATION.md). El PBIX publicado (SHA256 `a37f3743…`, re-guardado el 16 nov 2026 con `RutaCSV` portátil) incluye la página ML.
 - El parámetro `RutaCSV` del PBIP trae una ruta de ejemplo (`C:\path\to\...`); ajústalo en Desktop a `data/raw/steel_plates_faults.csv` de tu clon.
 
 ## Triaje de revisión humana para tu sistema de inspección (MVP)
