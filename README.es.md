@@ -57,9 +57,9 @@ Hallazgos descriptivos (con **costos ilustrativos**, no ahorros demostrados): tr
 
 ![Tablero: decisiones por tipo de defecto](reports/figures/decisiones.png)
 
-- Proyecto PBIP en [`powerbi/project/`](powerbi/project/) y PBIX en [`powerbi/artifacts/`](powerbi/artifacts/) (Git LFS: ejecuta `git lfs pull` tras clonar).
-- La página *MODEL PERFORMANCE & REVIEW* y la tabla `ML_Holdout` se reconciliaron contra Python (389 filas, 307 aciertos, 82 errores, 261 a revisión) solo a nivel de exportación: [reconciliación](docs/evidence/powerbi_ml_reconciliation.md).
-- **La validación en Power BI Desktop está pendiente** (abrir, refrescar, renderizar y guardar): `POWER_BI_RUNTIME = MANUAL_VALIDATION_REQUIRED`. Pasos exactos en el [handoff](docs/evidence/powerbi_runtime_handoff.md). El PBIX publicado aún no contiene la página ML.
+- Proyecto PBIP en [`powerbi/project/`](powerbi/project/) y PBIX en [`powerbi/artifacts/`](powerbi/artifacts/) (Git LFS: ejecuta `git lfs pull` tras clonar); nombre canónico del componente: `steel-plates-quality-mlops-powerbi`.
+- La página *MODEL PERFORMANCE & REVIEW* y la tabla `ML_Holdout` se reconciliaron contra Python (389 filas, 307 aciertos, 82 errores, 261 a revisión) a nivel de exportación y contra el motor real de Desktop: [reconciliación](docs/evidence/powerbi_ml_reconciliation.md).
+- **Validada en Power BI Desktop 2.156.951.0** (abierta, refrescada, reconciliada contra el motor con diferencia exactamente 0, inspeccionada visualmente por el autor, guardada y reabierta el 15 nov 2026): [evidencia de runtime](docs/production/POWERBI_DESKTOP_RUNTIME_EVIDENCE.md) y [certificación](docs/production/POWERBI_PBIX_CERTIFICATION.md). El PBIX publicado (SHA256 `91f89ff2…`) incluye la página ML.
 - El parámetro `RutaCSV` del PBIP trae una ruta de ejemplo (`C:\path\to\...`); ajústalo en Desktop a `data/raw/steel_plates_faults.csv` de tu clon.
 
 ## Triaje de revisión humana para tu sistema de inspección (MVP)
@@ -146,7 +146,7 @@ Carga el modelo solo desde un checkout de confianza: joblib/pickle ejecuta códi
 - **Solo clasificación con observación completa.** No hay placas buenas ni variables temporales; la disponibilidad temporal de las 27 medidas no está demostrada.
 - **Holdout consumido.** Ya no es un test virgen; cualquier modelo nuevo necesitaría datos nuevos.
 - **Clases pequeñas y política de revisión sin validación prospectiva.** La importancia de variables es asociativa, no causal; las probabilidades no están calibradas.
-- **Power BI Desktop sin validar en ejecución**; la reconciliación cubre la exportación de Python.
+- **Power BI Service sin usar**: la validación cubre Power BI Desktop; no se afirma espacio de trabajo en la nube, puerta de enlace ni actualización programada.
 - **Costos, límite de especificación y umbrales de acción supuestos.** No se reclama impacto financiero ni despliegue en producción.
 - **Confusión entre espesor y tipo de defecto**: el 99 % del rayón en K cae en espesor 40.
 

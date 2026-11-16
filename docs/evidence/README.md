@@ -27,7 +27,7 @@ Files are linked, not duplicated.
 | Model artifact + manifest | [09_model_lineage_and_batch_inference](../ml/09_model_lineage_and_batch_inference.md), [manifest.json](../../artifacts/manifest.json) | [test_artifact](../../tests/test_artifact.py); `python -B -m tools.project_checks validate-artifact` |
 | Batch inference | [predict.py](../../src/quality_ml/inference/predict.py) | `python -B -m tools.project_checks batch-smoke` |
 | Power BI export and reconciliation | [powerbi_ml_reconciliation](powerbi_ml_reconciliation.md), [ml_holdout_evaluation.csv](../../powerbi/data/ml_holdout_evaluation.csv) | [test_bi_integration](../../tests/test_bi_integration.py); `validate-evidence` |
-| Power BI Desktop runtime | [powerbi_runtime_handoff](powerbi_runtime_handoff.md) | Manual: `POWER_BI_RUNTIME = MANUAL_VALIDATION_REQUIRED` |
+| Power BI Desktop runtime | [powerbi_runtime_handoff](powerbi_runtime_handoff.md) | Validated: live Desktop engine over XMLA plus OWNER visual inspection (Nov 15, 2026); see [the production closeout](../production/POWERBI_PRODUCTION_CLOSEOUT.md) |
 | Power BI preservation baseline | [pre_ml_powerbi_hashes.json](pre_ml_powerbi_hashes.json) | [test_bi_integration](../../tests/test_bi_integration.py) |
 | SQL data contract (dbt + DuckDB) | [dbt/](../../dbt/), [data_contract.py](../../tools/data_contract.py) | [test_data_contract](../../tests/test_data_contract.py); `data-contract` job in [CI](../../.github/workflows/ci.yml) |
 | ONNX export and Node.js inference | [export_onnx.py](../../tools/export_onnx.py), [verification.json](../../reports/onnx/verification.json), [examples/onnx-node](../../examples/onnx-node/) | [test_onnx_export](../../tests/test_onnx_export.py); `onnx` job in [CI](../../.github/workflows/ci.yml) |
