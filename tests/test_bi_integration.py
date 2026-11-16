@@ -61,11 +61,13 @@ RAW_URL_OWNER_BASELINE = b"raw.githubusercontent.com/jesusgonzalezmexdata-ux/"
 BASELINE_NAME = "steel-plates-quality-bi"
 CANONICAL_NAME = "steel-plates-quality-mlops-powerbi"
 RENAMED_PREFIXES = ("powerbi/project/", "powerbi/artifacts/")
-# The certified PBIX, saved from Power BI Desktop 2.156.951.0 (26.07) on 2026-11-15.
-# The baseline records the pre-ML binary (oid 0a87a4e3...), whose LFS object no longer
-# exists on the server, so it can never be materialised again. Provenance and the
-# reopen evidence live in docs/production/POWERBI_PBIX_CERTIFICATION.md.
-PBIX_CERTIFIED_SHA256 = "91f89ff2d8ce7605e9b54d9c2c45a6d5cf2511649498e9c70ed82abfe7d86260"
+# The certified PBIX. First certified on 2026-11-15 (91f89ff2..., Desktop 2.156.951.0,
+# evidence in docs/production/POWERBI_PBIX_CERTIFICATION.md); re-saved through Desktop
+# on 2026-11-16 with RutaCSV set to the portable parameter and refreshed against it
+# (issue #2; evidence in docs/production/POWERBI_PBIX_RESAVE_PORTABLE.md). Only the
+# current certified binary is accepted besides the frozen pre-ML baseline, whose LFS
+# object (oid 0a87a4e3...) no longer exists on the server.
+PBIX_CERTIFIED_SHA256 = "a37f3743e6107b41eb11c31886cfa6120ebc468e480d361f000104e55bf5bec1"
 # A genuine Desktop save re-serialises pre-ML report objects, which the frozen
 # baseline is designed to catch. This manifest pins the post-save identity of each
 # rewritten object and records the baseline semantic core it had to keep; it is
