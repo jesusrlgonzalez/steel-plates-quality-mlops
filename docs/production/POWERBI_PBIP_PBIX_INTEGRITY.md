@@ -217,6 +217,8 @@ Desktop: el script la regenera y sobrescribiría el refinamiento.
 Rellenar con resultados reales. `NOT_EXECUTED` mientras no se ejecute. Registrar
 los fallos de forma explícita.
 
+> **Actualización posterior (vigente):** los controles marcados `NOT_EXECUTED` (G3 inspección visual de RutaCSV y G5 renderizado de páginas) se completaron después mediante la inspección visual del OWNER el 15 nov 2026 (evidencia de parte), registrada en [POWERBI_PRODUCTION_CLOSEOUT.md](POWERBI_PRODUCTION_CLOSEOUT.md). La plantilla se conserva tal como se rellenó.
+
 Estado al 2026-11-15. `PASS (motor)` = verificado consultando el motor en vivo;
 `NOT_EXECUTED` = pendiente, requiere la GUI.
 

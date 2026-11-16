@@ -1,5 +1,7 @@
 # PRODUCTION HANDOFF TO OWNER
 
+> **Documento histórico — SUPERADO.** Describe el estado del 14 nov 2026, previo a la validación en Power BI Desktop. Sus valores `NOT_EXECUTED`, `UNVERIFIED` o `READY_FOR_DESKTOP_VALIDATION` ya no son vigentes. Estado vigente: [POWERBI_PRODUCTION_CLOSEOUT.md](POWERBI_PRODUCTION_CLOSEOUT.md) e [índice](README.md). Se conserva como antecedente.
+
 Fecha de preparación: 2026-11-14. Fuente: ZIP adjunto `steel-plates-quality-mlops-main.zip`. Rama de GitHub consultada: `main`; último commit consultado: `e19cd1af045ea22e4518f3795f9c5070979a924f (remote main; snapshot ZIP commit UNVERIFIED)`. La equivalencia byte a byte entre ZIP y este commit no está demostrada. Autor original: Jesús R. L. González.
 
 Estado entregable: `SOURCE_INSPECTED` y `IMPLEMENTATION_READY` para ruta Windows; `READY_FOR_DESKTOP_VALIDATION` solo para estructura estática PBIP. `LOCAL_TESTS_PASSED` no concedido globalmente, por fallos del runtime. `DESKTOP_VALIDATED`, `OWNER_ACCEPTED`, `SERVICE_DEPLOYED_AND_VERIFIED`: NO.

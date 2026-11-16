@@ -12,9 +12,9 @@ BASELINE_SIGNAL_DETECTED = TRUE
 NEXT_PHASE = 11_PUBLICATION
 CURRENT_PHASE = 11
 PHASE_10_STATUS = PASS (Power BI Desktop runtime validated 2026-11-15; see docs/production/POWERBI_PRODUCTION_CLOSEOUT.md)
-PHASE_11_STATUS = IN_PROGRESS_READY_FOR_FIRST_PUSH
-PROJECT_CLOSEOUT_STATUS = READY_FOR_FIRST_PUSH
-STOP_GATE = HUMAN_GATE_FIRST_PUSH
+PHASE_11_STATUS = PASS (publicado en GitHub: PR #9, merge 3a240ad, 2026-11-16)
+PROJECT_CLOSEOUT_STATUS = PUBLISHED_PENDING_OWNER_ACCEPTANCE
+STOP_GATE = OWNER_ACCEPTANCE (issue #2 abierta: ruta interna del PBIX)
 
 VALIDITY_SCOPE = FULL_OBSERVATION_CLASSIFICATION_ONLY
 EARLY_PREDICTION_SUPPORTED = FALSE
@@ -74,8 +74,8 @@ G11_BATCH_REPRODUCIBILITY = PASS
 G12_POWER_BI_INTEGRATION = PASS_WITH_LIMITATION
 G13_POWER_BI_RUNTIME = PASS
 G14_TESTS = PASS
-CLEAN_CLONE_REPRODUCTION = LOCAL_PASS_REMOTE_PENDING
-EXPORT_READINESS = READY_FOR_FIRST_PUSH
+CLEAN_CLONE_REPRODUCTION = PASS (clon nuevo desde GitHub, 2026-11-16; PBIX 91f89ff2... verificado)
+EXPORT_READINESS = PUBLISHED
 
 The frozen Phase 7 model was evaluated once on the 389-row final holdout in
 Phase 8 after one fit on all 1,552 training rows. Its final macro-F1 remains
@@ -132,7 +132,7 @@ MODEL_ARTIFACT_SHA256 = 6f363b2c788789494d09e4f7a773c93a5fb283cda502bb73b7637fa6
 DATASET_FINGERPRINT = cb07fc4284cb1bea5b308ef1822f4440e83e16d53703b5d3254a0b5def76f408
 TRAINING_DATA_FINGERPRINT = bc1b6278bb65256c930ddf2b1739d1c3c82fa53527fa1922ff714b302f5bfc0b
 BATCH_INFERENCE = PASS
-CI = UPDATED_LOCAL_COMPONENTS_PASS_REMOTE_NOT_EXECUTED
+CI = PASS (GitHub Actions en main 3a240ad: test, data-contract, onnx, docker y CodeQL)
 
 The new BI CSV contains only 389 saved final-holdout predictions: 307 correct,
 82 errors, 128 candidate accepted and 261 candidate review. Policy application
@@ -178,6 +178,8 @@ probability, metric or Phase 8 artifact changed. The Desktop gate remains OPEN.
 
 ## Phase 11 — closeout, reproducibility and publication readiness
 
+> **Histórico.** Los párrafos y líneas de estado de esta sección describen el cierre anterior a la validación en Desktop (`MANUAL_VALIDATION_REQUIRED`, PBIX `0a87a4e3`, cuenta anterior). Quedan superados por las líneas de estado del inicio de este archivo y por `docs/production/POWERBI_PRODUCTION_CLOSEOUT.md`. Se conservan como antecedente.
+
 The Phase 10 Desktop gate is closed as a documented limitation, not as a pass:
 POWER_BI_RUNTIME = MANUAL_VALIDATION_REQUIRED. The Python layer does not depend on
 Power BI Desktop. No model, feature, threshold, metric, holdout file or Power BI
@@ -197,7 +199,7 @@ AUTHORSHIP = PASS (all commits: Jesus R. L. Gonzalez <285482007+jesusgonzalezmex
 README = FINAL
 MODEL_CARD = MODEL_CARD.md
 EVIDENCE_PACK = docs/evidence/README.md
-REMOTE_REPRODUCIBILITY = PENDING_FIRST_PUSH
+REMOTE_REPRODUCIBILITY = PASS (CI remoto y clon nuevo, 2026-11-16)
 
 The first Linux clean-clone run exposed three replay assertions that compared
 platform-dependent bytes. Diagnosis showed identical science: the rebuilt forest

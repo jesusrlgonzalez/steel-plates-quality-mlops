@@ -1,5 +1,7 @@
 # PRODUCTION POWERBI HANDOFF
 
+> **Documento histórico — SUPERADO.** Describe el estado del 14 nov 2026, previo a la validación en Power BI Desktop. Sus valores `NOT_EXECUTED`, `UNVERIFIED` o `READY_FOR_DESKTOP_VALIDATION` ya no son vigentes. Estado vigente: [POWERBI_PRODUCTION_CLOSEOUT.md](POWERBI_PRODUCTION_CLOSEOUT.md) e [índice](README.md). Se conserva como antecedente.
+
 > **SUPERSEDED — no seguir las rutas de este documento.**
 > OWNER-PBI-REN-001 (Fase 2) renombró el componente Power BI al nombre canónico
 > `steel-plates-quality-mlops-powerbi`. Las rutas con `steel-plates-quality-bi`
