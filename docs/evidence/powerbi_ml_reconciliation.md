@@ -1,12 +1,12 @@
 # Power BI / Python ML reconciliation
 
-STATUS = PYTHON_EXPORT_VERIFIED_DESKTOP_PENDING
+STATUS = DESKTOP_ENGINE_VERIFIED
 DATASET_ROLE = FINAL_HOLDOUT_EVALUATION
 POLICY_STATUS = DEVELOPMENT_ONLY
 POLICY_APPLICATION = POST_HOC_ONLY
-POWER_BI_RUNTIME_VALIDATION = PENDING
-POST_ML_PBIX_SHA256 = NOT_AVAILABLE
-POST_ML_PBIP_STATUS = TEXT_DRAFT_NOT_SAVED_BY_DESKTOP
+POWER_BI_RUNTIME_VALIDATION = PASS_ENGINE_XMLA_2026-11-15
+POST_ML_PBIX_SHA256 = 91f89ff2d8ce7605e9b54d9c2c45a6d5cf2511649498e9c70ed82abfe7d86260
+POST_ML_PBIP_STATUS = DESKTOP_SAVED_AND_CERTIFIED
 
 The source of every expected value is the frozen Phase 8 predictions/metrics and
 the frozen Phase 9 policy. The [generated expectations](../../reports/ml/integration/reconciliation_expected.json)
@@ -16,16 +16,16 @@ Python checking the export does not demonstrate a Power BI import.
 
 | Control, with ML filters cleared | Python expected | BI observed |
 |---|---:|---|
-| Rows | 389 | PENDING |
-| Correct | 307 | PENDING |
-| Errors | 82 | PENDING |
-| Candidate review rows | 261 | PENDING |
-| Candidate accepted rows | 128 | PENDING |
-| Review rate | 0.6709511568123393 | PENDING |
-| Errors sent to review | 81 | PENDING |
-| Errors not captured | 1 | PENDING |
-| Final Macro-F1 (all 389) | 0.8146728101764369 | PENDING |
-| Final Balanced Accuracy (all 389) | 0.8048726799979933 | PENDING |
+| Rows | 389 | 389 ✅ |
+| Correct | 307 | 307 ✅ |
+| Errors | 82 | 82 ✅ |
+| Candidate review rows | 261 | 261 ✅ |
+| Candidate accepted rows | 128 | 128 ✅ |
+| Review rate | 0.6709511568123393 | 0.6709511568123393 (difference 0) ✅ |
+| Errors sent to review | 81 | 81 ✅ |
+| Errors not captured | 1 | 1 ✅ |
+| Final Macro-F1 (all 389) | 0.8146728101764369 | 0.81467281017643689 (engine difference exactly 0) ✅ |
+| Final Balanced Accuracy (all 389) | 0.8048726799979933 | 0.80487267999799328 (engine difference exactly 0) ✅ |
 
 Final score cards intentionally display the recorded full-holdout metrics even
 when filters are active. They are labeled “(389)”; they do not purport to compute
@@ -41,7 +41,7 @@ subset macro-F1. Row/error/review/confidence measures respond to ML filters.
 | Bumps | 81 | 77 | 55 | 26 | 71 |
 | Other_Faults | 135 | 146 | 106 | 29 | 114 |
 
-All BI class-level observations above are still PENDING. Exact integer equality
+All BI class-level observations above were read from the Desktop engine and match exactly (seven class supports and seven error counts; segments A300 156/121/122, A400 233/186/139, Pastry 32/20/29; Bumps→Other_Faults 21; row_id 1277 attributes). Verified against the live Power BI Desktop engine (2.156.951.0, XMLA read-only, 2026-11-15): [runtime evidence](../production/POWERBI_DESKTOP_RUNTIME_EVIDENCE.md). Exact integer equality
 is required; compare unrounded numeric measures to Python with absolute tolerance
 1e-12, allowing only display rounding in the visible cards.
 

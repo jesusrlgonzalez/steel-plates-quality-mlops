@@ -1,0 +1,201 @@
+TRANSCRIPCION DEL MOTOR EN VIVO - OWNER-PBI-REN-001
+Fecha: 2026-11-15
+Power BI Desktop: 2.156.951.0 (26.07), PID 39352
+Motor: msmdsrv.exe PID 9204 (hijo de 39352), localhost:57045
+Proyecto: powerbi/project/steel-plates-quality-mlops-powerbi.pbip
+Consultas de SOLO LECTURA. No se escribio nada en el modelo.
+------------------------------------------------------------------
+
+===== query_live_model.ps1 =====
+CONECTADO. Base de datos: da6145ee-e092-4cca-8861-d0cfbd3aae14
+
+### Tablas del modelo
+
+Name                
+----                
+_Medidas            
+Dim_Acero           
+Dim_BandaTamano     
+Dim_TipoDefecto     
+Fact_Defecto        
+ML_Holdout          
+Param_Especificacion
+
+
+
+
+### Relaciones
+
+FromTableID ToTableID FromCardinality ToCardinality CrossFilteringBehavior IsActive
+----------- --------- --------------- ------------- ---------------------- --------
+         19        10               2             1                      1     True
+         19        13               2             1                      1     True
+         19        16               2             1                      1     True
+
+
+
+
+### Particiones: estado y modo
+
+TableID Name                 State Mode
+------- ----                 ----- ----
+     10 Dim_TipoDefecto          1    0
+     13 Dim_Acero                1    0
+     16 Dim_BandaTamano          1    0
+     19 Fact_Defecto             1    0
+     22 Param_Especificacion     1    0
+     25 _Medidas                 1    0
+     28 ML_Holdout               1    0
+
+
+
+
+### Recuento de filas por tabla
+
+[Tabla]              [Filas]
+-------              -------
+Fact_Defecto            1941
+ML_Holdout               389
+Dim_TipoDefecto            7
+Dim_Acero                 32
+Dim_BandaTamano            5
+Param_Especificacion       1
+
+
+
+
+### Medidas ML sin filtro (reconciliacion G6)
+
+[ML Rows] [ML Correct] [ML Errors] [ML Review Rows]         [MacroF1] [BalancedAccuracy] [ObservedAccuracy] [CandidateReview]
+--------- ------------ ----------- ----------------         --------- ------------------ ------------------ -----------------
+      389          307          82              261 0,814672810176437  0,804872679997993  0,789203084832905 0,670951156812339
+
+
+
+
+### Por tipo de acero
+
+ML_Holdout[steel_type] [Registros] [Aciertos] [Revisiones]
+---------------------- ----------- ---------- ------------
+A300                           156        121          122
+A400                           233        186          139
+
+
+
+
+### Por clase real
+
+ML_Holdout[actual_defect] [Registros] [Aciertos] [Errores] [Revisiones]
+------------------------- ----------- ---------- --------- ------------
+Bumps                              81         55        26           71
+Dirtiness                          11         10         1            5
+K_Scatch                           78         71         7           18
+Other_Faults                      135        106        29          114
+Pastry                             32         20        12           29
+Stains                             14         12         2            5
+Z_Scratch                          38         33         5           19
+
+
+
+
+### Confusion Bumps -> Other_Faults
+
+[Casos]
+-------
+     21
+
+
+
+
+### row_id 1277
+
+[row_id] [actual]     [predicho] [confianza] [estado]        [acierto] [revision]
+-------- --------     ---------- ----------- --------        --------- ----------
+    1277 Other_Faults K_Scatch             1 HIGH_CONFIDENCE         0          0
+
+
+
+
+### Estados de revision
+
+ML_Holdout[review_status] [Registros]
+------------------------- -----------
+HIGH_CONFIDENCE                   128
+LOW_CONFIDENCE                     88
+REVIEW_REQUIRED                   173
+
+
+
+
+### Inmunidad al filtro: A300 seleccionado
+
+[MacroF1filtrado] [MLRowsfiltrado]
+----------------- ----------------
+0,814672810176437              156
+
+
+
+
+### Medidas originales compilan (muestra de _Medidas)
+
+[Defectos] [COPQ MXN]              [Cpk]  [Linea Central]    [Sigma Global] [USL px2]
+---------- ----------              -----  ---------------    -------------- ---------
+      1941    2242600 0,0872832627740553 2,49238884678576 0,788930015464045       500
+
+
+
+
+CONEXION CERRADA. No se escribio nada en el modelo.
+
+===== query_precision.ps1 =====
+[difMacroF1]     0
+[difBalanced]    0
+[difAccuracy]    0
+[difReview]      0
+[igualMacroF1]   EXACTO
+[igualBalanced]  EXACTO
+
+--- valores a precision completa (formato R) ---
+[MacroF1]        0.81467281017643689
+[Balanced]       0.80487267999799328
+
+===== query_all_measures.ps1 =====
+Medidas declaradas en el modelo: 34
+
+  OK    _Medidas               % Fuera de USL                   = 0.30087583719732097
+  OK    _Medidas               Accion Recomendada               = Contención (ISO 8.7) + causa raíz (ISO 10.2)
+  OK    _Medidas               COPQ % del Total                 = 1
+  OK    _Medidas               COPQ Acumulado %                 = (BLANK)
+  OK    _Medidas               COPQ MXN                         = 2242600
+  OK    _Medidas               COPQ por Placa MXN               = 1155.3838227717672
+  OK    _Medidas               Cpk                              = 0.087283262774056139
+  OK    _Medidas               Defectos                         = 1941
+  OK    _Medidas               Defectos % del Total             = 1
+  OK    _Medidas               Defectos Grandes                 = 289
+  OK    _Medidas               Fuera de Limites                 = 0
+  OK    _Medidas               Grupos Fuera de Limites          = 7
+  OK    _Medidas               LCL                              = 2.4386674907661838
+  OK    _Medidas               Linea Central                    = 2.4923888467857553
+  OK    _Medidas               Media Log Area                   = 2.4923888467857553
+  OK    _Medidas               n Grupo                          = 1941
+  OK    _Medidas               Semaforo Cpk Color               = #C62828
+  OK    _Medidas               Semaforo Cpk Texto               = No capaz
+  OK    _Medidas               Sigma Global                     = 0.788930015464038
+  OK    _Medidas               Texto ISO 10.2                   = ISO 9001:2015 · 10.2 No conformidad y acción correctiva. Prioridad de análisis de causa raíz: Otros defectos (30% del COPQ).
+  OK    _Medidas               UCL                              = 2.5461102028053268
+  OK    _Medidas               USL px2                          = 500
+  OK    ML_Holdout             Candidate Review Rate            = 0.6709511568123393
+  OK    ML_Holdout             Final Balanced Accuracy (389)    = 0.80487267999799328
+  OK    ML_Holdout             Final Macro-F1 (389)             = 0.81467281017643689
+  OK    ML_Holdout             Mean Confidence                  = 0.688712807624532
+  OK    ML_Holdout             ML Confusion Errors              = 82
+  OK    ML_Holdout             ML Correct                       = 307
+  OK    ML_Holdout             ML Errors                        = 82
+  OK    ML_Holdout             ML Review Rows                   = 261
+  OK    ML_Holdout             ML Rows                          = 389
+  OK    ML_Holdout             Observed Accuracy                = 0.78920308483290491
+  OK    ML_Holdout             Observed Error Rate              = 0.21079691516709512
+  OK    ML_Holdout             Segment Support                  = DESCRIPTIVE
+
+RESULTADO: 34 de 34 medidas evaluadas sin error
+

@@ -62,9 +62,9 @@ Descriptive findings (with **illustrative costs**, not demonstrated savings): th
 
 ![Dashboard: decisions by defect type](reports/figures/decisiones.png)
 
-- PBIP project in [`powerbi/project/`](powerbi/project/) and PBIX in [`powerbi/artifacts/`](powerbi/artifacts/) (Git LFS: run `git lfs pull` after cloning).
-- The *MODEL PERFORMANCE & REVIEW* page and the `ML_Holdout` table were reconciled against Python (389 rows, 307 correct, 82 errors, 261 to review) at export level only: [reconciliation](docs/evidence/powerbi_ml_reconciliation.md).
-- **Power BI Desktop runtime validation is pending** (open, refresh, render, save): `POWER_BI_RUNTIME = MANUAL_VALIDATION_REQUIRED`. Exact steps in the [handoff](docs/evidence/powerbi_runtime_handoff.md). The published PBIX does not yet contain the ML page.
+- PBIP project in [`powerbi/project/`](powerbi/project/) and PBIX in [`powerbi/artifacts/`](powerbi/artifacts/) (Git LFS: run `git lfs pull` after cloning); canonical component name `steel-plates-quality-mlops-powerbi`.
+- The *MODEL PERFORMANCE & REVIEW* page and the `ML_Holdout` table were reconciled against Python (389 rows, 307 correct, 82 errors, 261 to review) at export level and against the live Desktop engine: [reconciliation](docs/evidence/powerbi_ml_reconciliation.md).
+- **Validated in Power BI Desktop 2.156.951.0** (opened, refreshed, reconciled against the live engine with exactly-zero difference, visually inspected by the author, saved and reopened on 2026-11-15): [runtime evidence](docs/production/POWERBI_DESKTOP_RUNTIME_EVIDENCE.md) and [certification](docs/production/POWERBI_PBIX_CERTIFICATION.md). The published PBIX (SHA256 `91f89ff2…`) includes the ML page.
 - The PBIP `RutaCSV` parameter ships with a placeholder (`C:\path\to\...`); set it in Desktop to `data/raw/steel_plates_faults.csv` in your clone.
 
 ## Human-review triage for your own inspection system (MVP)
@@ -123,7 +123,7 @@ The output contains the predicted class, seven probabilities, top-2 margin and t
 - **Full-observation classification only.** No good plates and no temporal variables; the temporal availability of the 27 measurements is not demonstrated.
 - **Consumed holdout.** It is no longer an untouched test set; any new model would need new data.
 - **Small classes and a review policy without prospective validation.** Feature importance is associative, not causal; probabilities are not calibrated.
-- **Power BI Desktop not validated at runtime**; reconciliation covers the Python export.
+- **Power BI Service not used**: validation covers Power BI Desktop; no cloud workspace, gateway or scheduled refresh is claimed.
 - **Assumed costs, specification limit and action thresholds.** No financial impact or production deployment is claimed.
 - **Thickness and defect type are confounded**: 99 % of K-scratches fall at thickness 40.
 

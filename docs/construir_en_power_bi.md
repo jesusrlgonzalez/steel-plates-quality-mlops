@@ -218,7 +218,7 @@ Si Power BI no coincide con estos valores, el gate queda **FAIL** hasta explicar
 
 Guarda dos artefactos locales:
 
-1. `steel-plates-quality-bi.pbix` — artefacto ejecutable para abrir en Power BI Desktop.
+1. `steel-plates-quality-mlops-powerbi.pbix` — artefacto ejecutable para abrir en Power BI Desktop.
 2. proyecto `.pbip` — fuente textual versionable.
 
 ### Regla de repositorio

@@ -6,6 +6,12 @@ the consumed holdout have not changed since v1.0.0.
 
 ## [Unreleased]
 
+### Added
+- Certified Power BI Desktop validation (OWNER-PBI-REN-001): the component is renamed to `steel-plates-quality-mlops-powerbi`, the PBIX saved from Desktop 2.156.951.0 (SHA256 `91f89ff2…d86260`) ships through Git LFS — repairing the previous pointer whose object was missing from the server — and the production dossier under `docs/production/` records the live-engine reconciliation with exactly-zero differences against the frozen metrics.
+
+### Changed
+- `RutaCSV` is published as a portable parameter with a neutral single-separator placeholder; the validation machine's local path stays out of version control. The preservation test accepts exactly the historical placeholder and the portable value, pins the Desktop-rewritten report objects byte by byte and checks their semantic core.
+
 ### Fixed
 - CI: `ubuntu-latest` moved to Ubuntu 26.04, where `actions/python-versions` publishes no Python 3.13.7 build. Jobs that pin 3.13.7 (the Docker base and the interpreter recorded in the artifact manifest) now run on `ubuntu-24.04`.
 - `test_previous_powerbi_preserved`: the account rename (`jesusgonzalezmexdata-ux` → `jesusrlgonzalez`, commit fecb642) changed the online data URL in `powerbi/powerquery/00_Parametros.pq`. The test now accepts exactly that owner change and still requires every other byte to match the pre-ML baseline; the baseline hash is unchanged.

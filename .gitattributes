@@ -6,6 +6,12 @@ reports/ml/final_holdout/*.json text eol=lf
 *.joblib binary
 artifacts/*.json text eol=lf
 powerbi/data/*.csv text eol=lf
-powerbi/project/steel-plates-quality-bi.Report/definition/pages/pages.json text eol=lf
-powerbi/project/steel-plates-quality-bi.Report/definition/pages/ml_performance_review/** text eol=lf
-powerbi/project/steel-plates-quality-bi.SemanticModel/definition/tables/ML_Holdout.tmdl text eol=lf
+powerbi/project/steel-plates-quality-mlops-powerbi.Report/definition/pages/pages.json text eol=lf
+powerbi/project/steel-plates-quality-mlops-powerbi.Report/definition/pages/ml_performance_review/** text eol=lf
+powerbi/project/steel-plates-quality-mlops-powerbi.SemanticModel/definition/tables/ML_Holdout.tmdl text eol=lf
+
+# El PBIX certificado (252 KB) se almacena como objeto git normal: el entorno que
+# lo publica no alcanza el extremo S3 de Git LFS, y un blob normal se descarga
+# desde cualquier clon sin git-lfs. Evita de raiz el fallo del puntero sin objeto
+# (404) que tuvo la version anterior. Desviacion documentada en el expediente A2-12.
+powerbi/artifacts/steel-plates-quality-mlops-powerbi.pbix -filter -diff -merge binary

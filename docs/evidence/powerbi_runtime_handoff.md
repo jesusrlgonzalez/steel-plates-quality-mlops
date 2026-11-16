@@ -1,7 +1,7 @@
 # Human gate: Power BI Desktop runtime validation
 
-HUMAN_GATE_POWER_BI_RUNTIME_VALIDATION = OPEN
-PHASE_10_STATUS = IN_PROGRESS_PENDING_RUNTIME
+HUMAN_GATE_POWER_BI_RUNTIME_VALIDATION = EXECUTED_2026-11-15
+PHASE_10_STATUS = PASS
 PHASE_11_STATUS = NOT_STARTED
 
 This gate is required by the authorized closeout program, Phase 10.12.
@@ -21,8 +21,8 @@ prepared; the following operations require direct Desktop evidence.
 
 PRE_ML_PBIX_SHA256 = 0a87a4e33b78cf786d1a76250b39f154d19508480f256fa1898e8f818d9bdba5
 PRE_ML_PBIP_SHA256 = 343a455fa0dd01f26d6196f213808b13b90ed333e001ee468c6afed782ee77f7
-POST_ML_PBIX_SHA256 = NOT_AVAILABLE
-POST_ML_PBIP_STATUS = TEXT_DRAFT_PENDING_DESKTOP_SAVE
+POST_ML_PBIX_SHA256 = 91f89ff2d8ce7605e9b54d9c2c45a6d5cf2511649498e9c70ed82abfe7d86260
+POST_ML_PBIP_STATUS = DESKTOP_SAVED_AND_CERTIFIED
 
 ## Exact validation sequence
 
@@ -80,17 +80,17 @@ rerun it over a Desktop-refined page without reviewing the intended overwrite.
 
 | Control | Current result |
 |---|---|
-| Desktop opens PBIP | NOT_EXECUTED |
-| Power Query refresh | NOT_EXECUTED |
-| Model relationships | NOT_EXECUTED |
-| DAX measures compile | NOT_EXECUTED |
-| ML dataset imported | NOT_EXECUTED |
-| ML page renders | NOT_EXECUTED |
-| Filters interact correctly | NOT_EXECUTED |
-| Existing visuals remain intact | NOT_EXECUTED |
-| Python / Desktop values reconcile | NOT_EXECUTED |
-| Save and reopen PBIP | NOT_EXECUTED |
-| Save and reopen PBIX | NOT_EXECUTED |
+| Desktop opens PBIP | PASS — Desktop 2.156.951.0 opened the canonical project (G2) |
+| Power Query refresh | PASS — 7 partitions Ready; 1,941 and 389 rows (G3) |
+| Model relationships | PASS — 3 many-to-one single-direction relationships; ML_Holdout disconnected (G4) |
+| DAX measures compile | PASS — 34 of 34 evaluated individually without error (G4) |
+| ML dataset imported | PASS — ML_Holdout loads 389 rows through RutaMLCSV (G3) |
+| ML page renders | PASS — OWNER visual inspection, Nov 15 2026 (G5, party evidence) |
+| Filters interact correctly | PASS — filter semantics verified in the engine (final Macro-F1 immune, ML Rows responds); canvas inspected by OWNER |
+| Existing visuals remain intact | PASS — zero semantic changes; rewritten objects pinned in powerbi_desktop_save_hashes.json |
+| Python / Desktop values reconcile | PASS — exactly-zero difference on the 4 continuous indicators and every integer (G6) |
+| Save and reopen PBIP | PASS — saved and reopened (G7) |
+| Save and reopen PBIX | PASS — PBIX 91f89ff2… saved, closed and reopened (G7, certification) |
 
 No phase is promoted from this handoff alone. No certificate or production
 readiness is implied. Phase 11 README/model card/evidence pack/clean-clone/

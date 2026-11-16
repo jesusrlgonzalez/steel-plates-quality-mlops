@@ -1,0 +1,18 @@
+EVALUATE
+ROW (
+    "Pareto última categoría",
+    CALCULATE (
+        [COPQ Acumulado %],
+        Dim_TipoDefecto[tipo_defecto] = "Suciedad"
+    )
+)
+
+
+
+
+
+
+
+
+
+
