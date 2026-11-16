@@ -11,8 +11,8 @@ prepared; the following operations require direct Desktop evidence.
 
 ## Prepared files
 
-- Open [steel-plates-quality-bi.pbip](../../powerbi/project/steel-plates-quality-bi.pbip).
-- Existing [PBIX](../../powerbi/artifacts/steel-plates-quality-bi.pbix) is unchanged.
+- Open [steel-plates-quality-mlops-powerbi.pbip](../../powerbi/project/steel-plates-quality-mlops-powerbi.pbip) (renamed from `steel-plates-quality-bi.pbip` in PR #9).
+- Certified [PBIX](../../powerbi/artifacts/steel-plates-quality-mlops-powerbi.pbix) saved from Desktop 2.156.951.0 (SHA256 `91f89ff2…d86260`).
 - New dataset: [ml_holdout_evaluation.csv](../../powerbi/data/ml_holdout_evaluation.csv).
 - New page: MODEL PERFORMANCE & REVIEW (12 visuals).
 - New table: ML_Holdout; new expression: RutaMLCSV.
@@ -59,13 +59,13 @@ POST_ML_PBIP_STATUS = DESKTOP_SAVED_AND_CERTIFIED
    and visuals. Preserve their content and analytical qualifications. Legacy
    COPQ uses assumed costs, not demonstrated savings.
 10. Save the PBIP through Desktop. Then use Save As through Desktop to save the
-    updated PBIX at `powerbi/artifacts/steel-plates-quality-bi.pbix`.
+    updated PBIX at `powerbi/artifacts/steel-plates-quality-mlops-powerbi.pbix`.
     Reopen both saved formats to verify successful persistence of the ML page.
     Do not edit PBIX bytes outside Desktop.
 11. Capture the Desktop version, refresh/model/measure/visual/filter/save outcomes,
     observed reconciliation values and supporting screenshots or exported tables.
     Record failures explicitly. Recompute PBIX SHA256 after the save, for example:
-    `Get-FileHash -LiteralPath 'powerbi/artifacts/steel-plates-quality-bi.pbix' -Algorithm SHA256`.
+    `Get-FileHash -LiteralPath 'powerbi/artifacts/steel-plates-quality-mlops-powerbi.pbix' -Algorithm SHA256`.
 12. Review the Desktop-generated Git diff for unintended changes, verify original
     page functionality, rerun Python export/artifact tests and record the actual
     post-save PBIP status/hash. Only then mark runtime PASS and continue Phase 11.
