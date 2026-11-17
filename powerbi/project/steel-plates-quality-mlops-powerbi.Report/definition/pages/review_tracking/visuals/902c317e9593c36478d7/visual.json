@@ -1,0 +1,136 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "902c317e9593c36478d7",
+  "position": {
+    "x": 20,
+    "y": 715,
+    "width": 610,
+    "height": 300,
+    "z": 12,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "fecha_corte"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.fecha_corte",
+              "nativeQueryRef": "fecha_corte"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Piezas Totales"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Piezas Totales",
+              "nativeQueryRef": "Piezas Totales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Piezas a Revision"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Piezas a Revision",
+              "nativeQueryRef": "Piezas a Revision"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Piezas Retenidas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Piezas Retenidas",
+              "nativeQueryRef": "Piezas Retenidas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Errores en Aceptadas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Errores en Aceptadas",
+              "nativeQueryRef": "Errores en Aceptadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Costo Total MXN"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Costo Total MXN",
+              "nativeQueryRef": "Costo Total MXN"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Semaforo Escapes"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Semaforo Escapes",
+              "nativeQueryRef": "Semaforo Escapes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Estado del Corte"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Estado del Corte",
+              "nativeQueryRef": "Estado del Corte"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

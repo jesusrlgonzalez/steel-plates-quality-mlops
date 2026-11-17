@@ -1,6 +1,6 @@
 # Expediente de producción Power BI — índice y estado vigente
 
-Estado vigente al 16 nov 2026: **Power BI validado en Desktop 2.156.951.0 y publicado** (PR #9, merge `3a240ad`). PBIX vigente SHA-256 `a37f3743e6107b41eb11c31886cfa6120ebc468e480d361f000104e55bf5bec1` (re-guardado el 16 nov con `RutaCSV` portátil; certificado anterior `91f89ff2…`, ver [POWERBI_PBIX_RESAVE_PORTABLE.md](POWERBI_PBIX_RESAVE_PORTABLE.md)). Power BI Service: **no usado**.
+Estado vigente al 16 nov 2026: **Power BI validado en Desktop 2.156.951.0 y publicado** (PR #9, merge `3a240ad`). PBIX vigente SHA-256 `a48291e59dfdc4d6b57da11b9c0280c60bfb48fcbab4f4533cacf0ddfc9435f4` (17 nov, con la página P02 validada en Desktop, ver [POWERBI_P02_REVIEW_PAGE.md](POWERBI_P02_REVIEW_PAGE.md); anteriores `a37f3743…` y `91f89ff2…`). Power BI Service: **no usado**.
 
 ## Documentos vigentes
 
@@ -11,6 +11,7 @@ Estado vigente al 16 nov 2026: **Power BI validado en Desktop 2.156.951.0 y publ
 | [POWERBI_RECONCILIATION_RESULTS.md](POWERBI_RECONCILIATION_RESULTS.md) | Reconciliación Python ↔ Power BI con diferencia 0 |
 | [POWERBI_PBIX_CERTIFICATION.md](POWERBI_PBIX_CERTIFICATION.md) | Certificación original del PBIX (15 nov, `91f89ff2…`) |
 | [POWERBI_PBIX_RESAVE_PORTABLE.md](POWERBI_PBIX_RESAVE_PORTABLE.md) | Re-guardado con `RutaCSV` portátil (16 nov, `a37f3743…`), incidencia #2 |
+| [POWERBI_P02_REVIEW_PAGE.md](POWERBI_P02_REVIEW_PAGE.md) | Página P02 de revisión humana validada en Desktop (17 nov, `a48291e5…`), reserva R3 |
 | [POWERBI_SECURITY_PORTABILITY.md](POWERBI_SECURITY_PORTABILITY.md) | Rutas, parámetro portátil y privacidad |
 | Resto de `POWERBI_*.md` y `evidence/` | Fases del renombrado, validaciones y scripts de verificación |
 

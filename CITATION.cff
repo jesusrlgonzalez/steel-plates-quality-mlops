@@ -6,7 +6,7 @@ authors:
   - family-names: "González"
     given-names: "Jesús R. L."
 license: Apache-2.0
-version: "1.6.0"
+version: "1.7.0"
 date-released: "2026-11-17"
 repository-code: "https://github.com/jesusrlgonzalez/steel-plates-quality-mlops"
 keywords:

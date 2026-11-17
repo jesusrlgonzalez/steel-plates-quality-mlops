@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "56ddbba90c6745d71cc8",
+  "position": {
+    "x": 20,
+    "y": 10,
+    "width": 1240,
+    "height": 95,
+    "z": 0,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "P02 · NIVEL A · flujo operativo SINTÉTICO de una planta ficticia; cifras en MXN de escenario, no beneficios observados. Cada fila = corte diario × escenario × política × clase predicha. Filtre UN escenario y UNA política para leer un caso. Escapes = placas liberadas con clase equivocada (clase real simulada). 'Revisar todo' supone revisar todas las piezas sin límite de inspectores. Clasificación de defectos ya detectados: no es detección temprana, prevención ni causa. Fuente: reports/pilots/P02.",
+                    "textStyle": {
+                      "fontFamily": "Verdana",
+                      "fontStyle": "normal",
+                      "fontSize": "13px",
+                      "color": "#d8d8d8"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

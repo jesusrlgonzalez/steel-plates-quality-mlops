@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "131ec8e492a3170770a9",
+  "position": {
+    "x": 20,
+    "y": 400,
+    "z": 10,
+    "height": 300,
+    "width": 610,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "fecha_corte"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.fecha_corte",
+              "nativeQueryRef": "fecha_corte",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Escapes por 1000 Aceptadas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Escapes por 1000 Aceptadas",
+              "nativeQueryRef": "Escapes por 1000 Aceptadas"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

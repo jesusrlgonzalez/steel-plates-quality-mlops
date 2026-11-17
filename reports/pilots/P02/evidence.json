@@ -6,7 +6,7 @@
  "pandas": "2.3.3",
  "numpy": "2.2.6",
  "codigo_y_fuente": {
-  "src/quality_ml/pilot_p02.py": "48624f7eaceeddb00ec6de669bd8fae54fa4e92be2c93d979c963930c439cee1",
+  "src/quality_ml/pilot_p02.py": "4526d95265a95ccc2f00581dd6e730c224b8d27a62b0fc7c97d87304d67a3599",
   "src/quality_ml/review_policy.py": "6211a26faf15c28d4bf0225e4a496c7d74e61fadc62239cd1dc6015325083995",
   "examples/review_triage/inspeccion_placas.csv": "3cb7ac32a7fcd4e527fc17d5edee172221a6fc30e14bc1b49301fa5ecc746b99"
  },
@@ -15,7 +15,7 @@
   "manifest.json": "28217aedc75bbc694be4da66cb139b36cfe736eb35580e6970a1dfcdfe441631",
   "raw_export_history.csv": "0789847cd951411869dd74e68bfc462078b08ea97b300310b7d974c5c8940713",
   "results.json": "269bc775fa3bd10a04533cd368ff565133e1e046a3f1089ca578ab938955b929",
-  "seguimiento_revision.csv": "bbb8cab377652097cc31f8286b85f598b5c824c87eb1a87022d8612c109802f9",
+  "seguimiento_revision.csv": "c18a40e503607255967bc9da0bfa72e347f708c372cef1430360b1cc179dabc8",
   "sensitivity.csv": "43b6f588e7379f72dfd2f215894c68b6eb3919e7ecf3b941cc9c74842cfb92f1"
  },
  "criterios": {

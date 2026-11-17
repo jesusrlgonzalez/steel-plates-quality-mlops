@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["RutaCSV","Raw_SteelPlates","Dim_TipoDefecto","Dim_Acero","Dim_BandaTamano","Fact_Defecto","Param_Especificacion","ML_Holdout","RutaMLCSV"]
+annotation PBI_QueryOrder = ["RutaCSV","Raw_SteelPlates","Dim_TipoDefecto","Dim_Acero","Dim_BandaTamano","Fact_Defecto","Param_Especificacion","ML_Holdout","RutaMLCSV","Seguimiento_Revision","RutaRevisionCSV"]
 
 annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
@@ -20,6 +20,7 @@ ref table Fact_Defecto
 ref table Param_Especificacion
 ref table _Medidas
 ref table ML_Holdout
+ref table Seguimiento_Revision
 
 ref cultureInfo es-ES
 
