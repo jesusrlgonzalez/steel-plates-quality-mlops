@@ -2,14 +2,16 @@
 // Medidas DAX · Seguimiento de la política de revisión humana (MVP 6)
 // Fuente: seguimiento_revision.csv, descargado del modo «Triaje de revisión» (una fila por clase y corte).
 // Réplica en Python: src/quality_ml/review_policy.py (bi_export).  ISO 9001:2015 · 8.6, 8.7, 9.1.1
-// Pendiente: crear la página en Power BI Desktop (no se puede validar sin Desktop).
+// Página: SEGUIMIENTO DE REVISIÓN HUMANA (tools/prepare_review_powerbi.py), validada en Power BI Desktop.
 // =====================================================================
 
-Piezas = SUM ( Seguimiento_Revision[piezas] )
+// «Piezas Totales» y no «Piezas»: Power BI no admite una medida con el nombre de una columna
+// (sin distinguir mayúsculas), y la tabla ya tiene la columna piezas. Detectado al abrir en Desktop.
+Piezas Totales = SUM ( Seguimiento_Revision[piezas] )
 
 Piezas a Revision = SUM ( Seguimiento_Revision[a_revision] )
 
-% a Revision = DIVIDE ( [Piezas a Revision], [Piezas] )
+% a Revision = DIVIDE ( [Piezas a Revision], [Piezas Totales] )
 
 Errores en Aceptadas = SUM ( Seguimiento_Revision[errores_en_aceptadas] )
 

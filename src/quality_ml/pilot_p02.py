@@ -442,13 +442,17 @@ BI_COLUMNS = ("fecha_corte", "escenario", "politica", "clase", "piezas", "a_revi
 def bi_export(runs: dict) -> pd.DataFrame:
     """``seguimiento_revision.csv`` para Power BI: una fila por fecha de corte, escenario, política y clase.
 
-    ``costo_escape`` es el costo medio por placa mal clasificada liberada, de modo que la medida DAX
-    ``errores_en_aceptadas × costo_escape`` reproduce el costo de la matriz."""
+    La fecha de corte es el día de **decisión** (captura), no la fecha de inspección de la placa: un registro
+    capturado con retraso (D6) se decide, y se suspende o no, el día en que llega. ``costo_escape`` es el costo
+    medio por placa mal clasificada liberada, de modo que la medida DAX ``errores_en_aceptadas × costo_escape``
+    reproduce el costo de la matriz."""
     out = []
     for r in runs.values():
         dec = r["decisiones"]
-        susp = r["dias"].set_index("dia")["suspendido"]
-        for (pol, dia, fecha, cls), g in dec.groupby(["politica", "dia", "fecha", "clase_predicha"], sort=True):
+        days = r["dias"].set_index("dia")
+        susp = days["suspendido"]
+        for (pol, dia, cls), g in dec.groupby(["politica", "dia", "clase_predicha"], sort=True):
+            fecha = days.loc[dia, "fecha"]
             rel = g["decision"].isin(["aceptar", "liberada_sin_cupo"])
             err, ce = int((g["costo_error"] > 0).sum()), float(g["costo_error"].sum())
             out.append(dict(fecha_corte=fecha, escenario=r["escenario"].id, politica=pol, clase=cls, piezas=len(g),

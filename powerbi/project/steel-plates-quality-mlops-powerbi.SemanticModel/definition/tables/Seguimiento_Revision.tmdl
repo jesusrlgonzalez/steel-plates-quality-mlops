@@ -1,12 +1,12 @@
 table Seguimiento_Revision
 
-	measure 'Piezas' = SUM ( Seguimiento_Revision[piezas] )
+	measure 'Piezas Totales' = SUM ( Seguimiento_Revision[piezas] )
 		formatString: #,0
 
 	measure 'Piezas a Revision' = SUM ( Seguimiento_Revision[a_revision] )
 		formatString: #,0
 
-	measure '% a Revision' = DIVIDE ( [Piezas a Revision], [Piezas] )
+	measure '% a Revision' = DIVIDE ( [Piezas a Revision], [Piezas Totales] )
 		formatString: 0.0%
 
 	measure 'Errores en Aceptadas' = SUM ( Seguimiento_Revision[errores_en_aceptadas] )

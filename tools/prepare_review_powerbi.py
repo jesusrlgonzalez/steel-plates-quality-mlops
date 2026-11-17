@@ -35,7 +35,7 @@ TYPES = {"fecha_corte": "dateTime", "escenario": "string", "politica": "string",
          "costo_errores": "double", "suspendido": "boolean", "clausula_iso9001": "string"}
 M_TYPES = {"dateTime": "type date", "string": "type text", "int64": "Int64.Type", "double": "type number",
            "boolean": "type logical"}
-FORMATS = {"Piezas": "#,0", "Piezas a Revision": "#,0", "% a Revision": "0.0%", "Errores en Aceptadas": "#,0",
+FORMATS = {"Piezas Totales": "#,0", "Piezas a Revision": "#,0", "% a Revision": "0.0%", "Errores en Aceptadas": "#,0",
            "Escapes por 1000 Aceptadas": "#,0.0", "Costo de Revision MXN": "#,0", "Costo de Escapes MXN": "#,0",
            "Costo Total MXN": "#,0", "Costo Revisar Todo MXN": "#,0", "Ahorro vs Revisar Todo MXN": "#,0",
            "Piezas Retenidas": "#,0"}
@@ -124,14 +124,14 @@ def prepare(root=ROOT):
 
     for i, column in enumerate(["escenario", "politica", "clase"]):
         visual("filter-" + column, "slicer", {"Values": [(column, False)]}, 20 + 415 * i, 115, 395, 150, i + 1)
-    for i, measure in enumerate(["Piezas", "Piezas a Revision", "% a Revision", "Errores en Aceptadas",
+    for i, measure in enumerate(["Piezas Totales", "Piezas a Revision", "% a Revision", "Errores en Aceptadas",
                                   "Escapes por 1000 Aceptadas", "Costo Total MXN"]):
         visual("card-" + measure, "card", {"Data": [(measure, True)]}, 20 + 207 * i, 280, 195, 105, i + 4)
     visual("trend", "line", {"Category": [("fecha_corte", False)], "Y": [("Escapes por 1000 Aceptadas", True)]},
            20, 400, 610, 300, 10)
     visual("by-class", "column", {"Category": [("clase", False)], "Y": [("Piezas a Revision", True)]},
            650, 400, 610, 300, 11)
-    visual("by-cut", "table", {"Values": [("fecha_corte", False), ("Piezas", True), ("Piezas a Revision", True),
+    visual("by-cut", "table", {"Values": [("fecha_corte", False), ("Piezas Totales", True), ("Piezas a Revision", True),
                                           ("Piezas Retenidas", True), ("Errores en Aceptadas", True),
                                           ("Costo Total MXN", True), ("Semaforo Escapes", True), ("Estado del Corte", True)]},
            20, 715, 610, 300, 12)
@@ -139,7 +139,7 @@ def prepare(root=ROOT):
                                          ("Costo Total MXN", True), ("Costo Revisar Todo MXN", True),
                                          ("Ahorro vs Revisar Todo MXN", True)]},
            650, 715, 610, 300, 13)
-    visual("class-table", "table", {"Values": [("clase", False), ("Piezas", True), ("Piezas a Revision", True),
+    visual("class-table", "table", {"Values": [("clase", False), ("Piezas Totales", True), ("Piezas a Revision", True),
                                                ("% a Revision", True), ("Errores en Aceptadas", True),
                                                ("Escapes por 1000 Aceptadas", True)]},
            20, 1030, 1240, 150, 14)
@@ -151,6 +151,9 @@ def prepare(root=ROOT):
     write_json(index_path, index)
 
     measures = dax_measures(root) | EXTRA
+    clash = {m for m in measures if m.lower() in {c.lower() for c in TYPES}}
+    if clash:
+        raise ValueError(f"Measures named like columns (Power BI rejects them): {sorted(clash)}")
     lines = [f"table {TABLE}"]
     for name, expression in measures.items():
         lines += ["", *_tmdl_measure(name, expression)]

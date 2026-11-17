@@ -32,6 +32,8 @@ def test_table_schema_and_measures_match_the_dax_file():
                             table, re.M | re.S))
     expected = dax_measures(ROOT) | EXTRA
     assert set(found) == set(expected)
+    # Desktop refuses a measure named like a column (case-insensitive); found when opening in Desktop.
+    assert not {m.lower() for m in found} & {c.lower() for c in TYPES}
     for name, expression in expected.items():
         assert _norm(found[name]) == _norm(expression), name
     assert "File.Contents(RutaRevisionCSV)" in table and "mode: import" in table

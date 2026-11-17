@@ -91,6 +91,13 @@ def test_c10_power_bi_export_matches_dax_and_reconciles(runs):
     assert bi["piezas"].sum() == len(dec)
     assert bi["a_revision"].sum() == (dec["decision"] == "revisar").sum()
     assert (bi["errores_en_aceptadas"] * bi["costo_escape"]).sum() == pytest.approx(dec["costo_error"].sum(), rel=1e-6)
+    # Each cut is a decision day: its suspension flag is that day's, with no late record leaking into
+    # the previous inspection date (found when the page was validated in Power BI Desktop).
+    for sc, r in runs.items():
+        days = r["dias"].set_index("fecha")["suspendido"]
+        flags = bi[bi["escenario"] == sc].groupby("fecha_corte")["suspendido"].agg(["min", "max"])
+        assert (flags["min"] == flags["max"]).all()
+        assert flags["max"].to_dict() == days.to_dict()
 
 
 def test_committed_outputs_match_evidence_hashes():

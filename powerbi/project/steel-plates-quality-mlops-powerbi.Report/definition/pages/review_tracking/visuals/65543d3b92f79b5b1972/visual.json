@@ -37,11 +37,11 @@
                       "Entity": "Seguimiento_Revision"
                     }
                   },
-                  "Property": "Piezas"
+                  "Property": "Piezas Totales"
                 }
               },
-              "queryRef": "Seguimiento_Revision.Piezas",
-              "nativeQueryRef": "Piezas"
+              "queryRef": "Seguimiento_Revision.Piezas Totales",
+              "nativeQueryRef": "Piezas Totales"
             },
             {
               "field": {
