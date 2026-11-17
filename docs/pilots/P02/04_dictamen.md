@@ -9,6 +9,8 @@
 >
 > No se atribuye a P02 detección temprana, prevención ni identificación de causas. La aceptación formal del OWNER es un acto posterior a la publicación y se registra fuera de este expediente.
 
+> **Estado vigente (`v1.7.0`, 2026-11-17).** R3 está cerrada: la página de Power BI se validó en Desktop. Siguen abiertas **R1, R2, R4 y R5**. El texto publicado en `v1.6.0` se conserva en ese release.
+
 ## 1. Puertas
 
 | Puerta | Estado | Evidencia |
@@ -34,7 +36,7 @@
 | C7 Límites | PASS: 0 placas de clase nueva liberadas; suspendidos los días con confianza descalibrada (2 de 2) y con datos inválidos (1 de 1). El cambio de mezcla se detectó 0 de 3 veces (R1) | `test_c7_*` |
 | C8 Trazabilidad y regeneración | PASS | `test_c8_*`, `evidence.json`, paso de CI |
 | C9 Consistencia económica | PASS: los costos se recalculan desde la bitácora | `test_c9_*` |
-| C10 Power BI | Exportación y conciliación: PASS. Página en Desktop: **NO EJECUTADO** | `test_c10_*` |
+| C10 Power BI | Exportación y conciliación: PASS. Página en Desktop: **PASS en `v1.7.0`** (2026-11-17; en `v1.6.0` constaba como no ejecutada) | `test_c10_*`, `test_review_powerbi.py`, [`POWERBI_P02_REVIEW_PAGE.md`](../../production/POWERBI_P02_REVIEW_PAGE.md) |
 | C11 Sin atribución indebida | PASS (revisión manual) | Ficha y resultados |
 
 Sin incidencias críticas.
@@ -43,10 +45,7 @@ Sin incidencias críticas.
 
 - **R1 El cambio de mezcla no se detecta.** El triple de `Bumps` en los días 3–5 de S3 no superó el umbral del PSI de mezcla (0.38), calibrado con el historial. Con ~60 placas por día el PSI diario es ruidoso. Antes de un piloto real: ventanas de varios días o pruebas por clase.
 - **R2 Costos y flujo del mismo autor.** La matriz de costos, el remuestreo y las políticas son supuestos. Las cifras no anticipan el efecto en una planta.
-- **R3 Página de Power BI no construida** — *resuelta en `v1.7.0`: página «SEGUIMIENTO DE REVISIÓN HUMANA» validada en Desktop, PBIX `a48291e5…435f4`; ver [`POWERBI_P02_REVIEW_PAGE.md`](../../production/POWERBI_P02_REVIEW_PAGE.md)*. La exportación cumple el esquema de `revision_humana.dax` y concilia con la bitácora. La página **MODEL PERFORMANCE & REVIEW** requiere:
-  - construirla en una copia versionada;
-  - validarla en Power BI Desktop;
-  - un nuevo SHA-256 del PBIX y la actualización controlada de `test_bi_integration.py`.
+- **R3 Página de Power BI — CERRADA en `v1.7.0` (2026-11-17).** La página «SEGUIMIENTO DE REVISIÓN HUMANA» se construyó en una copia versionada, se validó en Power BI Desktop y se certificó con un nuevo PBIX (`a48291e5…435f4`, fijado en `test_bi_integration.py`). Evidencia: [`POWERBI_P02_REVIEW_PAGE.md`](../../production/POWERBI_P02_REVIEW_PAGE.md). Sin tareas pendientes.
 - **R4 Un solo costo de escape en el ajuste.** Los cortes se optimizan con MXN 1,500 y se evalúan con la matriz. Optimizar con la matriz sería una extensión del algoritmo con versión y pruebas propias.
 - **R5 Decisiones humanas simuladas.** El inspector corrige siempre la clase de lo que revisa; lo liberado sin cupo no se recupera.
 
@@ -55,11 +54,11 @@ Sin incidencias críticas.
 | Campo | Valor |
 |---|---|
 | Proyecto | `steel-plates-quality-mlops` · Piloto P02, revisión humana de la clasificación de defectos con inspectores limitados |
-| Versión | `P02-v1.0.0`, en el release del repositorio `v1.6.0` |
+| Versión | `P02-v1.0.0`, en el release del repositorio `v1.6.0`; página de Power BI añadida en `v1.7.0` |
 | Código evaluado | `src/quality_ml/pilot_p02.py` y `review_policy.py`, con SHA-256 en `reports/pilots/P02/evidence.json` |
 | Fecha | 2026-11-17 |
 | Pruebas | Piloto: 11 de 11; suite completa en CI |
-| Resultado | Demostración aprobada con reservas R1–R5 |
+| Resultado | Demostración aprobada con reservas. Abiertas: R1, R2, R4 y R5 (R3 cerrada en `v1.7.0`) |
 | Naturaleza | **Autoevaluación del autor.** No es certificación externa, validación empresarial independiente ni acreditación de producción |
 
 ## 5. Condiciones para un piloto real (Nivel B)
