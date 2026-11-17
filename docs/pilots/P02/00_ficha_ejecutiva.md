@@ -24,7 +24,7 @@
 **Límites visibles.**
 - El monitor **no detectó** un cambio de mezcla (triple de `Bumps`).
 - Los costos son supuestos.
-- La página de Power BI **no se construyó** en esta versión. Existe la exportación `seguimiento_revision.csv`, con pruebas de esquema contra las medidas DAX y de conciliación con la bitácora. El PBIX certificado no cambia.
+- La página de Power BI se añadió en `v1.7.0`, validada en Power BI Desktop ([evidencia](../../production/POWERBI_P02_REVIEW_PAGE.md)). En `v1.6.0` solo existía la exportación `seguimiento_revision.csv`.
 
 **Dictamen:** demostración aprobada con reservas, exclusivamente en Nivel A (autoevaluación). Detalle en [04_dictamen.md](04_dictamen.md).
 
