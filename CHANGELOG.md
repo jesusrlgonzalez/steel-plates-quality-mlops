@@ -6,6 +6,18 @@ the consumed holdout have not changed since v1.0.0.
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-11-17
+
+### Added
+- Power BI page «SEGUIMIENTO DE REVISIÓN HUMANA» (`review_tracking`) for P02, authorised by the OWNER on 2026-11-17: table `Seguimiento_Revision` (612 rows, 13 measures from `revision_humana.dax`), expression `RutaRevisionCSV` derived from `RutaCSV`, 15 visuals. Built by `tools/prepare_review_powerbi.py`, opened, refreshed, reconciled and saved in Power BI Desktop; checked by `tests/test_review_powerbi.py`. Evidence in `docs/production/POWERBI_P02_REVIEW_PAGE.md`. Closes P02 reservation R3. Synthetic data, level A.
+
+### Changed
+- The certified PBIX is the Desktop save with the new page: SHA256 `a48291e5…435f4` (274,350 bytes). Previous pages, `ML_Holdout` (389 rows), the 34 earlier measures and the 3 relationships are unchanged; no auto date tables. `a37f3743…` is superseded.
+- `fecha_corte` in the P02 export is ISO text, so Desktop adds no date tables to the certified model.
+
+### Fixed
+- P02 Power BI export groups by decision day, so a late inspection record no longer carries the next day's suspension flag (S3 suspended cuts are days 7, 8 and 10).
+
 ## [1.6.0] - 2026-11-17
 
 ### Added

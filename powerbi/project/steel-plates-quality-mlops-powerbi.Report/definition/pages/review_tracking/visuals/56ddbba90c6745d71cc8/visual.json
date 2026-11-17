@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "P02 \u00b7 NIVEL A \u00b7 flujo operativo SINT\u00c9TICO de una planta ficticia; cifras en MXN de escenario, no beneficios observados. Cada fila = corte diario \u00d7 escenario \u00d7 pol\u00edtica \u00d7 clase predicha. Filtre UN escenario y UNA pol\u00edtica para leer un caso. Escapes = placas liberadas con clase equivocada (clase real simulada). 'Revisar todo' supone revisar todas las piezas sin l\u00edmite de inspectores. Clasificaci\u00f3n de defectos ya detectados: no es detecci\u00f3n temprana, prevenci\u00f3n ni causa. Fuente: reports/pilots/P02.",
+                    "value": "P02 · NIVEL A · flujo operativo SINTÉTICO de una planta ficticia; cifras en MXN de escenario, no beneficios observados. Cada fila = corte diario × escenario × política × clase predicha. Filtre UN escenario y UNA política para leer un caso. Escapes = placas liberadas con clase equivocada (clase real simulada). 'Revisar todo' supone revisar todas las piezas sin límite de inspectores. Clasificación de defectos ya detectados: no es detección temprana, prevención ni causa. Fuente: reports/pilots/P02.",
                     "textStyle": {
                       "fontFamily": "Verdana",
                       "fontStyle": "normal",

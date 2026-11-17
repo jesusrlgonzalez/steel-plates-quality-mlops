@@ -40,3 +40,5 @@ expression RutaRevisionCSV =
 		    Result = Root & "/powerbi/data/seguimiento_revision.csv"
 		in
 		    Result
+	lineageTag: cbecc650-5a87-4a3e-836f-7b2eb9cdf59a
+

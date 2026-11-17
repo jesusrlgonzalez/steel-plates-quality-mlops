@@ -65,10 +65,12 @@ RENAMED_PREFIXES = ("powerbi/project/", "powerbi/artifacts/")
 # The certified PBIX. First certified on 2026-11-15 (91f89ff2..., Desktop 2.156.951.0,
 # evidence in docs/production/POWERBI_PBIX_CERTIFICATION.md); re-saved through Desktop
 # on 2026-11-16 with RutaCSV set to the portable parameter and refreshed against it
-# (issue #2; evidence in docs/production/POWERBI_PBIX_RESAVE_PORTABLE.md). Only the
+# (issue #2; evidence in docs/production/POWERBI_PBIX_RESAVE_PORTABLE.md); saved again on
+# 2026-11-17 with the P02 review page added and validated in Desktop (a37f3743... is
+# superseded; evidence in docs/production/POWERBI_P02_REVIEW_PAGE.md). Only the
 # current certified binary is accepted besides the frozen pre-ML baseline, whose LFS
 # object (oid 0a87a4e3...) no longer exists on the server.
-PBIX_CERTIFIED_SHA256 = "a37f3743e6107b41eb11c31886cfa6120ebc468e480d361f000104e55bf5bec1"
+PBIX_CERTIFIED_SHA256 = "a48291e59dfdc4d6b57da11b9c0280c60bfb48fcbab4f4533cacf0ddfc9435f4"
 # A genuine Desktop save re-serialises pre-ML report objects, which the frozen
 # baseline is designed to catch. This manifest pins the post-save identity of each
 # rewritten object and records the baseline semantic core it had to keep; it is

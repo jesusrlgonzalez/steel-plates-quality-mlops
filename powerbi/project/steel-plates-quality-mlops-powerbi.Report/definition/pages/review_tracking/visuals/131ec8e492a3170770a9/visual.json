@@ -4,9 +4,9 @@
   "position": {
     "x": 20,
     "y": 400,
-    "width": 610,
-    "height": 300,
     "z": 10,
+    "height": 300,
+    "width": 610,
     "tabOrder": 10
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Seguimiento_Revision.fecha_corte",
-              "nativeQueryRef": "fecha_corte"
+              "nativeQueryRef": "fecha_corte",
+              "active": true
             }
           ]
         },

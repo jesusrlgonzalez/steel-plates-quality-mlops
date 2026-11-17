@@ -1,34 +1,45 @@
 table Seguimiento_Revision
+	lineageTag: 148c3fe9-6619-4f9c-bcf8-e203a3c2d938
 
 	measure 'Piezas Totales' = SUM ( Seguimiento_Revision[piezas] )
 		formatString: #,0
+		lineageTag: d022e532-a6f2-4150-9bbc-307163752996
 
 	measure 'Piezas a Revision' = SUM ( Seguimiento_Revision[a_revision] )
 		formatString: #,0
+		lineageTag: 5a836775-393a-44b6-8b23-7d27ab640a8f
 
 	measure '% a Revision' = DIVIDE ( [Piezas a Revision], [Piezas Totales] )
 		formatString: 0.0%
+		lineageTag: b809971a-18c8-40e5-ab25-1654b17478f8
 
 	measure 'Errores en Aceptadas' = SUM ( Seguimiento_Revision[errores_en_aceptadas] )
 		formatString: #,0
+		lineageTag: e4d3697e-ff62-4c5b-bbe6-7406898ac826
 
 	measure 'Escapes por 1000 Aceptadas' = DIVIDE ( [Errores en Aceptadas], SUM ( Seguimiento_Revision[aceptadas] ) ) * 1000
 		formatString: #,0.0
+		lineageTag: 8e904fa5-9cd3-4afb-be7f-d03c19c81e9a
 
 	measure 'Costo de Revision MXN' = SUMX ( Seguimiento_Revision, Seguimiento_Revision[a_revision] * Seguimiento_Revision[costo_revision] )
 		formatString: #,0
+		lineageTag: d79ce501-3fee-4890-95cc-88ad34a4c9c9
 
 	measure 'Costo de Escapes MXN' = SUMX ( Seguimiento_Revision, Seguimiento_Revision[errores_en_aceptadas] * Seguimiento_Revision[costo_escape] )
 		formatString: #,0
+		lineageTag: 259bb133-1e13-4aee-8a3d-4c1a4d447717
 
 	measure 'Costo Total MXN' = [Costo de Revision MXN] + [Costo de Escapes MXN]
 		formatString: #,0
+		lineageTag: 8da80089-b03e-4d9c-a7f5-95006d596b6d
 
 	measure 'Costo Revisar Todo MXN' = SUMX ( Seguimiento_Revision, Seguimiento_Revision[piezas] * Seguimiento_Revision[costo_revision] )
 		formatString: #,0
+		lineageTag: d376e4af-e1bb-4ac5-b257-2866f089596f
 
 	measure 'Ahorro vs Revisar Todo MXN' = [Costo Revisar Todo MXN] - [Costo Total MXN]
 		formatString: #,0
+		lineageTag: 3d72a169-1497-455a-8472-bc53f2688c02
 
 	measure 'Semaforo Escapes' =
 			VAR actual = [Escapes por 1000 Aceptadas]
@@ -38,80 +49,96 @@ table Seguimiento_Revision
 			        OFFSET ( -1, ALLSELECTED ( Seguimiento_Revision[fecha_corte] ), ORDERBY ( Seguimiento_Revision[fecha_corte] ) )
 			    )
 			RETURN IF ( NOT ISBLANK ( previo ) && actual > 1.5 * previo, "rojo", "verde" )
+		lineageTag: 45756748-0180-4ba5-8812-695c6ec12a33
 
 	measure 'Piezas Retenidas' = SUM ( Seguimiento_Revision[retenidas] )
 		formatString: #,0
+		lineageTag: 8ee05ba4-2fe1-4b06-ab60-6910cbb7ad55
 
 	measure 'Estado del Corte' = IF ( CALCULATE ( COUNTROWS ( Seguimiento_Revision ), Seguimiento_Revision[suspendido] = TRUE () ) > 0, "suspendido", "normal" )
+		lineageTag: f008d944-ff37-431a-b8b1-61f27e730016
 
 	column fecha_corte
-		dataType: dateTime
-		formatString: yyyy-mm-dd
+		dataType: string
+		lineageTag: 17a0cfa5-206b-4329-bb56-6b67d9038596
 		summarizeBy: none
 		sourceColumn: fecha_corte
 
 	column escenario
 		dataType: string
+		lineageTag: 5c473f85-c57d-4867-8fdf-25b9cad6b24b
 		summarizeBy: none
 		sourceColumn: escenario
 
 	column politica
 		dataType: string
+		lineageTag: 4372af6e-9f09-42e1-b305-ee51784b6285
 		summarizeBy: none
 		sourceColumn: politica
 
 	column clase
 		dataType: string
+		lineageTag: 7941ae1b-6988-4ade-b73d-72aaca407e14
 		summarizeBy: none
 		sourceColumn: clase
 
 	column piezas
 		dataType: int64
+		lineageTag: 770aa4a3-3a52-4771-af6d-da8377325344
 		summarizeBy: none
 		sourceColumn: piezas
 
 	column a_revision
 		dataType: int64
+		lineageTag: df278801-a75e-474f-a6a6-4d46cb162506
 		summarizeBy: none
 		sourceColumn: a_revision
 
 	column aceptadas
 		dataType: int64
+		lineageTag: f800634c-b82d-454e-bb8c-9ae64667b896
 		summarizeBy: none
 		sourceColumn: aceptadas
 
 	column retenidas
 		dataType: int64
+		lineageTag: 07ae81d9-acfd-41c5-bd4f-221e2b05439b
 		summarizeBy: none
 		sourceColumn: retenidas
 
 	column errores_en_aceptadas
 		dataType: int64
+		lineageTag: 3243eabf-6c9f-4b9f-afea-a0fced9a65e0
 		summarizeBy: none
 		sourceColumn: errores_en_aceptadas
 
 	column costo_revision
 		dataType: double
+		lineageTag: 4a324896-006f-44b6-9d39-4646a2d537dd
 		summarizeBy: none
 		sourceColumn: costo_revision
 
 	column costo_escape
 		dataType: double
+		lineageTag: 5755761a-8817-4d33-b35d-d0562ba3590a
 		summarizeBy: none
 		sourceColumn: costo_escape
 
 	column costo_errores
 		dataType: double
+		lineageTag: b21215f7-5bc0-4fef-9bd6-64ff82b9efcc
 		summarizeBy: none
 		sourceColumn: costo_errores
 
 	column suspendido
 		dataType: boolean
+		lineageTag: 1b2f898a-68c7-46d5-97ef-6515117e75d2
 		summarizeBy: none
 		sourceColumn: suspendido
 
 	column clausula_iso9001
 		dataType: string
+		lineageTag: e3e2a22a-e17f-4aa9-9ccc-c0141e331296
 		summarizeBy: none
 		sourceColumn: clausula_iso9001
 
@@ -123,8 +150,9 @@ table Seguimiento_Revision
 				    Cabecera = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
 				    Esperadas = {"fecha_corte", "escenario", "politica", "clase", "piezas", "a_revision", "aceptadas", "retenidas", "errores_en_aceptadas", "costo_revision", "costo_escape", "costo_errores", "suspendido", "clausula_iso9001"},
 				    Schema = if Table.ColumnNames(Cabecera) = Esperadas then Cabecera else error "Seguimiento schema mismatch",
-				    Tipos = Table.TransformColumnTypes(Schema, {{"fecha_corte", type date}, {"escenario", type text}, {"politica", type text}, {"clase", type text}, {"piezas", Int64.Type}, {"a_revision", Int64.Type}, {"aceptadas", Int64.Type}, {"retenidas", Int64.Type}, {"errores_en_aceptadas", Int64.Type}, {"costo_revision", type number}, {"costo_escape", type number}, {"costo_errores", type number}, {"suspendido", type logical}, {"clausula_iso9001", type text}}, "en-US"),
+				    Tipos = Table.TransformColumnTypes(Schema, {{"fecha_corte", type text}, {"escenario", type text}, {"politica", type text}, {"clase", type text}, {"piezas", Int64.Type}, {"a_revision", Int64.Type}, {"aceptadas", Int64.Type}, {"retenidas", Int64.Type}, {"errores_en_aceptadas", Int64.Type}, {"costo_revision", type number}, {"costo_escape", type number}, {"costo_errores", type number}, {"suspendido", type logical}, {"clausula_iso9001", type text}}, "en-US"),
 				    Validado = if List.ContainsAll({"S1", "S2", "S3"}, List.Distinct(Tipos[escenario])) and Table.RowCount(Tipos) > 0
 				        then Tipos else error "Expected P02 scenarios S1-S3"
 				in
 				    Validado
+

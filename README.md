@@ -64,7 +64,7 @@ Descriptive findings (with **illustrative costs**, not demonstrated savings): th
 
 - PBIP project in [`powerbi/project/`](powerbi/project/) and PBIX in [`powerbi/artifacts/`](powerbi/artifacts/) (Git LFS: run `git lfs pull` after cloning); canonical component name `steel-plates-quality-mlops-powerbi`.
 - The *MODEL PERFORMANCE & REVIEW* page and the `ML_Holdout` table were reconciled against Python (389 rows, 307 correct, 82 errors, 261 to review) at export level and against the live Desktop engine: [reconciliation](docs/evidence/powerbi_ml_reconciliation.md).
-- **Validated in Power BI Desktop 2.156.951.0** (opened, refreshed, reconciled against the live engine with exactly-zero difference, visually inspected by the author, saved and reopened on 2026-11-15): [runtime evidence](docs/production/POWERBI_DESKTOP_RUNTIME_EVIDENCE.md) and [certification](docs/production/POWERBI_PBIX_CERTIFICATION.md). The published PBIX (SHA256 `a37f3743…`, re-saved on 2026-11-16 with the portable `RutaCSV`) includes the ML page.
+- **Validated in Power BI Desktop 2.156.951.0** (opened, refreshed, reconciled against the live engine with exactly-zero difference, visually inspected by the author, saved and reopened on 2026-11-15): [runtime evidence](docs/production/POWERBI_DESKTOP_RUNTIME_EVIDENCE.md) and [certification](docs/production/POWERBI_PBIX_CERTIFICATION.md). The published PBIX (SHA256 `a48291e5…`, saved on 2026-11-17) includes the ML page and the P02 human-review page ([evidence](docs/production/POWERBI_P02_REVIEW_PAGE.md)).
 - The PBIP `RutaCSV` parameter ships with a placeholder (`C:\path\to\...`); set it in Desktop to `data/raw/steel_plates_faults.csv` in your clone.
 
 ## Human-review triage for your own inspection system (MVP)

@@ -5,7 +5,8 @@ Adds, without touching the certified pages or tables:
   P02 export ``reports/pilots/P02/seguimiento_revision.csv``) with the measures of ``powerbi/dax/revision_humana.dax``;
 - page ``review_tracking`` ("SEGUIMIENTO DE REVISIÓN HUMANA").
 
-The generated text is a draft until Power BI Desktop opens, refreshes and saves it.
+The generated text is a draft until Power BI Desktop opens, refreshes and saves it. Once the page exists,
+the committed files are the Desktop-saved ones (validated on 2026-11-17) and only the data copy is refreshed.
 """
 from __future__ import annotations
 
@@ -29,7 +30,9 @@ TABLE = "Seguimiento_Revision"
 SOURCE_CSV = "reports/pilots/P02/seguimiento_revision.csv"
 DATA_CSV = "powerbi/data/seguimiento_revision.csv"
 DAX = "powerbi/dax/revision_humana.dax"
-TYPES = {"fecha_corte": "dateTime", "escenario": "string", "politica": "string", "clase": "string",
+# fecha_corte stays ISO text (YYYY-MM-DD): it sorts like a date, and a date column would make Desktop
+# add auto date tables and a relationship to the certified model (seen on the first Desktop save).
+TYPES = {"fecha_corte": "string", "escenario": "string", "politica": "string", "clase": "string",
          "piezas": "int64", "a_revision": "int64", "aceptadas": "int64", "retenidas": "int64",
          "errores_en_aceptadas": "int64", "costo_revision": "double", "costo_escape": "double",
          "costo_errores": "double", "suspendido": "boolean", "clausula_iso9001": "string"}
@@ -72,6 +75,8 @@ def prepare(root=ROOT):
     header = (root / DATA_CSV).read_text(encoding="utf-8").splitlines()[0].split(",")
     if header != list(TYPES):
         raise ValueError(f"Unexpected export schema: {header}")
+    if PAGE in json.loads((base / "pages.json").read_text(encoding="utf-8-sig"))["pageOrder"]:
+        return dict(status="DESKTOP_SAVED_KEPT", page=PAGE, table=TABLE, runtime_validation="DESKTOP_VALIDATED")
 
     templates = {
         "card": "5ee9939d0101076d3381/visuals/083e0e977408b7b77e25/visual.json",
@@ -159,8 +164,6 @@ def prepare(root=ROOT):
         lines += ["", *_tmdl_measure(name, expression)]
     for name, kind in TYPES.items():
         lines += ["", f"\tcolumn {name}", f"\t\tdataType: {kind}"]
-        if kind == "dateTime":
-            lines += ["\t\tformatString: yyyy-mm-dd"]
         lines += ["\t\tsummarizeBy: none", f"\t\tsourceColumn: {name}"]
     headers = ", ".join(f'"{name}"' for name in TYPES)
     conversions = ", ".join('{"' + n + '", ' + M_TYPES[k] + "}" for n, k in TYPES.items())

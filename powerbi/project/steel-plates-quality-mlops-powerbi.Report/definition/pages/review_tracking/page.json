@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "review_tracking",
-  "displayName": "SEGUIMIENTO DE REVISI\u00d3N HUMANA",
+  "displayName": "SEGUIMIENTO DE REVISIÓN HUMANA",
   "displayOption": "FitToWidth",
   "height": 1200,
   "width": 1280

@@ -4,9 +4,9 @@
   "position": {
     "x": 850,
     "y": 115,
-    "width": 395,
-    "height": 150,
     "z": 3,
+    "height": 150,
+    "width": 395,
     "tabOrder": 3
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Seguimiento_Revision.clase",
-              "nativeQueryRef": "clase"
+              "nativeQueryRef": "clase",
+              "active": true
             }
           ]
         }

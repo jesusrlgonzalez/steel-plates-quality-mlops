@@ -79,8 +79,10 @@ def test_generation_is_idempotent(tmp_path):
     (tmp_path / SOURCE_CSV).parent.mkdir(parents=True)
     shutil.copyfile(ROOT / SOURCE_CSV, tmp_path / SOURCE_CSV)
     shutil.copyfile(ROOT / "powerbi/dax/revision_humana.dax", tmp_path / "powerbi/dax/revision_humana.dax")
+    before = {p: p.read_bytes() for p in (tmp_path / "powerbi").rglob("*") if p.is_file()}
     prepare(tmp_path)
     once = {p: p.read_bytes() for p in (tmp_path / "powerbi").rglob("*") if p.is_file()}
+    assert once == before  # the Desktop-saved page and table are never regenerated over
     prepare(tmp_path)
     assert once == {p: p.read_bytes() for p in (tmp_path / "powerbi").rglob("*") if p.is_file()}
 

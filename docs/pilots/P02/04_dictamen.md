@@ -16,7 +16,7 @@
 | G0 Definición del problema | PASS | [01_caso_empresarial.md](01_caso_empresarial.md), criterios C1–C11 en el commit `86130681b78bad0cef27c53d839225fd06e7e6f4`, publicado antes del código |
 | G1 Datos y contratos | PASS | D1–D7 comprobadas contra la verdad sintética (C1); revisiones abiertas fuera del ajuste (C2) |
 | G2 Validación científica | PASS | El holdout no se lee (C4). Modelo, métricas, `ml_holdout_evaluation.csv` y el PBIX certificado sin cambios; las pruebas existentes lo verifican |
-| G3 Integración operativa | PASS con reserva | Cupo estricto (C3), revisión humana obligatoria para lo desconocido o incompleto, suspensión, bitácora (C8) y costos recalculables (C9). Power BI: exportación y pruebas; página **no ejecutada** (R3) |
+| G3 Integración operativa | PASS con reserva | Cupo estricto (C3), revisión humana obligatoria para lo desconocido o incompleto, suspensión, bitácora (C8) y costos recalculables (C9). Power BI: exportación y pruebas; página validada en Desktop en `v1.7.0` (R3 resuelta) |
 | G4 Escenarios y robustez | PASS con reservas | S1–S3 y 21 combinaciones de sensibilidad. Reservas R1 y R2 |
 | G5 Auditoría y expediente | PASS (autoevaluación) | Este expediente |
 | G6 Publicación verificable | PASS | Versión del repositorio `v1.6.0` (`P02-v1.0.0`). Integración por PR con los 4 checks obligatorios; las salidas se regeneran idénticas en CI; el release incluye `p02-evidence-v1.6.0.zip`, verificado por `tests/test_release_p02.py` |
@@ -43,7 +43,7 @@ Sin incidencias críticas.
 
 - **R1 El cambio de mezcla no se detecta.** El triple de `Bumps` en los días 3–5 de S3 no superó el umbral del PSI de mezcla (0.38), calibrado con el historial. Con ~60 placas por día el PSI diario es ruidoso. Antes de un piloto real: ventanas de varios días o pruebas por clase.
 - **R2 Costos y flujo del mismo autor.** La matriz de costos, el remuestreo y las políticas son supuestos. Las cifras no anticipan el efecto en una planta.
-- **R3 Página de Power BI no construida.** La exportación cumple el esquema de `revision_humana.dax` y concilia con la bitácora. La página **MODEL PERFORMANCE & REVIEW** requiere:
+- **R3 Página de Power BI no construida** — *resuelta en `v1.7.0`: página «SEGUIMIENTO DE REVISIÓN HUMANA» validada en Desktop, PBIX `a48291e5…435f4`; ver [`POWERBI_P02_REVIEW_PAGE.md`](../../production/POWERBI_P02_REVIEW_PAGE.md)*. La exportación cumple el esquema de `revision_humana.dax` y concilia con la bitácora. La página **MODEL PERFORMANCE & REVIEW** requiere:
   - construirla en una copia versionada;
   - validarla en Power BI Desktop;
   - un nuevo SHA-256 del PBIX y la actualización controlada de `test_bi_integration.py`.
