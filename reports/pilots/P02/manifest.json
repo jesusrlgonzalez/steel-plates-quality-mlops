@@ -1,0 +1,156 @@
+{
+ "empresa": "Aceros Laminados del Golfo, S.A. (empresa ficticia)",
+ "origen": "simulada: remuestreo de predicción fuera de muestra (validación cruzada)",
+ "fuente": "examples/review_triage/inspeccion_placas.csv",
+ "filas_fuente_usadas": "solo origen == 'validación cruzada' (1,552); el holdout (389) no se lee",
+ "semillas": {
+  "historial": 3,
+  "imperfecciones_historial": 21,
+  "operacion": 4,
+  "imperfecciones_operacion": 31
+ },
+ "reglas": {
+  "historial": [
+   {
+    "regla": "D7",
+    "tipo": "Errores de integración (confianza fuera de rango o ilegible, clase vacía)",
+    "filas": 6
+   },
+   {
+    "regla": "D2",
+    "tipo": "Confianza ausente",
+    "filas": 59
+   },
+   {
+    "regla": "D3",
+    "tipo": "Escala de confianza mezclada (línea B de 0 a 100)",
+    "filas": 343
+   },
+   {
+    "regla": "D4",
+    "tipo": "Nomenclatura de clases inconsistente",
+    "filas": 118
+   },
+   {
+    "regla": "D5",
+    "tipo": "Revisión humana aún abierta (clase real pendiente)",
+    "filas": 54
+   },
+   {
+    "regla": "D6",
+    "tipo": "Registro capturado con un día de retraso",
+    "filas": 47
+   },
+   {
+    "regla": "D1",
+    "tipo": "Placa leída dos veces",
+    "filas": 35
+   }
+  ],
+  "S1": [
+   {
+    "regla": "D7",
+    "tipo": "Errores de integración (confianza fuera de rango o ilegible, clase vacía)",
+    "filas": 2
+   },
+   {
+    "regla": "D2",
+    "tipo": "Confianza ausente",
+    "filas": 30
+   },
+   {
+    "regla": "D3",
+    "tipo": "Escala de confianza mezclada (línea B de 0 a 100)",
+    "filas": 297
+   },
+   {
+    "regla": "D4",
+    "tipo": "Nomenclatura de clases inconsistente",
+    "filas": 61
+   },
+   {
+    "regla": "D6",
+    "tipo": "Registro capturado con un día de retraso",
+    "filas": 24
+   },
+   {
+    "regla": "D1",
+    "tipo": "Placa leída dos veces",
+    "filas": 18
+   }
+  ],
+  "S2": [
+   {
+    "regla": "D7",
+    "tipo": "Errores de integración (confianza fuera de rango o ilegible, clase vacía)",
+    "filas": 2
+   },
+   {
+    "regla": "D2",
+    "tipo": "Confianza ausente",
+    "filas": 61
+   },
+   {
+    "regla": "D3",
+    "tipo": "Escala de confianza mezclada (línea B de 0 a 100)",
+    "filas": 280
+   },
+   {
+    "regla": "D4",
+    "tipo": "Nomenclatura de clases inconsistente",
+    "filas": 92
+   },
+   {
+    "regla": "D6",
+    "tipo": "Registro capturado con un día de retraso",
+    "filas": 49
+   },
+   {
+    "regla": "D1",
+    "tipo": "Placa leída dos veces",
+    "filas": 37
+   }
+  ],
+  "S3": [
+   {
+    "regla": "D7",
+    "tipo": "Errores de integración (confianza fuera de rango o ilegible, clase vacía)",
+    "filas": 11
+   },
+   {
+    "regla": "D2",
+    "tipo": "Confianza ausente",
+    "filas": 31
+   },
+   {
+    "regla": "D3",
+    "tipo": "Escala de confianza mezclada (línea B de 0 a 100)",
+    "filas": 299
+   },
+   {
+    "regla": "D4",
+    "tipo": "Nomenclatura de clases inconsistente",
+    "filas": 62
+   },
+   {
+    "regla": "D6",
+    "tipo": "Registro capturado con un día de retraso",
+    "filas": 25
+   },
+   {
+    "regla": "D1",
+    "tipo": "Placa leída dos veces",
+    "filas": 18
+   }
+  ]
+ },
+ "conciliacion_historial": {
+  "filas_recibidas": 1218,
+  "duplicados": 35,
+  "nomenclatura_corregida": 118,
+  "confianza_reescalada": 343,
+  "filas_invalidas": 6,
+  "sin_confianza": 59,
+  "clases_desconocidas": 0
+ }
+}

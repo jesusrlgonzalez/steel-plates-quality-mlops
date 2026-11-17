@@ -70,7 +70,11 @@ Las acerías y las líneas de electrónica ya clasifican defectos con cámaras; 
 2. Captura el costo de una revisión y el de una pieza mal clasificada que llega al cliente.
 3. Obtén el umbral de confianza por clase, la carga de revisión, los escapes con intervalo fuera de muestra, la muestra de auditoría de lo aceptado, la lista de piezas a revisar y la tabla para la página de seguimiento en Power BI ([`powerbi/dax/revision_humana.dax`](powerbi/dax/revision_humana.dax)).
 
-Probado con las placas reales y una verdad oculta: cada placa tiene una predicción hecha sin ver su etiqueta y el 30 % conserva su clase. Con revisión de 40 MXN y escape de 1,500 MXN la política revisa el 79 % y estima 1.6 escapes (intervalo 0 a 8.2); la verdad oculta da 5. Protocolo: [`docs/MVP_PILOTO.md`](docs/MVP_PILOTO.md). Este repositorio absorbe además al antiguo `steel-plates-quality-bi` como capa de reportes.
+Probado con las placas reales y una verdad oculta: cada placa tiene una predicción hecha sin ver su etiqueta y el 30 % conserva su clase. Con revisión de 40 MXN y escape de 1,500 MXN la política revisa el 79 % y estima 1.6 escapes (intervalo 0 a 8.2); la verdad oculta da 5. Protocolo: [`docs/MVP_PILOTO.md`](docs/MVP_PILOTO.md).
+
+**Caso demostrativo P02 (Nivel A, planta ficticia, flujo operativo sintético, sin piloto real):** revisión humana diaria de la clasificación de defectos con cupo estricto de inspectores. Los registros llegan con siete tipos de defectos; se comparan tres políticas en tres escenarios, con sensibilidad. El modelo y el holdout congelados no cambian. Dictamen: aprobado con reservas (autoevaluación). [`docs/pilots/P02/`](docs/pilots/P02/README.md).
+
+Este repositorio absorbe además al antiguo `steel-plates-quality-bi` como capa de reportes.
 
 ## Monitoreo
 

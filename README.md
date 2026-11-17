@@ -75,7 +75,11 @@ Steel mills and electronics lines already classify defects with camera systems; 
 2. Enter the cost of a review and of a misclassified part reaching the customer.
 3. Get a confidence threshold per class, the review load, the escapes it lets through with an out-of-sample interval, an audit sample for accepted parts, a list of parts to review and a table for the Power BI tracking page ([`powerbi/dax/revision_humana.dax`](powerbi/dax/revision_humana.dax)).
 
-Tested on the real plates with a hidden truth: every plate gets a prediction its own label never touched (cross-validation or the frozen model's single holdout run) and 30 % keep their class. At 40 MXN per review and 1,500 MXN per escape the policy reviews 79 % of plates and estimates 1.6 escapes (interval 0–8.2); the hidden truth shows 5. Pilot protocol: [`docs/MVP_PILOTO.md`](docs/MVP_PILOTO.md) (Spanish). This repository also absorbs the former `steel-plates-quality-bi` as its reporting layer.
+Tested on the real plates with a hidden truth: every plate gets a prediction its own label never touched (cross-validation or the frozen model's single holdout run) and 30 % keep their class. At 40 MXN per review and 1,500 MXN per escape the policy reviews 79 % of plates and estimates 1.6 escapes (interval 0–8.2); the hidden truth shows 5. Pilot protocol: [`docs/MVP_PILOTO.md`](docs/MVP_PILOTO.md) (Spanish).
+
+**Demonstration case P02 (level A, fictitious plant, synthetic operational flow, no real pilot):** daily human review of defect classifications under a hard inspector cap. Records arrive with seven kinds of defects; three policies are compared in three scenarios, with sensitivity analysis. The frozen model and holdout are untouched. Verdict: approved with reservations (self-assessment). [`docs/pilots/P02/`](docs/pilots/P02/README.md) (Spanish).
+
+This repository also absorbs the former `steel-plates-quality-bi` as its reporting layer.
 
 ## Monitoring
 

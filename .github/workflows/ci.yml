@@ -32,6 +32,8 @@ jobs:
         run: python -B -m tools.project_checks validate-data
       - name: Full tests (includes historical training regression and OOF replay)
         run: python -B -m pytest -q
+      - name: Pilot P02 outputs are reproducible (synthetic operational layer, docs/pilots/P02)
+        run: python -B -m quality_ml.pilot_p02 > /dev/null && git diff --exit-code reports/pilots/P02
       - run: python -B -m tools.project_checks validate-artifact
       - run: python -B -m tools.project_checks batch-smoke
       - run: python -B -m tools.project_checks validate-evidence
