@@ -12,6 +12,7 @@ from quality_ml.inference.bi_export import (
     BASELINE_PATH, COLUMNS, EXPORT_PATH, export_frame, validate_export,
 )
 from tools.prepare_ml_powerbi import PAGE, REPORT, SEMANTIC, TABLE, prepare
+from tools.prepare_review_powerbi import PAGE as REVIEW_PAGE, TABLE as REVIEW_TABLE
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -147,9 +148,10 @@ def test_previous_powerbi_preserved():
             # longer exists. What the baseline protects here is the model's structure,
             # which is asserted directly and is a tighter check than a prefix hash.
             model = data.decode("utf-8-sig").replace("\r\n", "\n")
+            # P02 (owner-authorised 2026-11-17) appends exactly one table after ML_Holdout.
             assert re.findall(r"^ref table (\w+)$", model, re.M) == [
                 "Dim_TipoDefecto", "Dim_Acero", "Dim_BandaTamano", "Fact_Defecto",
-                "Param_Especificacion", "_Medidas", TABLE]
+                "Param_Especificacion", "_Medidas", TABLE, REVIEW_TABLE]
             assert re.search(r"^ref cultureInfo es-ES$", model, re.M)
             for line in ("model Model", "\tculture: es-ES",
                          "\tdefaultPowerBIDataSourceVersion: powerBI_V3",
@@ -161,7 +163,7 @@ def test_previous_powerbi_preserved():
             order = json.loads(re.search(r"annotation PBI_QueryOrder = (\[.*\])", model).group(1))
             assert order[:7] == ["RutaCSV", "Raw_SteelPlates", "Dim_TipoDefecto",
                 "Dim_Acero", "Dim_BandaTamano", "Fact_Defecto", "Param_Especificacion"]
-            assert set(order[7:]) <= {TABLE, "RutaMLCSV"}
+            assert set(order[7:]) <= {TABLE, "RutaMLCSV", REVIEW_TABLE, "RutaRevisionCSV"}
         elif name == PARAMETROS_PQ:
             current = data.replace(b"\r\n", b"\n")
             assert current.count(RAW_URL_OWNER_NOW) == 2 and RAW_URL_OWNER_BASELINE not in current
@@ -193,12 +195,12 @@ def test_previous_powerbi_preserved():
                        == identity["lf_sha256"] for count in range(4))
     index = json.loads((ROOT / REPORT / "pages.json").read_text())
     assert index["pageOrder"] == ["5ee9939d0101076d3381", "f50491653678cb19a699",
-        "1f75dde540a696f2b18f", "cb973d91eb46886907c2", PAGE]
+        "1f75dde540a696f2b18f", "cb973d91eb46886907c2", PAGE, REVIEW_PAGE]
     # activePageName records the tab selected when Desktop last saved, so a genuine
     # save moves it. OWNER accepted the ML page as the landing page on 2026-11-15
     # (OWNER-PBI-REN-001). Both accepted values are spelled out; pageOrder above is
     # what must never drift and is still asserted exactly.
-    assert index["activePageName"] in ("5ee9939d0101076d3381", PAGE)
+    assert index["activePageName"] in ("5ee9939d0101076d3381", PAGE, REVIEW_PAGE)
 
 
 def test_draft_structure_and_field_bindings():

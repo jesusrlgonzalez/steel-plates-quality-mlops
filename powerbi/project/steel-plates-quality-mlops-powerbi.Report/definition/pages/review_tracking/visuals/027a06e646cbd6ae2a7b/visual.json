@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "027a06e646cbd6ae2a7b",
+  "position": {
+    "x": 20,
+    "y": 280,
+    "width": 195,
+    "height": 105,
+    "z": 4,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Piezas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Piezas",
+              "nativeQueryRef": "Piezas"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -32,3 +32,11 @@ expression RutaMLCSV =
 		    Result
 	lineageTag: 8070b2ea-4c61-4070-8c16-8a5206582c80
 
+expression RutaRevisionCSV =
+		let
+		    Normalized = Text.Replace(Text.Trim(RutaCSV), "\", "/"),
+		    Root = if Text.Contains(Normalized, "/data/raw/") then Text.BeforeDelimiter(Normalized, "/data/raw/")
+		        else error "Set RutaCSV to this repository data/raw/steel_plates_faults.csv",
+		    Result = Root & "/powerbi/data/seguimiento_revision.csv"
+		in
+		    Result

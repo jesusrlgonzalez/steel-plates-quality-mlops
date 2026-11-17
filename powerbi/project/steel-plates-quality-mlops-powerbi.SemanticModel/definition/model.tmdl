@@ -20,6 +20,7 @@ ref table Fact_Defecto
 ref table Param_Especificacion
 ref table _Medidas
 ref table ML_Holdout
+ref table Seguimiento_Revision
 
 ref cultureInfo es-ES
 

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "65543d3b92f79b5b1972",
+  "position": {
+    "x": 20,
+    "y": 1030,
+    "width": 1240,
+    "height": 150,
+    "z": 14,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "clase"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.clase",
+              "nativeQueryRef": "clase"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Piezas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Piezas",
+              "nativeQueryRef": "Piezas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Piezas a Revision"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Piezas a Revision",
+              "nativeQueryRef": "Piezas a Revision"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "% a Revision"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.% a Revision",
+              "nativeQueryRef": "% a Revision"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Errores en Aceptadas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Errores en Aceptadas",
+              "nativeQueryRef": "Errores en Aceptadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Escapes por 1000 Aceptadas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Escapes por 1000 Aceptadas",
+              "nativeQueryRef": "Escapes por 1000 Aceptadas"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

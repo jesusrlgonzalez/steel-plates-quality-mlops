@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "e9d1ee503c0ebe0c9140",
+  "position": {
+    "x": 641,
+    "y": 280,
+    "width": 195,
+    "height": 105,
+    "z": 7,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Errores en Aceptadas"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Errores en Aceptadas",
+              "nativeQueryRef": "Errores en Aceptadas"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

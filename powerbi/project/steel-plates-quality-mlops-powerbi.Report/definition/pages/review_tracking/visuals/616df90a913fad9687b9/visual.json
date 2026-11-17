@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "616df90a913fad9687b9",
+  "position": {
+    "x": 435,
+    "y": 115,
+    "width": 395,
+    "height": 150,
+    "z": 2,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "listSlicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "politica"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.politica",
+              "nativeQueryRef": "politica"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

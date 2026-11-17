@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "134a7de387231cbf89cb",
+  "position": {
+    "x": 20,
+    "y": 115,
+    "width": 395,
+    "height": 150,
+    "z": 1,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "listSlicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "escenario"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.escenario",
+              "nativeQueryRef": "escenario"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "cc3513f8162485e6bdc3",
+  "position": {
+    "x": 650,
+    "y": 715,
+    "width": 610,
+    "height": 300,
+    "z": 13,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "politica"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.politica",
+              "nativeQueryRef": "politica"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Costo de Revision MXN"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Costo de Revision MXN",
+              "nativeQueryRef": "Costo de Revision MXN"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Costo de Escapes MXN"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Costo de Escapes MXN",
+              "nativeQueryRef": "Costo de Escapes MXN"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Costo Total MXN"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Costo Total MXN",
+              "nativeQueryRef": "Costo Total MXN"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Costo Revisar Todo MXN"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Costo Revisar Todo MXN",
+              "nativeQueryRef": "Costo Revisar Todo MXN"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguimiento_Revision"
+                    }
+                  },
+                  "Property": "Ahorro vs Revisar Todo MXN"
+                }
+              },
+              "queryRef": "Seguimiento_Revision.Ahorro vs Revisar Todo MXN",
+              "nativeQueryRef": "Ahorro vs Revisar Todo MXN"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
