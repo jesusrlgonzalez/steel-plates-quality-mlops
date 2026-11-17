@@ -1,0 +1,20 @@
+# Demonstration case P02 (level A, synthetic operational layer): dossier, outputs with SHA-256
+# evidence, and everything needed to regenerate them.
+docs/pilots/P02
+reports/pilots/P02
+src/quality_ml/__init__.py
+src/quality_ml/pilot_p02.py
+src/quality_ml/review_policy.py
+src/quality_ml/review_intake.py
+examples/review_triage/inspeccion_placas.csv
+powerbi/dax/revision_humana.dax
+tests/test_pilot_p02.py
+tests/test_release_p02.py
+deploy/build_release_bundle.sh
+deploy/release-assets-p02.txt
+pyproject.toml
+requirements.txt
+requirements-dev.txt
+CHANGELOG.md
+MODEL_CARD.md
+LICENSE

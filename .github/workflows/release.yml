@@ -42,6 +42,9 @@ jobs:
           if [ "${{ steps.tooling.outputs.onnx }}" = "true" ]; then
             cp artifacts/onnx/final_random_forest.onnx reports/onnx/verification.json dist/
           fi
+          if [ -f deploy/release-assets-p02.txt ]; then
+            bash deploy/build_release_bundle.sh HEAD "dist/p02-evidence-${TAG}.zip" deploy/release-assets-p02.txt
+          fi
           (cd dist && sha256sum * > SHA256SUMS)
           cat dist/SHA256SUMS
       - name: Upload to the release
