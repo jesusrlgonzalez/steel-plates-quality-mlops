@@ -6,6 +6,11 @@ the consumed holdout have not changed since v1.0.0.
 
 ## [Unreleased]
 
+### Security
+- Browser demo (Hugging Face Space): the Python requirements are pinned (`plotly==7.1.0`, `scikit-learn==1.7.0`, `scipy==1.14.1`, `openpyxl==3.1.5`, `et-xmlfile==2.0.0`), so the code that runs next to an uploaded file no longer changes between visits.
+- The demo page sets a Content-Security-Policy whose `connect-src` only allows the page itself, jsDelivr and PyPI; it also applies to the Pyodide worker.
+- The upload screen shows a data-use notice naming the third parties that receive the visitor's IP address (jsDelivr, PyPI, Google Fonts).
+
 ## [1.7.0] - 2026-11-17
 
 ### Added
