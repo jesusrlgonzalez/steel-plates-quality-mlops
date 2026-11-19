@@ -54,6 +54,9 @@ def render():
     st.markdown("Sube los resultados de tu sistema de inspección (clase y confianza) con una muestra revisada por personas y obtén "
                 "**desde qué confianza aceptar cada clase sin revisión**, la carga de revisión esperada y la muestra para auditar lo "
                 "aceptado. **El archivo se procesa en tu navegador: no se envía a ningún servidor.**")
+    st.caption("Aviso de uso de datos: para funcionar, la página descarga bibliotecas y tipografías de servicios públicos "
+               "(jsDelivr, PyPI, Google Fonts), que reciben tu dirección IP y datos técnicos de tu navegador, pero no tu "
+               "archivo. No subas datos personales ni confidenciales sin autorización de tu empresa.")
     a, b = st.columns([1, 2])
     a.download_button("Descargar plantilla de Excel (con datos de ejemplo)", _template(), "plantilla_revision.xlsx",
                       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")

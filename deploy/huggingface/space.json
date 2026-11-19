@@ -5,10 +5,11 @@
   "colorTo": "gray",
   "entrypoint": "streamlit_app.py",
   "requirements": [
-    "plotly",
-    "scikit-learn",
-    "scipy",
-    "openpyxl"
+    "plotly==7.1.0",
+    "scikit-learn==1.7.0",
+    "scipy==1.14.1",
+    "openpyxl==3.1.5",
+    "et-xmlfile==2.0.0"
   ],
   "include": [
     "streamlit_app.py",
